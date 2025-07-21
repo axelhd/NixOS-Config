@@ -1,0 +1,170 @@
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+
+{
+  home.packages = with pkgs; [
+
+    neofetch
+    nnn
+
+    # archives
+    zip
+    xz
+    unzip
+    p7zip
+
+    # utils
+    ripgrep # recursively searches directories for a regex pattern
+    jq # A lightweight and flexible command-line JSON processor
+    yq-go # yaml processor https://github.com/mikefarah/yq
+    eza # A modern replacement for ‘ls’
+    fzf # A command-line fuzzy finder
+
+    # networking tools
+    mtr # A network diagnostic tool
+    iperf3
+    dnsutils # `dig` + `nslookup`
+    ldns # replacement of `dig`, it provide the command `drill`
+    aria2 # A lightweight multi-protocol & multi-source command-line download utility
+    socat # replacement of openbsd-netcat
+    nmap # A utility for network discovery and security auditing
+    ipcalc # it is a calculator for the IPv4/v6 addresses
+
+    # misc
+    cowsay
+    file
+    which
+    tree
+    gnused
+    gnutar
+    gawk
+    zstd
+    gnupg
+
+    # nix related
+    #
+    # it provides the command `nom` works just like `nix`
+    # with more details log output
+    nix-output-monitor
+
+    # productivity
+    glow # markdown previewer in terminal
+
+    btop # replacement of htop/nmon
+    iotop # io monitoring
+    iftop # network monitoring
+    atop
+    htop
+    nvtopPackages.full
+
+    # system call monitoring
+    strace # system call monitoring
+    ltrace # library call monitoring
+    lsof # list open files
+
+    # system tools
+    sysstat
+    lm_sensors # for `sensors` command
+    ethtool
+    pciutils # lspci
+    usbutils # lsusb
+
+    obsidian
+    git
+    imhex
+
+    pavucontrol
+    volctl
+    playerctl
+    kdePackages.kate
+    kdePackages.dolphin
+    kdePackages.qtsvg
+    kdePackages.kio-fuse # to mount remote filesystems via FUSE
+    kdePackages.kio-extras # extra protocols support (sftp, fish and more)
+    kdePackages.gwenview
+    darktable
+    thunderbird
+    #subversion
+    python3
+    python312Packages.numpy
+    rustup
+    gcc
+    firefox
+    lnav
+    wine
+    keepassxc
+    signal-desktop
+    ipfetch
+
+    firefox
+    kile
+    texliveFull
+    rubber
+    kdePackages.okular
+    imagemagick
+
+    libreoffice-qt6-fresh
+    xclicker
+    subversion
+    #kdePackages.kwallet
+    bc
+    qalculate-gtk
+    spotdl
+    yt-dlp
+    vlc
+    #jetbrains.pycharm-community
+    jetbrains.rust-rover
+    xnec2c
+    freecad
+    blender
+    openscad
+    inkscape
+
+    lutris
+    jstest-gtk
+    linuxConsoleTools
+    opentrack
+    ckan
+    cool-retro-term
+    digikam
+    godot
+    octaveFull
+    gimp3-with-plugins
+    flightgear
+    alvr
+    webcamoid
+    evtest
+    evtest-qt
+    kew
+    r2modman
+    obs-studio
+    discord
+    vesktop
+    ffmpeg_6-full
+    zoxide
+    ghidra
+    #dconf
+    dbeaver-bin
+    redshift
+    #geogebra
+    geogebra6
+    lunar-client
+    modrinth-app
+    jetbrains.pycharm-professional
+    rustlings
+    heroic
+    wxmaxima
+    maxima
+  ];
+
+  programs.obs-studio.package = (
+    pkgs.obs-studio.override {
+      cudaSupport = true;
+    }
+  );
+
+}
