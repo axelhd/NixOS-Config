@@ -1,4 +1,0 @@
-Only configuration.nix, flake.nix, flake.lock, hardware-configuration.nix and home.nix used.
-https://github.com/Misterio77/nix-starter-configs/blob/main/standard/modules/nixos/default.nix 
-https://github.com/ryan4yin/nix-config/blob/i3-kickstarter/flake.nix 
-https://nixos-and-flakes.thiscute.world/nixos-with-flakes/modularize-the-configuration
