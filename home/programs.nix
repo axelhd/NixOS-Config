@@ -159,6 +159,7 @@
     heroic
     wxmaxima
     maxima
+    wsjtx
   ];
 
   programs.obs-studio.package = (

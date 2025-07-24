@@ -140,6 +140,7 @@
       "networkmanager"
       "wheel"
       "docekr"
+      "dialout"
     ];
     shell = pkgs.nushell;
     #packages = with pkgs; [
@@ -222,6 +223,8 @@
     #libsForQt5.qt5c               # Qt5 configuration tool (optional, for manual tweaking)
     dconf # Required for GTK theme settings
     nushell
+    chntpw
+    dislocker
 
     # FHS
     (
