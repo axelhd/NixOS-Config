@@ -144,6 +144,7 @@
     obs-studio
     discord
     vesktop
+    lorien
     ffmpeg_6-full
     zoxide
     ghidra
@@ -160,6 +161,7 @@
     wxmaxima
     maxima
     wsjtx
+    caligula
   ];
 
   programs.obs-studio.package = (

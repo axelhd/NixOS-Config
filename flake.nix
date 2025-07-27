@@ -86,7 +86,7 @@
           modules = [
             # Import the previous configuration.nix we used,
             # so the old configuration file still takes effect
-            ./configuration.nix
+            ./host/cesar/configuration.nix
             catppuccin.nixosModules.catppuccin
             everforest.nixosModules.everforest
             #nvf.nixosModules.default
