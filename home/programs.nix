@@ -163,6 +163,8 @@
     wsjtx
     caligula
     lm_sensors
+    element
+    element-matrix
   ];
 
   programs.obs-studio.package = (
