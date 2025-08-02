@@ -164,7 +164,7 @@
     caligula
     lm_sensors
     element
-    element-matrix
+    element-desktop
   ];
 
   programs.obs-studio.package = (

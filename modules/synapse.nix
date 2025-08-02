@@ -20,7 +20,7 @@ let
     return 200 '${builtins.toJSON data}';
   '';
 in {
-  networking.hostName = "myhostname";
+  networking.hostName = "cesar";
   networking.domain = "example.org";
   networking.firewall.allowedTCPPorts = [ 80 443 ];
 

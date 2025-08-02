@@ -17,7 +17,7 @@
     #inputs.rednix.container
     ../../cachix.nix
     ../../modules/nvidia.nix
-    ../../modules/synapse.nix
+    #../../modules/synapse.nix
   ];
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
