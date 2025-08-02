@@ -7,16 +7,15 @@
 
     everforest.url = "git+https://codeberg.org/fwinter/everforest-nix.git";
 
-    nvchad-config = {
-      #url = "github.com:<github-username>/<repository-name>"; # <- replace this with your own
-      url = "path:/home/ahd/nvchad-config"; # <- for local relative folder (e.g. path:./home/nvim)
-      flake = false;
-    };
+    #nvchad-config = {
+      #url = "path:/home/ahd/nvchad-config"; # <- for local relative folder (e.g. path:./home/nvim)
+      #flake = false;
+    #};
 
     # Not used, switched to nvf
     nix4nvchad = {
       url = "github:nix-community/nix4nvchad";
-      inputs.nixpkgs.follows = "nvchad-config";
+      #UNCOMMENT ME inputs.nixpkgs.follows = "nvchad-config";
     };
 
     # Obsidian nvim not used
@@ -45,8 +44,8 @@
     catppuccin.url = "github:catppuccin/nix";
 
     rednix = {
-      url = "path:/home/ahd/RedNix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:redcode-labs/RedNix";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };
@@ -90,7 +89,7 @@
             catppuccin.nixosModules.catppuccin
             everforest.nixosModules.everforest
             #nvf.nixosModules.default
-            ./immich.nix
+            #./immich.nix
 
             # make home-manager as a module of nixos
             # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
@@ -105,6 +104,32 @@
             }
           ];
         };
+        kali = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            # Import the previous configuration.nix we used,
+            # so the old configuration file still takes effect
+            ./host/kali/configuration.nix
+            catppuccin.nixosModules.catppuccin
+            everforest.nixosModules.everforest
+            #nvf.nixosModules.default
+            #./immich.nix
+        
+            # make home-manager as a module of nixos
+            # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                inherit extraSpecialArgs;
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.ahd = import ./home;
+              };
+            }
+          ];
+        };
+ 
       };
       "ahd@cesar" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -113,5 +138,14 @@
           #./home # <- your home entrypoint, `programs.nvf.*` may be defined here
         ];
       };
+      "ahd@kali" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [
+          nvf.homeManagerModules.default # <- this imports the home-manager module that provides the options
+          #./home # <- your home entrypoint, `programs.nvf.*` may be defined here
+        ];
+      };
+ 
     };
+
 }

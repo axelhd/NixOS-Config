@@ -162,6 +162,7 @@
     maxima
     wsjtx
     caligula
+    lm_sensors
   ];
 
   programs.obs-studio.package = (

@@ -28,7 +28,7 @@
 
   catppuccin = {
     #enable = true;
-    starship.enable = true;
+    starship.enable = false;
     waybar.enable = false;
     nvim.enable = false;
     flavor = "mocha";
@@ -37,8 +37,8 @@
   home.pointerCursor = {
     gtk.enable = true;  # Enable GTK cursor support for compatibility
     x11.enable = true;  # Enable X11 cursor support (optional, for XWayland apps)
-    package = pkgs.catppuccin-cursors.mochaMauve;  # Your chosen Catppuccin cursor variant
-    name = "Catppuccin-Mocha-Mauve-Cursors";  # Must match the exact cursor theme name
+    package = pkgs.catppuccin-cursors.mochaDark;  # Your chosen Catppuccin cursor variant
+    name = "Catppuccin-Mocha-Dark-Cursors";  # Must match the exact cursor theme name
     size = 24;  # Adjust cursor size as needed
     hyprcursor = {
       enable = true;  # Enable Hyprcursor support
@@ -186,13 +186,13 @@
           "cpu"
           "custom/left-arrow-light"
           "custom/left-arrow-dark"
-          "temperature"
+          "battery"
           "custom/left-arrow-light"
           "custom/left-arrow-dark"
           "disk"
           "custom/left-arrow-light"
           "custom/left-arrow-dark"
-	  "temperature"
+	        "temperature"
           "custom/left-arrow-light"
           "custom/left-arrow-dark"
           "tray"
@@ -272,6 +272,22 @@
 
         tray = {
           icon-size = 20;
+        };
+
+        battery = {
+          states = {
+            good = 95;
+            warning = 30;
+            critical = 15;
+          };
+          format = "{icon} {capacity}%";
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
         };
       };
     };
