@@ -3,7 +3,8 @@
 
   inputs = {
     # NixOS official package source
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     everforest.url = "git+https://codeberg.org/fwinter/everforest-nix.git";
 
@@ -54,6 +55,7 @@
     {
       self,
       nixpkgs,
+      nixpkgs-unstable,
       home-manager,
       catppuccin,
       everforest,

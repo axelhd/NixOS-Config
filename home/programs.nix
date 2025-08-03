@@ -4,7 +4,9 @@
   inputs,
   ...
 }:
-
+let
+  unstable = import <nixos-unstable> {};
+in
 {
   home.packages = with pkgs; [
 
@@ -86,7 +88,6 @@
     kdePackages.kio-fuse # to mount remote filesystems via FUSE
     kdePackages.kio-extras # extra protocols support (sftp, fish and more)
     kdePackages.gwenview
-    darktable
     thunderbird
     #subversion
     python3

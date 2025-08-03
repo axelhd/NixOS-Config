@@ -11,6 +11,7 @@
     ./nvf.nix
     ./nvchad.nix # Disabled 
     ./programs.nix
+    #    ./unstable-programs.nix
     ./terminal.nix
     ./hyprland
   ];
