@@ -14,7 +14,7 @@
     ./hardware-configuration.nix
     # Include Home Manager module
     #(import "${home-manager}/nixos")
-    inputs.rednix.container
+    #inputs.rednix.container
     ../../cachix.nix
     ../../modules/configuration.nix
   ];
