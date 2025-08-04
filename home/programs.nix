@@ -5,7 +5,7 @@
   ...
 }:
 let
-  unstable = import <nixos-unstable> {};
+  unstable = import <nixos-unstable> { };
 in
 {
   home.packages = with pkgs; [
@@ -166,6 +166,7 @@ in
     lm_sensors
     element
     element-desktop
+    darktable
   ];
 
   programs.obs-studio.package = (

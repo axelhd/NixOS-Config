@@ -9,8 +9,8 @@
     everforest.url = "git+https://codeberg.org/fwinter/everforest-nix.git";
 
     #nvchad-config = {
-      #url = "path:/home/ahd/nvchad-config"; # <- for local relative folder (e.g. path:./home/nvim)
-      #flake = false;
+    #url = "path:/home/ahd/nvchad-config"; # <- for local relative folder (e.g. path:./home/nvim)
+    #flake = false;
     #};
 
     # Not used, switched to nvf
@@ -34,7 +34,7 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/master";
       # The `follows` keyword in inputs is used for inheritance.
       # Here, `inputs.nixpkgs` of home-manager is kept consistent with
       # the `inputs.nixpkgs` of the current flake,
@@ -117,7 +117,7 @@
             everforest.nixosModules.everforest
             #nvf.nixosModules.default
             #./immich.nix
-        
+
             # make home-manager as a module of nixos
             # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
             home-manager.nixosModules.home-manager
@@ -131,7 +131,7 @@
             }
           ];
         };
- 
+
       };
       "ahd@cesar" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -147,7 +147,7 @@
           #./home # <- your home entrypoint, `programs.nvf.*` may be defined here
         ];
       };
- 
+
     };
 
 }
