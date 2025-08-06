@@ -22,7 +22,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Copenhagen";
+  time.timeZone = "Europe/Tallinn";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_DK.UTF-8";
@@ -44,7 +44,7 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  #services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   # services.desktopManager.plasma6.enable = true;
 
@@ -188,6 +188,10 @@
     nushell
     chntpw
     dislocker
+    z3
+    python313Packages.z3-solver
+    gdb
+    cutter
 
     # FHS
     (
@@ -268,7 +272,7 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   networking.firewall.enable = false;
-
+  networking.networkmanager.enable = true;
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

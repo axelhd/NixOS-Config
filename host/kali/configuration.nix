@@ -17,11 +17,10 @@
     #inputs.rednix.container
     ../../cachix.nix
     ../../modules/configuration.nix
-    ../../modules/wifi.nix
+    #../../modules/wifi.nix
   ];
   networking.hostName = "kali"; # Define your hostname.
-  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
   hardware.graphics = {
     enable = true;
   };
