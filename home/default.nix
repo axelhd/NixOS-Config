@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   home.username = "ahd";
@@ -9,11 +14,12 @@
     #inputs.everforest.homeModules.everforest
     inputs.nvf.homeManagerModules.default
     ./nvf.nix
-    ./nvchad.nix # Disabled 
+    ./nvchad.nix # Disabled
     ./programs.nix
     #    ./unstable-programs.nix
     ./terminal.nix
     ./hyprland
+    ./hollywood.nix
   ];
 
   #gtk.enable = true; # to enable the cursor theme on gtk apps
@@ -21,8 +27,8 @@
 
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = ["qemu:///system"];
-      uris = ["qemu:///system"];
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
     };
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -78,8 +84,8 @@
 
   # Set Qt environment variables for Breeze Dark
   home.sessionVariables = {
-    QT_STYLE_OVERRIDE = "breeze-dark";  # For Qt5 applications
-    QT_QPA_PLATFORMTHEME = "qt5ct";    # Use qt5ct for theming (optional)
+    QT_STYLE_OVERRIDE = "breeze-dark"; # For Qt5 applications
+    QT_QPA_PLATFORMTHEME = "qt5ct"; # Use qt5ct for theming (optional)
   };
 
   # Ensure qt5ct and qt6ct are configured

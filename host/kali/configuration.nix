@@ -18,6 +18,7 @@
     ../../cachix.nix
     ../../modules/configuration.nix
     #../../modules/wifi.nix
+    ../../modules/regreet.nix
   ];
   networking.hostName = "kali"; # Define your hostname.
   services.libinput.enable = true;

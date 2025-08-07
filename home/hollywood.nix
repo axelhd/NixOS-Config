@@ -1,0 +1,35 @@
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+{
+  home.packages = with pkgs; [
+    atop
+    bmon
+    cmatrix
+    ethstatus
+    glances
+    htop
+    ifstat
+    iotop
+    iptraf-ng
+    itop
+    jnettop
+    kerneltop
+    latencytop
+    logtop
+    netmrg
+    nload
+    nmon
+    ntop
+    powertop
+    sagan
+    slurm
+    snetz
+    top
+    tiptop
+    vnstat
+  ];
+}
