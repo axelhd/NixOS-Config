@@ -107,7 +107,7 @@
       )
     '';
     shellAliases = {
-      ll = "ls -l | select name type size mode user group";
+      ll = "ls -l";
       lla = "ls -la";
     };
   };
