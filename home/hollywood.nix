@@ -9,27 +9,28 @@
     atop
     bmon
     cmatrix
-    ethstatus
+    #ethstatus
     glances
     htop
-    ifstat
+    #ifstat
     iotop
     iptraf-ng
-    itop
+    #itop
     jnettop
-    kerneltop
-    latencytop
+    #kerneltop
+    #latencytop
     logtop
-    netmrg
+    #netmrg
     nload
     nmon
-    ntop
+    #ntop
     powertop
-    sagan
+    #sagan
     slurm
-    snetz
-    top
+    #snetz
+    #top
     tiptop
     vnstat
+    hollywood
   ];
 }

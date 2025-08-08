@@ -104,15 +104,16 @@
       };
       "$mod" = "SUPER";
       bind = [
-        "$mod, T, exec, alacritty" # Launch terminal
+        "$mod, T, exec, kitty" # Launch terminal
         "$mod, E, exec, dolphin" # Launch dolphin
         "$mod, D, exec, rofi -show drun -show-icons" # Launch application menu
         "$mod, G, exec, fuzzel" # Launch application menu
         "$mod, Q, killactive," # Close active window
-        "$mod, M, exit," # Exit Hyprland session
+        "$mod, P, exit," # Exit Hyprland session
         "$mod, F, togglefloating," # Toggle floating window
         "$mod, SPACE, exec, wofi --show run" # Run command
         "$mod, R, fullscreen"
+        "$mod, M, exec, kitty cmatrix"
         # Move focus
         "$mod, h, movefocus, l"
         "$mod, j, movefocus, d"

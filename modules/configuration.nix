@@ -192,6 +192,9 @@
     python313Packages.z3-solver
     gdb
     cutter
+    pwntools
+    python313Packages.pwntools
+    scanmem
 
     # FHS
     (
