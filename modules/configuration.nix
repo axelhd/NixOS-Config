@@ -190,11 +190,11 @@
     dislocker
     z3
     python313Packages.z3-solver
-    gdb
     cutter
     pwntools
     python313Packages.pwntools
     scanmem
+    pwndbg
 
     # FHS
     (
@@ -243,6 +243,7 @@
     overlays = [
       (final: prev: {
         nvchad = inputs.nix4nvchad.packages."${pkgs.system}".nvchad;
+        inherit (inputs.pwndbg.packages.${final.system}) pwndbg;
       })
     ];
   };
@@ -255,6 +256,7 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "libsoup-2.74.3"
+    "libxml2-2.13.8"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

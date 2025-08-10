@@ -167,6 +167,24 @@ in
     element
     element-desktop
     darktable
+    gdb
+    avalonia-ilspy
+    unityhub
+    audacity
+    sox
+    spek
+    sonic-visualiser
+    sonic-pi
+    praat
+    ocenaudio
+    baudline
+    zsteg
+    qsstv
+    fldigi
+    stegsolve
+    urh
+    pwntools
+    python313Packages.pwntools
   ];
 
   programs.obs-studio.package = (

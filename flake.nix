@@ -49,6 +49,8 @@
       #inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    pwndbg.url = "github:pwndbg/pwndbg";
+
   };
 
   outputs =
@@ -60,6 +62,7 @@
       catppuccin,
       everforest,
       nvf,
+      pwndbg,
       ...
     }@inputs:
     let

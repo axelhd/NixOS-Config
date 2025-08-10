@@ -20,7 +20,8 @@
     ./terminal.nix
     ./hyprland
     ./hollywood.nix
-    ./gdb.nix
+    #./pwndbg.nix
+    #inputs.pwndbg
   ];
 
   #gtk.enable = true; # to enable the cursor theme on gtk apps
