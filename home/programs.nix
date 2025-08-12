@@ -185,6 +185,7 @@ in
     urh
     pwntools
     python313Packages.pwntools
+    vscodium
   ];
 
   programs.obs-studio.package = (
