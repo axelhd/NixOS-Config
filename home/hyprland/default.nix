@@ -77,14 +77,14 @@
         follow_mouse = 1;
       };
       general = {
-        gaps_in = 2; # 5
-        gaps_out = 4; # 10
+        gaps_in = 5; # 5
+        gaps_out = 10; # 10
         border_size = 1;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
       };
       decoration = {
-        rounding = 5;
+        rounding = 15;
         #drop_shadow = true;
         #shadow_range = 4;
         #shadow_render_power = 3;
@@ -310,7 +310,7 @@
   home.file.".config/waybar/style.css".source = ./waybar_style.css;
   # Optional: Hyprpaper configuration for wallpaper
   home.file.".config/hypr/hyprpaper.conf".text = ''
-    preload = /usr/share/backgrounds/sunset.jpg
-    wallpaper = ,/usr/share/backgrounds/sunset.jpg
+    preload = /etc/nixos/home/wallpapers/assembly.png
+    wallpaper = , /etc/nixos/home/wallpapers/assembly.png
   '';
 }
