@@ -104,6 +104,7 @@
       };
       "$mod" = "SUPER";
       bind = [
+        "$mod, SPACE, togglesplit"
         "$mod, T, exec, kitty" # Launch terminal
         "$mod, E, exec, dolphin" # Launch dolphin
         "$mod, D, exec, rofi -show drun -show-icons" # Launch application menu
@@ -111,7 +112,7 @@
         "$mod, Q, killactive," # Close active window
         "$mod, P, exit," # Exit Hyprland session
         "$mod, F, togglefloating," # Toggle floating window
-        "$mod, SPACE, exec, wofi --show run" # Run command
+        "$mod, N, exec, wofi --show run" # Run command
         "$mod, R, fullscreen"
         "$mod, M, exec, kitty cmatrix"
         # Move focus
@@ -311,6 +312,11 @@
   # Optional: Hyprpaper configuration for wallpaper
   home.file.".config/hypr/hyprpaper.conf".text = ''
     preload = /etc/nixos/home/wallpapers/assembly.png
+    preload = /etc/nixos/home/wallpapers/c1.png
+    preload = /etc/nixos/home/wallpapers/c2_rotated.jpg
+    preload = /etc/nixos/home/wallpapers/rust.png
+    preload = /etc/nixos/home/wallpapers/rust2.png
+    preload = /etc/nixos/home/wallpapers/rust3.png
     wallpaper = , /etc/nixos/home/wallpapers/assembly.png
   '';
 }
