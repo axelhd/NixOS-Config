@@ -22,7 +22,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Tallinn";
+  time.timeZone = "Europe/Copenhagen";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_DK.UTF-8";
@@ -195,6 +195,7 @@
     python313Packages.pwntools
     scanmem
     pwndbg
+    nix-output-monitor
 
     # FHS
     (

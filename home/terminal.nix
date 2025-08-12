@@ -111,6 +111,7 @@
       ll = "ls -l";
       lla = "ls -la";
       gdb = "pwndbg";
+      rebuild = "nixos-rebuild switch --log-format internal-json -v o+e>| nom --json";
     };
   };
   #carapace.enable = true;
