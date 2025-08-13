@@ -319,6 +319,5 @@
     preload = /etc/nixos/home/wallpapers/rust2.png
     preload = /etc/nixos/home/wallpapers/rust3.png
     preload = /etc/nixos/home/wallpapers/forest.jpg
-    wallpaper = , /etc/nixos/home/wallpaper.png
-  '';
+    wallpaper = , /etc/nixos/home/wallpapers/forest.jpg'';
 }
