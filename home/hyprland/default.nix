@@ -311,6 +311,7 @@
   home.file.".config/waybar/style.css".source = ./waybar_style.css;
   # Optional: Hyprpaper configuration for wallpaper
   home.file.".config/hypr/hyprpaper.conf".text = ''
+    preload = /etc/nixos/home/wallpaper.png
     preload = /etc/nixos/home/wallpapers/assembly.png
     preload = /etc/nixos/home/wallpapers/c1.png
     preload = /etc/nixos/home/wallpapers/c2_rotated.jpg
@@ -318,6 +319,6 @@
     preload = /etc/nixos/home/wallpapers/rust2.png
     preload = /etc/nixos/home/wallpapers/rust3.png
     preload = /etc/nixos/home/wallpapers/forest.jpg
-    wallpaper = , /etc/nixos/home/wallpapers/assembly.png
+    wallpaper = , /etc/nixos/home/wallpaper.png
   '';
 }
