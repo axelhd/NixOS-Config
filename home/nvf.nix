@@ -14,7 +14,7 @@
       vim = {
         theme = {
           enable = true;
-          name = "oxocarbon";
+          name = "onedark";
           style = "dark";
           transparent = true;
         };
