@@ -31,6 +31,11 @@
     hyprshot
   ];
 
+  programs.rofi = {
+    enable = true;
+    theme = "/etc/nixos/home/hyprland/rofi.rasi";
+  };
+
   catppuccin = {
     #enable = true;
     starship.enable = false;

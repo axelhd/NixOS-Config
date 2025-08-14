@@ -14,8 +14,9 @@
       vim = {
         theme = {
           enable = true;
-          name = "gruvbox";
+          name = "oxocarbon";
           style = "dark";
+          transparent = true;
         };
         viAlias = true;
         vimAlias = true;
