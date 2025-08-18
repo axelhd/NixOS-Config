@@ -186,6 +186,9 @@ in
     pwntools
     python313Packages.pwntools
     vscodium
+    jetbrains.clion
+    jetbrains.dataspell
+    love
   ];
 
   programs.obs-studio.package = (
