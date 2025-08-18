@@ -8,9 +8,6 @@ let
   unstable = import <nixos-unstable> { };
 in
 {
-  imports = [
-    ./programs
-  ];
   home.packages = with pkgs; [
 
     neofetch

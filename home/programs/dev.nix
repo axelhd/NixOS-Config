@@ -29,5 +29,7 @@ in
     rubber
     love
     luajit
+    lazarus-qt6
+    fpc
   ];
 }
