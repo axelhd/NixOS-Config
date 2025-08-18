@@ -27,7 +27,7 @@ $conda\
 $time\
 [ ](fg:chinese_white)\
 $cmd_duration\
-$line_break\
+$line_break
 $character"""
 
 palette = 'forest'
