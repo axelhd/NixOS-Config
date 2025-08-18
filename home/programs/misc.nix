@@ -8,6 +8,9 @@ let
   unstable = import <nixos-unstable> { };
 in
 {
+  imports = [
+    ./programs
+  ];
   home.packages = with pkgs; [
 
     neofetch
@@ -76,7 +79,6 @@ in
     usbutils # lsusb
 
     obsidian
-    git
     imhex
 
     pavucontrol
@@ -89,36 +91,24 @@ in
     kdePackages.kio-extras # extra protocols support (sftp, fish and more)
     kdePackages.gwenview
     thunderbird
-    #subversion
-    python3
-    python312Packages.numpy
-    rustup
-    gcc
     firefox
-    lnav
     wine
     keepassxc
     signal-desktop
     ipfetch
 
     firefox
-    kile
-    texliveFull
-    rubber
     kdePackages.okular
     imagemagick
 
     libreoffice-qt6-fresh
     xclicker
-    subversion
     #kdePackages.kwallet
     bc
     qalculate-gtk
     spotdl
     yt-dlp
     vlc
-    #jetbrains.pycharm-community
-    jetbrains.rust-rover
     xnec2c
     freecad
     blender
@@ -132,10 +122,7 @@ in
     ckan
     cool-retro-term
     digikam
-    godot
-    octaveFull
     gimp3-with-plugins
-    flightgear
     alvr
     webcamoid
     evtest
@@ -148,16 +135,12 @@ in
     lorien
     ffmpeg_6-full
     zoxide
-    ghidra
     #dconf
-    dbeaver-bin
     redshift
     #geogebra
     geogebra6
     lunar-client
     modrinth-app
-    jetbrains.pycharm-professional
-    rustlings
     heroic
     wxmaxima
     maxima
@@ -167,28 +150,6 @@ in
     element
     element-desktop
     darktable
-    gdb
-    avalonia-ilspy
-    unityhub
-    audacity
-    sox
-    spek
-    sonic-visualiser
-    sonic-pi
-    praat
-    ocenaudio
-    baudline
-    zsteg
-    qsstv
-    fldigi
-    stegsolve
-    urh
-    pwntools
-    python313Packages.pwntools
-    vscodium
-    jetbrains.clion
-    jetbrains.dataspell
-    love
   ];
 
   programs.obs-studio.package = (

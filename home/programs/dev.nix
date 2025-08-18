@@ -1,0 +1,33 @@
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+let
+  unstable = import <nixos-unstable> { };
+in
+{
+  home.packages = with pkgs; [
+    vscodium
+    jetbrains.clion
+    jetbrains.dataspell
+    jetbrains.pycharm-professional
+    jetbrains.rust-rover
+    rustlings
+    dbeaver-bin
+    octaveFull
+    godot
+    git
+    subversion
+    python3Full
+    lnav
+    rustup
+    gcc
+    kile
+    texliveFull
+    rubber
+    love
+    luajit
+  ];
+}

@@ -15,7 +15,7 @@
     inputs.nvf.homeManagerModules.default
     ./nvf.nix
     ./nvchad.nix # Disabled
-    ./programs.nix
+    ./programs
     #    ./unstable-programs.nix
     ./terminal.nix
     ./hyprland
