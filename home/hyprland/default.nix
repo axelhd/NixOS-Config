@@ -51,7 +51,7 @@
     name = "Catppuccin-Mocha-Dark-Cursors"; # Must match the exact cursor theme name
     size = 24; # Adjust cursor size as needed
     hyprcursor = {
-      enable = true; # Enable Hyprcursor support
+      enable = false; # Enable Hyprcursor support
       size = 24; # Optional: Set Hyprcursor-specific size (defaults to home.pointerCursor.size if null)
     };
   };
