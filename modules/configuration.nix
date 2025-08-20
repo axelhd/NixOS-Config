@@ -146,6 +146,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
+    sddm-astronaut
     wget
     cryptsetup
     # Hyprland-related utilities
