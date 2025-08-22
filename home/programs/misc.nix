@@ -147,6 +147,9 @@ in
     element
     element-desktop
     darktable
+    aseprite
+    krita
+
   ];
 
   programs.obs-studio.package = (

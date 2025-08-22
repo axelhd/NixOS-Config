@@ -31,5 +31,6 @@ in
     luajit
     lazarus-qt6
     fpc
+    sqlite
   ];
 }

@@ -22,6 +22,7 @@
     ./hollywood.nix
     #./pwndbg.nix
     #inputs.pwndbg
+    ./wacom.nix
   ];
 
   #gtk.enable = true; # to enable the cursor theme on gtk apps

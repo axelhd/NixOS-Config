@@ -67,6 +67,11 @@
         ",preferred,auto,1"
       ];
 
+      device = {
+        name = "wacom-cintiq-16-pen";
+        output = "HDMI-A-1";
+      };
+
       render = {
         direct_scanout = false;
       };
