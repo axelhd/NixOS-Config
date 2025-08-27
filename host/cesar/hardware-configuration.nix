@@ -24,33 +24,24 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  #fileSystems."/var/lib/docker/overlay2/fc181f41972314551fc4019c57a959582b3e85c70a4211a2f4f75b5d6156a3ea/merged" =
-  #  { device = "overlay";
-  #    fsType = "overlay";
-  #  };
-
   fileSystems."/data/hdd1" =
-    { device = "/dev/disk/by-uuid/d3c55c60-4819-439d-8cae-27042ee07bc7";
+    { device = "/dev/mapper/hdd1";
       fsType = "xfs";
     };
 
   boot.initrd.luks.devices."hdd1".device = "/dev/disk/by-uuid/49f2f43b-c616-4cef-b2fd-3363c8b46ad3";
 
-  #fileSystems."/data/corvina_photo" =
-  #  { device = "//10.0.0.50/users/ahd/photo";
-  #    fsType = "cifs";
-  #  };
+  fileSystems."/var/lib/docker/overlay2/fc181f41972314551fc4019c57a959582b3e85c70a4211a2f4f75b5d6156a3ea/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/data/hdd2" =
+    { device = "/dev/disk/by-uuid/237083aa-7060-4071-9ef8-8cad75113497";
+      fsType = "ext4";
+    };
 
   swapDevices = [ ];
-
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.docker0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp10s0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.vethbb7f780.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
