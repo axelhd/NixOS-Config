@@ -149,6 +149,7 @@ in
     darktable
     aseprite
     krita
+    google-fonts
 
   ];
 

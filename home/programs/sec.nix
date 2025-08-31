@@ -14,18 +14,10 @@ in
     gdb
     avalonia-ilspy
     audacity
-    sox
-    spek
     sonic-visualiser
-    sonic-pi
-    praat
-    ocenaudio
-    baudline
     zsteg
     qsstv
-    fldigi
     stegsolve
-    urh
     ghidra
   ];
 }

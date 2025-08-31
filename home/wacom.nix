@@ -9,7 +9,7 @@ let
 in
 {
   home.packages = with pkgs; [
-    wacomtablet
+    kdePackages.wacomtablet
   ];
 
   home.file."wacom-tablet-bindings.sh" = {
