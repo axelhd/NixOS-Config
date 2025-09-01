@@ -80,7 +80,6 @@
 
   services.samba = {
     enable = true;
-    settings.global.security = "user";
     openFirewall = true;
     settings = {
       global = {
