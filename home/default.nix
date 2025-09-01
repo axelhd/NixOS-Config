@@ -61,49 +61,6 @@
 
   };
 
-  gtk = {
-    #enable = true;
-    theme = {
-      name = "Breeze-Dark";
-      package = pkgs.kdePackages.breeze-gtk;
-    };
-    iconTheme = {
-      name = "breeze-dark";
-      package = pkgs.kdePackages.breeze-icons;
-    };
-    cursorTheme = {
-      name = "breeze_cursors";
-      package = pkgs.kdePackages.breeze;
-    };
-
-    # Additional GTK settings for dark theme
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
-    };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
-    };
-  };
-
-  # Set Qt environment variables for Breeze Dark
-  home.sessionVariables = {
-    QT_STYLE_OVERRIDE = "breeze-dark"; # For Qt5 applications
-    QT_QPA_PLATFORMTHEME = "qt5ct"; # Use qt5ct for theming (optional)
-  };
-
-  # Ensure qt5ct and qt6ct are configured
-  home.file.".config/qt5ct/qt5ct.conf".text = ''
-    [Appearance]
-    style=Breeze-Dark
-    color_scheme_path=/usr/share/color-schemes/BreezeDark.colors
-  '';
-
-  home.file.".config/qt6ct/qt6ct.conf".text = ''
-    [Appearance]
-    style=Breeze-Dark
-    color_scheme_path=/usr/share/color-schemes/BreezeDark.colors
-  '';
-
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
