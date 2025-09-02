@@ -29,6 +29,7 @@
     catppuccin-cursors.mochaDark
     #catppuccin-cursors.mochaLavender
     hyprshot
+    nwg-look
   ];
 
   programs.rofi = {

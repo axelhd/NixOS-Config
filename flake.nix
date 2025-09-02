@@ -51,6 +51,11 @@
 
     pwndbg.url = "github:pwndbg/pwndbg";
 
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -63,6 +68,7 @@
       everforest,
       nvf,
       pwndbg,
+      stylix,
       ...
     }@inputs:
     let
@@ -93,6 +99,7 @@
             ./host/cesar/configuration.nix
             catppuccin.nixosModules.catppuccin
             everforest.nixosModules.everforest
+            stylix.nixosModules.stylix
             #nvf.nixosModules.default
             #./immich.nix
 
@@ -118,6 +125,7 @@
             ./host/kali/configuration.nix
             catppuccin.nixosModules.catppuccin
             everforest.nixosModules.everforest
+            stylix.nixosModules.stylix
             #nvf.nixosModules.default
             #./immich.nix
 

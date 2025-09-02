@@ -222,12 +222,7 @@
     cmake
     virtualbox
     kdePackages.kwallet
-    kdePackages.breeze-gtk # Breeze theme for GTK applications
-    kdePackages.breeze
     docker
-    # Breeze theme for Qt applications
-    #kdePackages.qt6ct             # Qt6 configuration tool (optional, for manual tweaking)
-    #libsForQt5.qt5c               # Qt5 configuration tool (optional, for manual tweaking)
     dconf # Required for GTK theme settings
     nushell
     chntpw
