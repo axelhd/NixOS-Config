@@ -19,6 +19,10 @@
 
   #services.xserver.wacom.enable = true;
 
+  imports = [
+    #./stylix.nix
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
