@@ -150,7 +150,6 @@ in
     aseprite
     krita
     google-fonts
-
   ];
 
   programs.obs-studio.package = (

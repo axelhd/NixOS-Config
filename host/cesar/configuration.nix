@@ -34,4 +34,8 @@
     STEAMVR_LH_ENABLE = "1";
     XRT_COMPOSITOR_COMPUTE = "1";
   };
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 }
