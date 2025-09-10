@@ -35,7 +35,7 @@
 
   programs.rofi = {
     enable = true;
-    theme = "/etc/nixos/home/hyprland/rofi.rasi";
+    theme = "/home/ahd/wc/axel-doc/kode/nix/home/hyprland/rofi.rasi";
   };
 
   catppuccin = {
