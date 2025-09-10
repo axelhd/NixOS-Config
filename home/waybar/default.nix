@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 
@@ -9,7 +10,7 @@
   # Configure Waybar
   programs.waybar = {
     enable = true;
-    settings = {
+    settings = lib.mkDefault {
       mainBar = {
         layer = "top";
         position = "bottom";
@@ -152,7 +153,5 @@
       };
     };
   };
-
-  # Specify the CSS file for Waybar
-  h
+  home.file.".config/waybar/style.css".source = lib.mkDefault ./default.css;
 }
