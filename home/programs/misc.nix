@@ -150,6 +150,8 @@ in
     aseprite
     krita
     google-fonts
+    cdparanoia
+    abcde
   ];
 
   programs.obs-studio.package = (
@@ -158,4 +160,5 @@ in
     }
   );
 
+  home.file.".abcde.conf".source = ../abcde.conf;
 }

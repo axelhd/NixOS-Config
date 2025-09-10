@@ -44,6 +44,11 @@
     fsType = "xfs";
   };
 
+  fileSystems."/data/hdd2" = {
+    device = "/dev/disk/by-uuid/237083aa-7060-4071-9ef8-8cad75113497";
+    fsType = "ext4";
+  };
+
   boot.initrd.luks.devices."hdd1".device = "/dev/disk/by-uuid/49f2f43b-c616-4cef-b2fd-3363c8b46ad3";
 
   swapDevices = [ ];
