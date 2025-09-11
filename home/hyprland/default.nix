@@ -9,7 +9,8 @@
 
   imports = [
     inputs.catppuccin.homeModules.catppuccin
-    ../waybar
+    #../waybar
+    ../waybar/eli.nix
   ];
 
   home.packages = with pkgs; [

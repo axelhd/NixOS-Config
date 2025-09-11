@@ -108,7 +108,6 @@ in
     vlc
     xnec2c
     freecad
-    blender
     openscad
     inkscape
 
@@ -152,6 +151,7 @@ in
     google-fonts
     cdparanoia
     abcde
+    pywal
   ];
 
   programs.obs-studio.package = (

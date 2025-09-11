@@ -240,6 +240,10 @@
     scanmem
     pwndbg
     nix-output-monitor
+    blender
+    (blender.override {
+      cudaSupport = true;
+    })
 
     # FHS
     (

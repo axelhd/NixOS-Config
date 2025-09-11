@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 {
-  home.file.".config/waybar".source = ./eli;
+  xdg.configFile."waybar".source = ./eli;
   programs.waybar.enable = true;
 }
