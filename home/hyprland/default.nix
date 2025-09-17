@@ -80,8 +80,9 @@
       };
 
       exec-once = [
-        "waybar &" # Start waybar
         "hyprpaper &" # Start wallpaper
+        "vlc --play-and-exit --fullscreen --no-video-title-show --quiet ~/wc/axel-doc/kode/nix/home/hyprland/startup.mkv"
+        "waybar &" # Start waybar
         "dunst &" # Start notification daemon
         "/run/current-system/sw/bin/kwalletd6"
       ];
@@ -174,15 +175,6 @@
   };
 
   home.file.".config/hypr/hyprpaper.conf".text = ''
-    preload = /etc/nixos/home/wallpaper.png
-    preload = /etc/nixos/home/wallpapers/assembly.png
-    preload = /etc/nixos/home/wallpapers/c1.png
-    preload = /etc/nixos/home/wallpapers/c2_rotated.jpg
-    preload = /etc/nixos/home/wallpapers/rust.png
-    preload = /etc/nixos/home/wallpapers/rust2.png
-    preload = /etc/nixos/home/wallpapers/rust3.png
-    preload = /etc/nixos/home/wallpapers/forest.jpg
-    preload = /etc/nixos/home/wallpapers/estonia.png
-    preload = /etc/nixos/home/wallpapers/estonia2.png
-    wallpaper = , /etc/nixos/home/wallpapers/estonia2.png'';
+    preload = /home/ahd/wc/axel-doc/kode/nix/home/wall.png
+    wallpaper = , /home/ahd/wc/axel-doc/kode/nix/home/wall.png'';
 }

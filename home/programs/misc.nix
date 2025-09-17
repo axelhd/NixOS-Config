@@ -152,6 +152,7 @@ in
     cdparanoia
     abcde
     pywal
+    pipes-rs
   ];
 
   programs.obs-studio.package = (

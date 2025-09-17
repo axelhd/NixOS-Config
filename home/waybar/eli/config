@@ -18,12 +18,6 @@
                 "*": [ 1,2,3,4,5 ]
             }
         },
-        "custom/notification": {
-            "tooltip": false,
-            "format": "",
-            "on-click": "swaync-client -t -sw",
-            "escape": true
-        },
         "clock": {
             "format": "{:%I:%M:%S %p} ",
             "interval": 1,   
@@ -78,23 +72,6 @@
             "󰂂",
             "󰁹"
             ],
-        },
-        "custom/pacman": {
-            "format": "󰅢 {}",
-            "interval": 30,   
-            "exec": "checkupdates | wc -l",
-            "exec-if": "exit 0",
-            "on-click": "kitty sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
-            "signal": 8,
-            "tooltip": false,
-        },
-        "custom/expand": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/endpoint":{
-            "format": "|",
-            "tooltip": false
         },
         "group/expand": {
             "orientation": "horizontal",
