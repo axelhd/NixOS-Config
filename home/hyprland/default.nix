@@ -27,7 +27,6 @@
     fuzzel
     hyprcursor
     rofi
-    catppuccin-cursors.mochaMauve
     catppuccin-cursors.mochaDark
     #catppuccin-cursors.mochaLavender
     hyprshot
@@ -80,8 +79,8 @@
       };
 
       exec-once = [
-        "hyprpaper &" # Start wallpaper
         "vlc --play-and-exit --fullscreen --no-video-title-show --quiet ~/wc/axel-doc/kode/nix/home/hyprland/startup.mkv"
+        "hyprpaper &" # Start wallpaper
         "waybar &" # Start waybar
         "dunst &" # Start notification daemon
         "/run/current-system/sw/bin/kwalletd6"

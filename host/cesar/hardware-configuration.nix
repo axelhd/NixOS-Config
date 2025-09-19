@@ -26,7 +26,7 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/f935eb3f-7bce-44d5-b48e-1f21b7021c9c";
+    device = "/dev/disk/by-uuid/3d87b4c3-19c0-40f7-afdf-331195133af2";
     fsType = "ext4";
   };
 
@@ -42,11 +42,6 @@
   fileSystems."/data/hdd1" = {
     device = "/dev/mapper/hdd1";
     fsType = "xfs";
-  };
-
-  fileSystems."/data/hdd2" = {
-    device = "/dev/disk/by-uuid/237083aa-7060-4071-9ef8-8cad75113497";
-    fsType = "ext4";
   };
 
   boot.initrd.luks.devices."hdd1".device = "/dev/disk/by-uuid/49f2f43b-c616-4cef-b2fd-3363c8b46ad3";
