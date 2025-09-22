@@ -136,7 +136,6 @@ in
     #geogebra
     geogebra6
     lunar-client
-    modrinth-app
     heroic
     wxmaxima
     maxima
@@ -153,6 +152,16 @@ in
     abcde
     pywal
     pipes-rs
+    themechanger
+    (modrinth-app.overrideAttrs (oldAttrs: {
+      buildCommand = ''
+        					gappsWrapperArgs+=(
+        						--set GDK_BACKEND x11
+        						--set WEBKIT_DISABLE_DMABUF_RENDERER 1
+        					)
+        				''
+      + oldAttrs.buildCommand;
+    }))
   ];
 
   programs.obs-studio.package = (

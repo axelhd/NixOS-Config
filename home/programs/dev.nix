@@ -20,7 +20,7 @@ in
     godot
     git
     subversion
-    python3Full
+    python3
     lnav
     rustup
     gcc

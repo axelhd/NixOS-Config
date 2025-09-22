@@ -15,7 +15,7 @@
         theme = {
           enable = true;
           name = "onedark";
-          style = "dark";
+          style = "cool";
           transparent = true;
         };
         viAlias = true;
@@ -51,7 +51,12 @@
           sql.enable = true;
           java.enable = true;
           kotlin.enable = true;
-          lua.enable = true;
+          lua = {
+            enable = true;
+            format.enable = true;
+            lsp.enable = true;
+            treesitter.enable = true;
+          };
           zig.enable = true;
           python.enable = true;
           typst.enable = true;
@@ -112,7 +117,7 @@
         binds = {
           whichKey.enable = true;
           cheatsheet.enable = true;
-          hardtime-nvim.enable = true;
+          hardtime-nvim.enable = false;
         };
 
         telescope.enable = true;
