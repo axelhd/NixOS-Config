@@ -14,6 +14,8 @@ in
     jetbrains.dataspell
     jetbrains.pycharm-professional
     jetbrains.rust-rover
+    jetbrains.rider
+    jetbrains.idea-ultimate
     rustlings
     dbeaver-bin
     octaveFull

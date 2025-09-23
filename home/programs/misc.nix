@@ -46,6 +46,7 @@ in
     gawk
     zstd
     gnupg
+    the-powder-toy
 
     # nix related
     #
