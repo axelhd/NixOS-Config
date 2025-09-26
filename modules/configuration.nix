@@ -23,6 +23,8 @@
     #./stylix.nix
   ];
 
+  boot.kernel.sysctl."kernel.sysrq" = 502;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -166,6 +168,9 @@
   users.groups.libvirtd.members = [ "ahd" ];
 
   virtualisation.libvirtd.enable = true;
+  users.extraGroups.vboxusers.members = [ "ahd" ];
+
+  virtualisation.virtualbox.host.enable = true;
 
   virtualisation.spiceUSBRedirection.enable = true;
 
@@ -225,7 +230,7 @@
     pkg-config
     cairo
     cmake
-    virtualbox
+    #virtualbox
     kdePackages.kwallet
     docker
     dconf # Required for GTK theme settings
