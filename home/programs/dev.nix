@@ -34,5 +34,6 @@ in
     lazarus-qt6
     fpc
     sqlite
+    python313Packages.pip
   ];
 }
