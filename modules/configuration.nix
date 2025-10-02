@@ -162,18 +162,6 @@
     #];
   };
 
-  # Virtualization
-  programs.virt-manager.enable = true;
-
-  users.groups.libvirtd.members = [ "ahd" ];
-
-  virtualisation.libvirtd.enable = true;
-  users.extraGroups.vboxusers.members = [ "ahd" ];
-
-  virtualisation.virtualbox.host.enable = true;
-
-  virtualisation.spiceUSBRedirection.enable = true;
-
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
   ];
@@ -230,7 +218,6 @@
     pkg-config
     cairo
     cmake
-    #virtualbox
     kdePackages.kwallet
     docker
     dconf # Required for GTK theme settings

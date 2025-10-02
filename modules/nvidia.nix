@@ -1,13 +1,18 @@
- {
+{
   config,
   pkgs,
   inputs,
   ...
 }:
-{ # Nvidia
+{
+  # Nvidia
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
+    extraPackages = with pkgs; [
+      vulkan-loader
+      dxvk
+    ];
   };
 
   # Load nvidia driver for Xorg and Wayland
