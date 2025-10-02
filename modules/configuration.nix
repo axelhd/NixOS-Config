@@ -20,7 +20,7 @@
   #services.xserver.wacom.enable = true;
 
   imports = [
-    #./stylix.nix
+    ./virtualization.nix
   ];
 
   boot.kernel.sysctl."kernel.sysrq" = 502;
