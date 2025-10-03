@@ -21,6 +21,7 @@
 
   imports = [
     ./virtualization.nix
+    ./hyprlock.nix
   ];
 
   boot.kernel.sysctl."kernel.sysrq" = 502;
