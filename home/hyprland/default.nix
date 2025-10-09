@@ -11,6 +11,7 @@
     inputs.catppuccin.homeModules.catppuccin
     #../waybar
     ../waybar/eli.nix
+    ./hyprlock.nix
   ];
 
   home.packages = with pkgs; [
@@ -128,6 +129,7 @@
         "$mod, N, exec, wofi --show run" # Run command
         "$mod, R, fullscreen"
         "$mod, M, exec, kitty cmatrix"
+        "$mod, Y, exec, hyprlock"
         # Move focus
         "$mod, h, movefocus, l"
         "$mod, j, movefocus, d"

@@ -35,5 +35,8 @@ in
     fpc
     sqlite
     python313Packages.pip
+    jdk25
+    craftos-pc
+    qcad
   ];
 }

@@ -103,13 +103,21 @@ in
     xclicker
     #kdePackages.kwallet
     bc
+    kdePackages.ark
     qalculate-gtk
     spotdl
     yt-dlp
     vlc
     xnec2c
-    freecad
     openscad
+    (freecad.overrideAttrs (oldAttrs: rec {
+      installPhase = ''
+        mkdir -p $out/bin
+        echo '#!/bin/sh' > $out/bin/freecad
+        echo 'QT_QPA_PLATFORM=xcb ${oldAttrs.pname} "$@"' >> $out/bin/freecad
+        chmod +x $out/bin/freecad
+      '';
+    }))
     inkscape
 
     lutris
@@ -119,6 +127,7 @@ in
     ckan
     cool-retro-term
     digikam
+    blueman
     gimp3-with-plugins
     alvr
     webcamoid
@@ -153,6 +162,7 @@ in
     abcde
     pywal
     pipes-rs
+    prismlauncher
     themechanger
     (modrinth-app.overrideAttrs (oldAttrs: {
       buildCommand = ''
