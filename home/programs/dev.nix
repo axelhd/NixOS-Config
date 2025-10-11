@@ -38,5 +38,6 @@ in
     jdk25
     craftos-pc
     qcad
+    wireguard-tools
   ];
 }

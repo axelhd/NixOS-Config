@@ -110,18 +110,11 @@ in
     vlc
     xnec2c
     openscad
-    (freecad.overrideAttrs (oldAttrs: rec {
-      installPhase = ''
-        mkdir -p $out/bin
-        echo '#!/bin/sh' > $out/bin/freecad
-        echo 'QT_QPA_PLATFORM=xcb ${oldAttrs.pname} "$@"' >> $out/bin/freecad
-        chmod +x $out/bin/freecad
-      '';
-    }))
+    freecad
     inkscape
 
     lutris
-    jstest-gtk
+    #jstest-gtk
     linuxConsoleTools
     opentrack
     ckan
@@ -155,11 +148,11 @@ in
     element
     element-desktop
     darktable
-    aseprite
+    #aseprite
     krita
     google-fonts
     cdparanoia
-    abcde
+    #abcde
     pywal
     pipes-rs
     prismlauncher
