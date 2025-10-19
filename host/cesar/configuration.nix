@@ -19,6 +19,7 @@
     ../../modules/nvidia.nix
     #../../modules/synapse.nix
     ../../modules/configuration.nix
+    ../../modules/copyparty.nix
   ];
   networking.hostName = "cesar"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

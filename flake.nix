@@ -56,6 +56,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    copyparty.url = "github:9001/copyparty";
+
   };
 
   outputs =
@@ -69,6 +71,7 @@
       nvf,
       pwndbg,
       stylix,
+      copyparty,
       ...
     }@inputs:
     let
@@ -100,6 +103,16 @@
             catppuccin.nixosModules.catppuccin
             everforest.nixosModules.everforest
             stylix.nixosModules.stylix
+            copyparty.nixosModules.default
+            (
+              { pkgs, ... }:
+              {
+                # add the copyparty overlay to expose the package to the module
+                nixpkgs.overlays = [ copyparty.overlays.default ];
+                # (optional) install the package globally
+                environment.systemPackages = [ pkgs.copyparty ];
+              }
+            )
             #nvf.nixosModules.default
             #./immich.nix
 
@@ -126,6 +139,7 @@
             catppuccin.nixosModules.catppuccin
             everforest.nixosModules.everforest
             stylix.nixosModules.stylix
+            copyparty.nixosModules.default
             #nvf.nixosModules.default
             #./immich.nix
 

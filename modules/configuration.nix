@@ -232,6 +232,7 @@
     scanmem
     pwndbg
     nix-output-monitor
+    cloudflared
     (blender.override {
       cudaSupport = true;
     })
