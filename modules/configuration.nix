@@ -58,6 +58,8 @@
     services.desktopManager.plasma6.enable = true;
   };
 
+  programs.kdeconnect.enable = true;
+
   programs.hyprland = {
     enable = true;
     xwayland.enable = true; # Enable XWayland for compatibility
@@ -296,8 +298,6 @@
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
-    "libsoup-2.74.3"
-    "libxml2-2.13.8"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

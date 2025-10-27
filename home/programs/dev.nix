@@ -39,5 +39,7 @@ in
     craftos-pc
     qcad
     wireguard-tools
+    nim
+    devenv
   ];
 }
