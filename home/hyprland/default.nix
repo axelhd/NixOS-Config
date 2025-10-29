@@ -118,7 +118,7 @@
       };
       "$mod" = "SUPER";
       bind = [
-        "$mod, SPACE, togglesplit"
+        "$mod, SPACE, layoutmsg, togglesplit"
         "$mod, T, exec, kitty" # Launch terminal
         "$mod, E, exec, dolphin" # Launch dolphin
         "$mod, D, exec, rofi -show drun -show-icons" # Launch application menu
@@ -177,5 +177,8 @@
 
   home.file.".config/hypr/hyprpaper.conf".text = ''
     preload = /home/ahd/wc/axel-doc/kode/nix/home/wall.png
-    wallpaper = , /home/ahd/wc/axel-doc/kode/nix/home/wall.png'';
+    preload = /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-9.png
+    preload = /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-10.png
+    wallpaper = , /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-10.png
+    wallpaper = DP-1, /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-9.png'';
 }
