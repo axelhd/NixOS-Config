@@ -2,17 +2,18 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 {
   programs.hyprlock = {
     enable = true;
-    settings = {
+    settings = lib.mkDefault {
       general = {
         hide_cursor = true;
         ignore_empty_input = true;
       };
-      background = [
+      background = lib.mkDefault [
         {
           monitor = "";
           path = "../wall.png"; # Only png supported

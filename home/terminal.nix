@@ -81,14 +81,6 @@
     # custom settings
     settings = {
       env.TERM = "xterm-256color";
-      font = {
-        size = 12;
-        #normal.family = "Nerd Font Hack";
-        #bold.family = "Nerd Font Hack";
-        #italic.family = "Nerd Font Hack";
-        #bold_italic.family = "Nerd Font Hack";
-        #draw_bold_text_with_bright_colors = true;
-      };
       scrolling.multiplier = 5;
       selection.save_to_clipboard = true;
     };

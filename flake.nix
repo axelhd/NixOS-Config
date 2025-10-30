@@ -163,6 +163,7 @@
         modules = [
           nvf.homeManagerModules.default # <- this imports the home-manager module that provides the options
           #./home # <- your home entrypoint, `programs.nvf.*` may be defined here
+          stylix.homeModules.stylix
         ];
       };
       "ahd@kali" = home-manager.lib.homeManagerConfiguration {
@@ -170,6 +171,7 @@
         modules = [
           nvf.homeManagerModules.default # <- this imports the home-manager module that provides the options
           #./home # <- your home entrypoint, `programs.nvf.*` may be defined here
+
         ];
       };
 

@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 
@@ -36,7 +37,7 @@
 
   programs.rofi = {
     enable = true;
-    theme = "/home/ahd/wc/axel-doc/kode/nix/home/hyprland/rofi.rasi";
+    theme = lib.mkForce "/home/ahd/wc/axel-doc/kode/nix/home/hyprland/rofi.rasi";
   };
 
   catppuccin = {
@@ -94,8 +95,8 @@
         gaps_in = 5; # 5
         gaps_out = 10; # 10
         border_size = 1;
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
+        "col.active_border" = lib.mkDefault "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        "col.inactive_border" = lib.mkDefault "rgba(595959aa)";
       };
       decoration = {
         rounding = 15;
@@ -120,7 +121,7 @@
       bind = [
         "$mod, SPACE, layoutmsg, togglesplit"
         "$mod, T, exec, kitty" # Launch terminal
-        "$mod, E, exec, dolphin" # Launch dolphin
+        "$mod, E, exec, thunar" # Launch dolphin
         "$mod, D, exec, rofi -show drun -show-icons" # Launch application menu
         "$mod, G, exec, fuzzel" # Launch application menu
         "$mod, Q, killactive," # Close active window
@@ -175,10 +176,10 @@
     };
   };
 
-  home.file.".config/hypr/hyprpaper.conf".text = ''
-    preload = /home/ahd/wc/axel-doc/kode/nix/home/wall.png
-    preload = /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-9.png
-    preload = /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-10.png
-    wallpaper = , /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-10.png
-    wallpaper = DP-1, /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-9.png'';
+  #home.file.".config/hypr/hyprpaper.conf".text = lib.mkDefault ''
+  #  preload = /home/ahd/wc/axel-doc/kode/nix/home/wall.png
+  #  preload = /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-9.png
+  #  preload = /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-10.png
+  #  wallpaper = , /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-10.png
+  #  wallpaper = DP-1, /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-9.png'';
 }

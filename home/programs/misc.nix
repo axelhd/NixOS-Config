@@ -82,6 +82,8 @@ in
     pavucontrol
     volctl
     playerctl
+    xfce.thunar
+    nemo
     kdePackages.kate
     kdePackages.dolphin
     kdePackages.qtsvg

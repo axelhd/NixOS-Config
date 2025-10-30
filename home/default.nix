@@ -9,6 +9,8 @@
   home.username = "ahd";
   home.homeDirectory = "/home/ahd";
 
+  stylix.enable = true;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
   imports = [
     #inputs.rednix.container
     #inputs.everforest.homeModules.everforest
