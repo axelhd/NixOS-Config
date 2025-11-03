@@ -15,8 +15,10 @@
       vim = {
         theme = {
           enable = true;
-          name = "onedark";
-          style = "cool";
+          #name = "onedark";
+          #style = "cool";
+          name = "oxocarbon";
+          style = "dark";
           transparent = true;
         };
         viAlias = true;

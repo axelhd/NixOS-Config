@@ -112,7 +112,16 @@ in
     vlc
     xnec2c
     openscad
-    freecad
+    #freecad
+    (pkgs.symlinkJoin {
+      name = "freecad";
+      buildInputs = [ pkgs.makeWrapper ];
+      paths = [ pkgs.freecad ];
+      postBuild = ''
+        wrapProgram $out/bin/freecad \
+          --set QT_QPA_PLATFORM xcb
+      '';
+    })
     inkscape
 
     lutris

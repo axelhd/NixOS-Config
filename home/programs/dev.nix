@@ -41,5 +41,9 @@ in
     wireguard-tools
     nim
     devenv
+    arduino-ide
+    arduino
+    dfu-programmer
+    dfu-util
   ];
 }

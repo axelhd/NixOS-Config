@@ -23,6 +23,8 @@
     #./virtualization.nix
   ];
 
+  nixpkgs.config.allowBroken = true;
+
   boot.kernel.sysctl."kernel.sysrq" = 502;
 
   # Bootloader.

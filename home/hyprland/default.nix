@@ -120,6 +120,7 @@
       "$mod" = "SUPER";
       bind = [
         "$mod, SPACE, layoutmsg, togglesplit"
+        "$mod, V, layoutmsg, swapsplit"
         "$mod, T, exec, kitty" # Launch terminal
         "$mod, E, exec, thunar" # Launch dolphin
         "$mod, D, exec, rofi -show drun -show-icons" # Launch application menu
@@ -173,6 +174,9 @@
         "$mod, mouse:272, movewindow" # Move window with mouse
         "$mod, mouse:273, resizewindow" # Resize window with mouse
       ];
+      dwindle = {
+        preserve_split = true; # Needed to make togglesplit work
+      };
     };
   };
 

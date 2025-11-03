@@ -20,5 +20,6 @@ in
     stegsolve
     ghidra
     python313Packages.protobuf
+    urh
   ];
 }
