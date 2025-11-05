@@ -1,0 +1,18 @@
+base16-colors = {
+  base00: "#161616"
+  base01: "#262626"
+  base02: "#393939"
+  base03: "#f5f900" 
+  base04: "#dde1e6"
+  base05: "#6fe0fc"
+  base06: "#ffffff"
+  base07: "#08bdba"
+  base08: "#f2f4f8"
+  base09: "#9752f2"
+  base0A: "#f2f4f8"
+  base0B: "#42be65"
+  base0C: "#f2f4f8"
+  base0D: "#33b1ff"
+  base0E: "#f2f4f8"
+  base0F: "#82cfff"
+};

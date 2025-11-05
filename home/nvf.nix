@@ -17,8 +17,8 @@
           enable = true;
           name = "onedark";
           style = "cool";
-          #name = "oxocarbon";
-          #style = "dark";
+          #name = "rose-pine";
+          #style = "main";
           transparent = true;
         };
         viAlias = true;
