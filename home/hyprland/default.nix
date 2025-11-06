@@ -64,12 +64,21 @@
     enable = true;
     settings = {
       #monitor = ",preferred,auto,1"; # Auto-configure monitors
-      monitor = [
-        "DP-1,1920x1200@60,1920x0,1"
-        "DP-2,1920x1200@60,0x0,1"
-        "DP-3,1920x1200@60,3840x0,1"
-        ",preferred,auto,1"
-      ];
+      monitor =
+        if (builtins.getEnv "HOSTNAME" == "cesar") then
+          #if (config.networking.hostName == "cesar") then
+          [
+            "DP-1,1920x1200@60,1920x0,1"
+            "DP-2,1920x1200@60,0x0,1"
+            "DP-3,1920x1200@60,3840x0,1"
+            ",preferred,auto,1"
+          ]
+        else
+          [
+            "eDP-1,1920x1080@60,0x0,1"
+            "DP-3,1920x1080@60,1920x0,1"
+            ",preferred,auto,1"
+          ];
 
       device = {
         name = "wacom-cintiq-16-pen";

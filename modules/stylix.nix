@@ -9,7 +9,7 @@
   stylix = {
     enable = true;
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
     image = ../home/wallpapers/leaf-16-10.png;
 
     fonts = {

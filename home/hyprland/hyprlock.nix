@@ -65,7 +65,7 @@
         # User
         {
           monitor = "DP-1";
-          text = ''$USER@cesar'';
+          text = "$USER@${builtins.getEnv "HOSTNAME"}";
           font_family = "${config.stylix.fonts.monospace.name}";
           font_size = 35;
           color = "rgb(${config.lib.stylix.colors.base05})";
