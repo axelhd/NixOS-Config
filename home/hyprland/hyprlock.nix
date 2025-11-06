@@ -3,6 +3,7 @@
   pkgs,
   inputs,
   lib,
+  osConfig,
   ...
 }:
 {
@@ -18,7 +19,7 @@
           monitor = "";
           #path = "../wallpapers/leaf-16-10.png"; # Only png supported
           path = "screenshot";
-          blur_passes = 3; # 0 disables blur
+          blur_passes = 1; # 0 disables blur
           contrast = 0.9;
           brightness = 0.8;
           vibrancy = 0.15;
@@ -65,7 +66,7 @@
         # User
         {
           monitor = "DP-1";
-          text = "$USER@${builtins.getEnv "HOSTNAME"}";
+          text = "$USER@${osConfig.networking.hostName}";
           font_family = "${config.stylix.fonts.monospace.name}";
           font_size = 35;
           color = "rgb(${config.lib.stylix.colors.base05})";

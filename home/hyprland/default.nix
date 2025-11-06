@@ -3,6 +3,7 @@
   pkgs,
   inputs,
   lib,
+  osConfig,
   ...
 }:
 
@@ -65,7 +66,7 @@
     settings = {
       #monitor = ",preferred,auto,1"; # Auto-configure monitors
       monitor =
-        if (builtins.getEnv "HOSTNAME" == "cesar") then
+        if (osConfig.networking.hostName == "cesar") then
           #if (config.networking.hostName == "cesar") then
           [
             "DP-1,1920x1200@60,1920x0,1"

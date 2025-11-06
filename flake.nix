@@ -119,14 +119,21 @@
             # make home-manager as a module of nixos
             # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
             home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                inherit extraSpecialArgs;
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.ahd = import ./home;
-              };
-            }
+            (
+              { config, ... }:
+              {
+                home-manager = {
+                  #inherit extraSpecialArgs;
+                  extraSpecialArgs = {
+                    inherit inputs;
+                    inherit (config.networking) hostName;
+                  };
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  users.ahd = import ./home;
+                };
+              }
+            )
           ];
         };
         kali = nixpkgs.lib.nixosSystem {
