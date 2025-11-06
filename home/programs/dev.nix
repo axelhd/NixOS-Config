@@ -45,5 +45,6 @@ in
     arduino
     dfu-programmer
     dfu-util
+    processing
   ];
 }
