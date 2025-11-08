@@ -12,7 +12,7 @@
   imports = [
     inputs.catppuccin.homeModules.catppuccin
     #../waybar
-    ../waybar/eli.nix
+    ../waybar/new.nix
     ./hyprlock.nix
   ];
 
