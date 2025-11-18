@@ -246,10 +246,11 @@
     nix-output-monitor
     cloudflared
     keymapp
-    (blender.override {
-      cudaSupport = true;
-    })
-
+    /*
+      (blender.override {
+        cudaSupport = true;
+      })
+    */
     # FHS
     (
       let

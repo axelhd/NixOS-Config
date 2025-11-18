@@ -1,5 +1,4 @@
-jstest-gtk misc
-abcde misc
-aseprite misc
-
+modrinth
+alvr
+blender
 virtualbox import in config
