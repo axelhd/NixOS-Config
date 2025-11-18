@@ -90,6 +90,14 @@
     hplipWithPlugin
   ];
 
+  services.udev.extraRules = ''
+    # ZSA Moonlander Mark I
+    SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3297", ATTRS{idProduct}=="1969", MODE="0666"
+    # Flash mode
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="04d8", MODE="0666"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE="0666"
+  '';
+
   services.samba = {
     enable = true;
     openFirewall = true;
@@ -237,6 +245,7 @@
     pwndbg
     nix-output-monitor
     cloudflared
+    keymapp
     (blender.override {
       cudaSupport = true;
     })

@@ -129,11 +129,11 @@
       };
       "$mod" = "SUPER";
       bind = [
-        "$mod, SPACE, layoutmsg, togglesplit"
-        "$mod, V, layoutmsg, swapsplit"
+        "$mod, W, layoutmsg, togglesplit"
+        "$mod, P, layoutmsg, swapsplit"
         "$mod, T, exec, kitty" # Launch terminal
-        "$mod, E, exec, thunar" # Launch dolphin
-        "$mod, D, exec, rofi -show drun -show-icons" # Launch application menu
+        "$mod, F, exec, thunar" # Launch dolphin
+        "$mod, A, exec, rofi -show drun -show-icons" # Launch application menu
         "$mod, G, exec, fuzzel" # Launch application menu
         "$mod, Q, killactive," # Close active window
         "$mod, P, exit," # Exit Hyprland session
@@ -141,12 +141,12 @@
         "$mod, N, exec, wofi --show run" # Run command
         "$mod, R, fullscreen"
         "$mod, M, exec, kitty cmatrix"
-        "$mod, Y, exec, hyprlock"
+        "$mod, K, exec, hyprlock"
         # Move focus
         "$mod, h, movefocus, l"
-        "$mod, j, movefocus, d"
-        "$mod, k, movefocus, u"
-        "$mod, l, movefocus, r"
+        "$mod, n, movefocus, d"
+        "$mod, e, movefocus, u"
+        "$mod, i, movefocus, r"
         # Switch workspaces
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"

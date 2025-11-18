@@ -31,6 +31,6 @@
     #top
     tiptop
     vnstat
-    hollywood
+    #hollywood
   ];
 }

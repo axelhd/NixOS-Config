@@ -77,7 +77,7 @@ in
     usbutils # lsusb
 
     obsidian
-    imhex
+    #imhex
 
     pavucontrol
     volctl
