@@ -47,6 +47,7 @@ in
     zstd
     gnupg
     the-powder-toy
+    musescore
 
     # nix related
     #
@@ -168,6 +169,10 @@ in
     pipes-rs
     prismlauncher
     themechanger
+    davinci-resolve
+    steamcmd
+    kdePackages.kdenlive
+
     /*
       (modrinth-app.overrideAttrs (oldAttrs: {
         buildCommand = ''
@@ -179,6 +184,7 @@ in
         + oldAttrs.buildCommand;
       }))
     */
+
   ];
   programs.obs-studio.package = (
     pkgs.obs-studio.override {

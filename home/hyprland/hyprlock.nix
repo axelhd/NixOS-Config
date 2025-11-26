@@ -28,7 +28,7 @@
       ];
       input-field = lib.mkForce [
         {
-          monitor = "DP-1";
+          monitor = "";
           size = "280, 80";
           outline_thickness = 2;
           #outer_color = "$base";
@@ -65,7 +65,7 @@
 
         # User
         {
-          monitor = "DP-1";
+          monitor = "";
           text = "$USER@${osConfig.networking.hostName}";
           font_family = "${config.stylix.fonts.monospace.name}";
           font_size = 35;

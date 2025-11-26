@@ -17,7 +17,7 @@ in
     sonic-visualiser
     zsteg
     qsstv
-    stegsolve
+    #stegsolve
     ghidra
     python313Packages.protobuf
     urh

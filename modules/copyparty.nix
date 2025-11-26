@@ -14,12 +14,11 @@
       # use lists to set multiple values
       p = [
         3210
-        3211
       ];
     };
     volumes = {
       "/" = {
-        path = "/home/ahd/Music/cd/";
+        path = "/home/ahd/zomboid/";
         access = {
           r = "*";
         };

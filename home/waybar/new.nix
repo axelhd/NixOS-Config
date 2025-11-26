@@ -18,6 +18,7 @@
         modules-left = [
           "custom/notification"
           "clock"
+          "tray"
         ];
         modules-center = [
           "hyprland/workspaces"
@@ -27,7 +28,10 @@
           "network"
           "battery"
         ];
-
+        tray = {
+          icon-size = 14;
+          spacing = 10;
+        };
         "hyprland/workspaces" = {
           format = "{name}";
           format-icons = {
