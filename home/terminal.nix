@@ -53,6 +53,8 @@
 
   home.file.".config/fastfetch/nix.png".source = ./nix.png;
 
+  home.file."~/.subversion/config".source = ./svnconfig;
+
   programs.kitty = lib.mkForce {
     enable = true;
     settings = {
