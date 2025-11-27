@@ -12,6 +12,21 @@
     enable = true;
     settings.user.name = "Axel Hajslund Damgaard";
     settings.user.email = "axel@hajslunddamgaard.dk";
+
+    signing = {
+      key = "~/.ssh/id_ed25519.pub";
+      signByDefault = true; # enables commit.gpgSign = true
+    };
+
+    extraConfig = {
+      gpg.format = "ssh";
+
+      # Optional but very commonly wanted – sign tags too:
+      tag.gpgSign = true;
+
+      # Optional – only needed if you want local verification (git log --show-signature) to work without GitHub:
+      # gpg.ssh.allowedSignersFile = "${config.home.homeDirectory}/.ssh/allowed_signers";
+    };
   };
 
   # starship - an customizable prompt for any shell

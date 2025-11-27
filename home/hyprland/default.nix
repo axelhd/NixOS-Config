@@ -69,7 +69,7 @@
         if (osConfig.networking.hostName == "cesar") then
           #if (config.networking.hostName == "cesar") then
           [
-            "DP-1,3840x2160@60,1920x0,2"
+            "DP-1,1920x1080@60,1920x0,1"
             "DP-2,1920x1200@60,0x0,1"
             "DP-3,1920x1200@60,3840x0,1"
             ",preferred,auto,1"
@@ -85,10 +85,6 @@
       };
 
       # toolkit-specific scale
-      env = [
-        "GDK_SCALE,2"
-        "XCURSOR_SIZE,32"
-      ];
       device = {
         name = "wacom-cintiq-16-pen";
         output = "HDMI-A-1";
