@@ -46,5 +46,6 @@ in
     dfu-programmer
     dfu-util
     processing
+    raylib
   ];
 }
