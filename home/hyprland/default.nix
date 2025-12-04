@@ -38,7 +38,7 @@
 
   programs.rofi = {
     enable = true;
-    theme = lib.mkForce "/home/ahd/wc/axel-doc/kode/nix/home/hyprland/rofi.rasi";
+    theme = lib.mkForce "/home/ahd/wc/nix/home/hyprland/rofi.rasi";
   };
 
   catppuccin = {
@@ -95,7 +95,7 @@
       };
 
       exec-once = [
-        "vlc --play-and-exit --fullscreen --no-video-title-show --quiet ~/wc/axel-doc/kode/nix/home/hyprland/startup.mkv"
+        "vlc --play-and-exit --fullscreen --no-video-title-show --quiet ~/wc/nix/home/hyprland/startup.mkv"
         "hyprpaper &" # Start wallpaper
         "waybar &" # Start waybar
         "dunst &" # Start notification daemon
@@ -195,9 +195,9 @@
   };
 
   #home.file.".config/hypr/hyprpaper.conf".text = lib.mkDefault ''
-  #  preload = /home/ahd/wc/axel-doc/kode/nix/home/wall.png
-  #  preload = /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-9.png
-  #  preload = /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-10.png
-  #  wallpaper = , /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-10.png
-  #  wallpaper = DP-1, /home/ahd/wc/axel-doc/kode/nix/home/wallpapers/leaf-16-9.png'';
+  #  preload = /home/ahd/wc/nix/home/wall.png
+  #  preload = /home/ahd/wc/nix/home/wallpapers/leaf-16-9.png
+  #  preload = /home/ahd/wc/nix/home/wallpapers/leaf-16-10.png
+  #  wallpaper = , /home/ahd/wc/nix/home/wallpapers/leaf-16-10.png
+  #  wallpaper = DP-1, /home/ahd/wc/nix/home/wallpapers/leaf-16-9.png'';
 }
