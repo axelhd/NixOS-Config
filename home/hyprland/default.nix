@@ -131,6 +131,10 @@
           "workspaces, 1, 6, default"
         ];
       };
+      windowrule = [
+        "float,title:swall"
+        "move 11 61,title:swall"
+      ];
       "$mod" = "SUPER";
       bind = [
         "$mod, W, layoutmsg, togglesplit"
@@ -140,7 +144,7 @@
         "$mod, A, exec, rofi -show drun -show-icons" # Launch application menu
         "$mod, G, exec, fuzzel" # Launch application menu
         "$mod, Q, killactive," # Close active window
-        "$mod, G, exit," # Exit Hyprland session
+        #"$mod, G, exit," # Exit Hyprland session
         "$mod, F, togglefloating," # Toggle floating window
         "$mod, N, exec, wofi --show run" # Run command
         "$mod, R, fullscreen"

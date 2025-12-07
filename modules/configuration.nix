@@ -246,11 +246,11 @@
     nix-output-monitor
     cloudflared
     keymapp
-    /*
-      (blender.override {
-        cudaSupport = true;
-      })
-    */
+
+    (blender.override {
+      cudaSupport = true;
+    })
+
     # FHS
     (
       let
@@ -308,6 +308,8 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.hack
   ];
+
+  #programs.swall.enable = true;
 
   nixpkgs.config.permittedInsecurePackages = [
   ];

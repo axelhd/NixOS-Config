@@ -58,6 +58,8 @@
 
     copyparty.url = "github:9001/copyparty";
 
+    swall.url = "path:/home/ahd/wc/axel-doc/kode/PycharmProjects/wallswitcher";
+
   };
 
   outputs =
@@ -72,6 +74,7 @@
       pwndbg,
       stylix,
       copyparty,
+      swall,
       ...
     }@inputs:
     let
