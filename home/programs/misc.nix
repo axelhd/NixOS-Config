@@ -48,6 +48,8 @@ in
     gnupg
     the-powder-toy
     musescore
+    gamma-launcher
+    bottles
 
     # nix related
     #
@@ -173,17 +175,15 @@ in
     steamcmd
     kdePackages.kdenlive
 
-    /*
-      (modrinth-app.overrideAttrs (oldAttrs: {
-        buildCommand = ''
-          					gappsWrapperArgs+=(
-          						--set GDK_BACKEND x11
-          						--set WEBKIT_DISABLE_DMABUF_RENDERER 1
-          					)
-          				''
-        + oldAttrs.buildCommand;
-      }))
-    */
+    (modrinth-app.overrideAttrs (oldAttrs: {
+      buildCommand = ''
+        					gappsWrapperArgs+=(
+        						--set GDK_BACKEND x11
+        						--set WEBKIT_DISABLE_DMABUF_RENDERER 1
+        					)
+        				''
+      + oldAttrs.buildCommand;
+    }))
 
   ];
   programs.obs-studio.package = (
