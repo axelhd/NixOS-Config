@@ -253,10 +253,6 @@
     cloudflared
     keymapp
 
-    (blender.override {
-      cudaSupport = true;
-    })
-
     # FHS
     (
       let
