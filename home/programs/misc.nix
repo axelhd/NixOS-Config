@@ -95,7 +95,7 @@ in
     kdePackages.gwenview
     thunderbird
     firefox
-    wine
+    #wine
     keepassxc
     signal-desktop
     ipfetch

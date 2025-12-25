@@ -10,7 +10,7 @@
     enable = true;
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
-    image = ../home/wallpapers/stalker/strelok_night.jpg;
+    image = ../home/wallpapers/stalker/strelok_night.png;
 
     fonts = {
       monospace = {

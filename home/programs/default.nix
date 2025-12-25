@@ -9,5 +9,6 @@
     ./dev.nix
     ./sec.nix
     ./misc.nix
+    ./typst.nix
   ];
 }
