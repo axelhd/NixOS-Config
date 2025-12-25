@@ -176,6 +176,33 @@
             }
           ];
         };
+        venus = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            # Import the previous configuration.nix we used,
+            # so the old configuration file still takes effect
+            ./host/venus/configuration.nix
+            catppuccin.nixosModules.catppuccin
+            everforest.nixosModules.everforest
+            stylix.nixosModules.stylix
+            copyparty.nixosModules.default
+            #nvf.nixosModules.default
+            #./immich.nix
+
+            # make home-manager as a module of nixos
+            # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                inherit extraSpecialArgs;
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.ahd = import ./home;
+              };
+            }
+          ];
+        };
 
       };
       "ahd@cesar" = home-manager.lib.homeManagerConfiguration {
@@ -187,6 +214,15 @@
         ];
       };
       "ahd@kali" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [
+          nvf.homeManagerModules.default # <- this imports the home-manager module that provides the options
+          #./home # <- your home entrypoint, `programs.nvf.*` may be defined here
+          stylix.homeModules.stylix
+        ];
+      };
+
+      "ahd@venus" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           nvf.homeManagerModules.default # <- this imports the home-manager module that provides the options
