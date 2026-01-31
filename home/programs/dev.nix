@@ -12,10 +12,10 @@ in
     vscodium
     jetbrains.clion
     jetbrains.dataspell
-    jetbrains.pycharm-professional
+    jetbrains.pycharm
     jetbrains.rust-rover
     jetbrains.rider
-    jetbrains.idea-ultimate
+    jetbrains.idea
     rustlings
     dbeaver-bin
     octaveFull
@@ -48,4 +48,11 @@ in
     processing
     raylib
   ];
-}
+
+  home.file.".wakatime.cfg".text = ''
+[settings]
+api_url = https://hackatime.hackclub.com/api/hackatime/v1
+api_key = 0d7d68c3-f4c4-4968-b055-b20648f6ae50
+heartbeat_rate_limit_seconds = 30
+  '';
+ }

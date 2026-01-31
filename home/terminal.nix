@@ -18,7 +18,7 @@
       signByDefault = true; # enables commit.gpgSign = true
     };
 
-    extraConfig = {
+    settings = {
       gpg.format = "ssh";
 
       # Optional but very commonly wanted – sign tags too:
@@ -64,7 +64,7 @@
       enable_audio_bell = false;
       mouse_hide_wait = "-1.0";
       window_padding_width = 3;
-      background_opacity = "0.7";
+      background_opacity = "1"; # "0.7" for transparency
       background_blur = 10;
       symbol_map =
         let

@@ -132,8 +132,7 @@
         ];
       };
       windowrule = [
-        "float,title:swall"
-        "move 11 61,title:swall"
+        "match:title swall, float on, move 11 61"
       ];
       "$mod" = "SUPER";
       bind = [

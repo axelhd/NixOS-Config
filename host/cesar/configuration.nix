@@ -23,6 +23,7 @@
     ../../modules/copyparty.nix
     ../../modules/stylix.nix
     ../../modules/joy.nix
+    ../../modules/warp.nix
   ];
   networking.hostName = "cesar"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

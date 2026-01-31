@@ -2,3 +2,4 @@ modrinth
 alvr
 blender
 virtualbox import in config
+sonic-visualizer

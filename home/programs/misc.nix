@@ -85,7 +85,7 @@ in
     pavucontrol
     volctl
     playerctl
-    xfce.thunar
+    thunar
     nemo
     kdePackages.kate
     kdePackages.dolphin
@@ -115,6 +115,7 @@ in
     vlc
     xnec2c
     openscad
+    gnome-terminal
     #freecad
     (pkgs.symlinkJoin {
       name = "freecad";
@@ -173,7 +174,9 @@ in
     themechanger
     davinci-resolve
     steamcmd
-    kdePackages.kdenlive
+    #kdePackages.kdenlive
+    forge-mtg
+    pscircle
 
     (modrinth-app.overrideAttrs (oldAttrs: {
       buildCommand = ''

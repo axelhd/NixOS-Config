@@ -92,12 +92,6 @@
         inherit system;
         inherit inputs;
       }; # <- passing inputs to the attribute set for NixOS (optional)
-      keymaxOverlay = import ./overlays/keymax.nix;
-      winePkgs = import inputs.nixpkgs {
-        inherit system;
-        overlays = [ keymaxOverlay ];
-        config.allowUnfree = true;
-      };
     in
     {
       # Please replace my-nixos with your hostname
@@ -117,11 +111,10 @@
               { pkgs, ... }:
               {
                 # add the copyparty overlay to expose the package to the module
-                nixpkgs.overlays = [ copyparty.overlays.default ];
+                nixpkgs.overlays = [ copyparty.overlays.default];
                 # (optional) install the package globally
                 environment.systemPackages = [
                   pkgs.copyparty
-                  winePkgs.wineWowPackages.staging
                 ];
 
               }

@@ -21,6 +21,8 @@
 
   imports = [
     #./virtualization.nix
+    #./i2p.nix
+    ./restic.nix
   ];
 
   nixpkgs.config.allowBroken = true;

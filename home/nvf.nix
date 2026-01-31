@@ -65,12 +65,22 @@
           typst.enable = true;
           rust = {
             enable = true;
-            crates.enable = true;
+            extensions.crates-nvim.enable = true;
           };
           assembly.enable = true;
           csharp.enable = true;
           nim.enable = true;
         };
+
+        #TEMPORARY FIX TO FIX BROKEN PLUGINS AFTER TREESITTER MOVAL
+
+      extraPlugins.nvim-treesitter-textobjects = {
+  package = pkgs.vimPlugins.nvim-treesitter-textobjects;
+};
+ 
+  
+
+
 
         visuals = {
           nvim-scrollbar.enable = true;

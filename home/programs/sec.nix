@@ -14,7 +14,7 @@ in
     gdb
     avalonia-ilspy
     audacity
-    sonic-visualiser
+    #sonic-visualiser
     zsteg
     qsstv
     #stegsolve
