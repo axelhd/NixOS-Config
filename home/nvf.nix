@@ -125,7 +125,10 @@
           nvimBufferline.enable = true;
         };
 
-        treesitter.context.enable = true;
+        treesitter = { 
+          context.enable = true;
+          textobjects.enable = true;
+        };
 
         binds = {
           whichKey.enable = true;
@@ -195,8 +198,8 @@
           modes-nvim.enable = false; # the theme looks terrible with catppuccin
           illuminate.enable = true;
           breadcrumbs = {
-            enable = true;
-            navbuddy.enable = true;
+            enable = false;
+            navbuddy.enable = false;
           };
           smartcolumn = {
             enable = true;

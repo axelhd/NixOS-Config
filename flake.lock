@@ -113,11 +113,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1769809780,
-        "narHash": "sha256-4Q2f/wyj8cD1nRP8aUxwIcKXypksczZfnLbgBQD4tvY=",
+        "lastModified": 1769886676,
+        "narHash": "sha256-bdQnwdB6iv+TjTLngfXY/8ys7ZcqdM6lVg14hc0RyiA=",
         "owner": "9001",
         "repo": "copyparty",
-        "rev": "32c11f142e2b4c59b22e2e6df1cc85487c1d5999",
+        "rev": "72224d29d627c2cc5632bf74b43eb5edb9e3cdb7",
         "type": "github"
       },
       "original": {
@@ -336,11 +336,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769813945,
-        "narHash": "sha256-9ABv9Lo9t6MrFjlnRnU8Zw1C6LVj2+R8PipQ/rxGLHk=",
+        "lastModified": 1769872935,
+        "narHash": "sha256-07HMIGQ/WJeAQJooA7Kkg1SDKxhAiV6eodvOwTX6WKI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "475921375def3eb930e1f8883f619ff8609accb6",
+        "rev": "f4ad5068ee8e89e4a7c2e963e10dd35cd77b37b7",
         "type": "github"
       },
       "original": {
@@ -765,8 +765,8 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1766440994,
-        "narHash": "sha256-Pbs/WXcK+68qOsv7pZ7KneKSGiwwOZ5B6O+i/h0cS9k=",
+        "lastModified": 1769862313,
+        "narHash": "sha256-rhlfZXN3Dx97ZJQ1cu6UGdevFvKUveaEDS6tHND45bc=",
         "path": "/home/ahd/wc/axel-doc/kode/PycharmProjects/wallswitcher",
         "type": "path"
       },

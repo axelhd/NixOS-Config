@@ -24,6 +24,9 @@
           "hyprland/workspaces"
         ];
         modules-right = [
+          "mpris"
+          "wireplumber#sink"
+          "wireplumber#source"
           "bluetooth"
           "network"
           "battery"
@@ -42,10 +45,11 @@
           #persistent-workspaces = {"*" = [1 2 3 4 5 ]; };
         };
 
+
         clock = {
           format = "{:%I:%M:%S %p} ";
           interval = 1;
-          tooltip-format = "<tt>{calender}</tt>";
+          tooltip-format = "<tt>{calendar}</tt>";
           calender = {
             format = {
               today = "<span color='#fAfBfC'><br>{}</br></span>";
@@ -58,13 +62,13 @@
         };
 
         network = {
-          format-wifi = "";
-          format-ethernet = "";
-          format-disconnected = "";
+          format-wifi = " ";
+          format-ethernet = " ";
+          format-disconnected = " ";
           tooltip-format-disconnected = "No connection";
-          tooltip-format-wifi = "{essid} ({signalStrength}%) ";
-          tooltip-format-ethernet = "{ifname} 🖧";
-          on-click = "ketty nmtui";
+          tooltip-format-wifi = "{essid} ({signalStrength}%)  ";
+          tooltip-format-ethernet = "{ifname} 🖧 ";
+          on-click = "kitty nmtui";
         };
 
         bluetooth = {
@@ -100,6 +104,38 @@
             "󰁹"
           ];
         };
+
+        mpris = {
+          format = "{player_icon} {dynamic}";
+          format-paused = "{status_icon} <i>{dynamic}</i>";
+          player-icons = {
+            default = "▶";
+          };
+          status-icons = {
+            paused = "⏸";
+          };
+          max-length = 30;
+        };
+
+        "wireplumber#sink" = {
+          format = "{volume}%  {icon}";
+          tooltip-format = "{volume}%";
+          format-muted = "󰝟  ";
+          format-icons = ["  " "  " "  "];
+          on-click = "pavucontrol";
+          on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          scroll-step = 5;
+        };
+
+        "wireplumber#source" = {
+          node-type = "Audio/Source";
+          tooltip-format = "{volume}%";
+          format = "";
+          format-muted = " ";
+          on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+          scroll-step = 5;
+        };
+
       };
     };
     style = ''
@@ -197,6 +233,8 @@
           color:#${config.lib.stylix.colors.base04};
 
       }
+      #mpris,
+      #wireplumber,
       #network{
           padding: 0px 5px;
           transition: all .3s ease;
@@ -268,6 +306,12 @@
           padding: 0px 5px;
           transition: all .3s ease; 
       }
+
+
+      #wireplumber.muted {
+        color: rgb(255, 0, 0);
+      }
+
 
     '';
   };
