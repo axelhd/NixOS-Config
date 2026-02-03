@@ -20,7 +20,7 @@
     wofi
     waybar
     hyprpaper
-    dunst
+    #dunst
     kitty
     swaylock
     wl-clipboard
@@ -35,6 +35,38 @@
     hyprshot
     nwg-look
   ];
+
+  services.dunst = {
+    enable = true;
+    configFile = ./dunstrc2;
+   /* settigs = {
+      width = "(100, 300)";
+      height = "(0, 300)";
+      origin = "top-right";
+      offset = "(5, 15)";
+      progress_bar = true;
+      progress_bar_height = 14;
+      progress_bar_frame_width = 0;
+      progress_bar_min_width = 100;
+      progress_bar_max_width = 300;
+      progress_bar_corner_radius = 50;
+      progress_bar_corners = "bottom-left, top-right";
+      icon_corner_radius = 5;
+      icon_corners = "all";
+      indicate_hidden = "yes";
+      transparency = 50;
+      separator_height = 6;
+      padding = 10;
+      horizontal_padding = 8;
+      text_icon_padding = 12;
+      frame_width = 1;
+      frame_color = "#ff0000"; # TODO: replace with stylix value 
+      gap_size = 6;
+      separator_color = auto;
+      markup = "full";
+      format = "<b>%s</b>\n%b";
+    }; */
+  };
 
   programs.rofi = {
     enable = true;

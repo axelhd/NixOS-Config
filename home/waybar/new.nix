@@ -6,7 +6,6 @@
   lib,
   ...
 }:
-
 {
   programs.waybar = {
     enable = true;
@@ -25,8 +24,7 @@
         ];
         modules-right = [
           "mpris"
-          "wireplumber#sink"
-          "wireplumber#source"
+          "pipewire"
           "bluetooth"
           "network"
           "battery"
@@ -42,17 +40,14 @@
             default = "";
             empty = "";
           };
-          #persistent-workspaces = {"*" = [1 2 3 4 5 ]; };
         };
-
-
         clock = {
           format = "{:%I:%M:%S %p} ";
           interval = 1;
-          tooltip-format = "<tt>{calendar}</tt>";
+          tooltip-format = "{calendar}";
           calender = {
             format = {
-              today = "<span color='#fAfBfC'><br>{}</br></span>";
+              today = "{}";
             };
           };
           actions = {
@@ -60,7 +55,6 @@
             on-click = "shift_up";
           };
         };
-
         network = {
           format-wifi = " ";
           format-ethernet = " ";
@@ -70,7 +64,6 @@
           tooltip-format-ethernet = "{ifname} 🖧 ";
           on-click = "kitty nmtui";
         };
-
         bluetooth = {
           format-on = "󰂯";
           format-off = "BT Off";
@@ -83,7 +76,6 @@
           tooltip-format-enumerate-connected-battery = "{device_alias}\n{device_address}\n{device_battery_percentage}%";
           on-click-right = "blueman-manager";
         };
-
         battery = {
           interval = 30;
           states = {
@@ -104,10 +96,9 @@
             "󰁹"
           ];
         };
-
         mpris = {
           format = "{player_icon} {dynamic}";
-          format-paused = "{status_icon} <i>{dynamic}</i>";
+          format-paused = "{status_icon} {dynamic}";
           player-icons = {
             default = "▶";
           };
@@ -116,26 +107,19 @@
           };
           max-length = 30;
         };
-
-        "wireplumber#sink" = {
-          format = "{volume}%  {icon}";
-          tooltip-format = "{volume}%";
-          format-muted = "󰝟  ";
-          format-icons = ["  " "  " "  "];
+        pipewire = {
+          format = "{volume}% {icon} {format_source}";
+          format-muted = "{icon} {format_source}";
+          muted-icon = "󰝟 ";
+          format-icons = [ " " " " " " ];
+          format-source = " ";
+          format-source-muted = "  ";
+          tooltip-format = "Speaker: {volume}%\nMicrophone: {source_volume}%";
           on-click = "pavucontrol";
           on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          on-click-middle = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
           scroll-step = 5;
         };
-
-        "wireplumber#source" = {
-          node-type = "Audio/Source";
-          tooltip-format = "{volume}%";
-          format = "";
-          format-muted = " ";
-          on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-          scroll-step = 5;
-        };
-
       };
     };
     style = ''
@@ -189,7 +173,6 @@
           padding: 0px 5px;
           transition: all .3s ease;
           color:#${config.lib.stylix.colors.base04};
-
       }
       #workspaces {
           padding: 0px 5px;
@@ -231,31 +214,25 @@
           padding: 0px 5px;
           transition: all .3s ease;
           color:#${config.lib.stylix.colors.base04};
-
       }
       #mpris,
-      #wireplumber,
+      #pipewire,
       #network{
           padding: 0px 5px;
           transition: all .3s ease;
           color:#${config.lib.stylix.colors.base04};
-
       }
       #battery{
           padding: 0px 5px;
           transition: all .3s ease;
           color:#${config.lib.stylix.colors.base04};
-
-
       }
       #battery.charging {
           color: #26A65B;
       }
-
       #battery.warning:not(.charging) {
           color: #ffbe61;
       }
-
       #battery.critical:not(.charging) {
           color: #f53c3c;
           animation-name: blink;
@@ -266,13 +243,13 @@
       }
       #group-expand{
           padding: 0px 5px;
-          transition: all .3s ease; 
+          transition: all .3s ease;
       }
       #custom-expand{
           padding: 0px 5px;
           color:alpha(#${config.lib.stylix.colors.base04},.2);
           text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
-          transition: all .3s ease; 
+          transition: all .3s ease;
       }
       #custom-expand:hover{
           color:rgba(255,255,255,.2);
@@ -283,36 +260,28 @@
       }
       #cpu,#memory,#temperature{
           padding: 0px 5px;
-          transition: all .3s ease; 
+          transition: all .3s ease;
           color:#${config.lib.stylix.colors.base04};
-
       }
       #custom-endpoint{
           color:transparent;
           text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
-
       }
       #tray{
           padding: 0px 5px;
-          transition: all .3s ease; 
-
+          transition: all .3s ease;
       }
       #tray menu * {
           padding: 0px 5px;
-          transition: all .3s ease; 
+          transition: all .3s ease;
       }
-
       #tray menu separator {
           padding: 0px 5px;
-          transition: all .3s ease; 
+          transition: all .3s ease;
       }
-
-
-      #wireplumber.muted {
+      #pipewire.muted {
         color: rgb(255, 0, 0);
       }
-
-
     '';
   };
 }
