@@ -72,16 +72,6 @@
           nim.enable = true;
         };
 
-        #TEMPORARY FIX TO FIX BROKEN PLUGINS AFTER TREESITTER MOVAL
-
-      extraPlugins.nvim-treesitter-textobjects = {
-  package = pkgs.vimPlugins.nvim-treesitter-textobjects;
-};
- 
-  
-
-
-
         visuals = {
           nvim-scrollbar.enable = true;
           nvim-web-devicons.enable = true;
@@ -198,8 +188,8 @@
           modes-nvim.enable = false; # the theme looks terrible with catppuccin
           illuminate.enable = true;
           breadcrumbs = {
-            enable = false;
-            navbuddy.enable = false;
+            enable = true;
+            navbuddy.enable = true; 
           };
           smartcolumn = {
             enable = true;

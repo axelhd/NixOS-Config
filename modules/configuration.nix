@@ -23,6 +23,7 @@
     #./virtualization.nix
     #./i2p.nix
     ./restic.nix
+    ./sddm.nix
   ];
 
   nixpkgs.config.allowBroken = true;
