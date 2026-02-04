@@ -47,6 +47,7 @@ in
     dfu-util
     processing
     raylib
+    libnotify
   ];
 
   home.file.".wakatime.cfg".text = ''
