@@ -1,1 +1,0 @@
-/home/ahd/.config/home-manager/home.nix
