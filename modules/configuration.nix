@@ -313,6 +313,7 @@
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
     nerd-fonts.hack
+    (callPackage ../pkgs/fragile-bombers-attack-font.nix { })
   ];
 
   #programs.swall.enable = true;
