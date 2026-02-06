@@ -175,6 +175,7 @@
       "docekr"
       "dialout"
       "input"
+      "hamachi"
     ];
     shell = pkgs.nushell;
     #packages = with pkgs; [

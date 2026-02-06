@@ -48,5 +48,15 @@
     (blender.override {
       cudaSupport = true;
     })
+
+    haguichi
+    logmein-hamachi
   ];
+
+  services.logmein-hamachi.enable = true;
+  users.users.ahd.extraGroups = [ "hamachi" ];
+
+  networking.firewall = {
+  allowedUDPPorts = [ 2302 2303 2304 2305 2306 ];
+};
 }
