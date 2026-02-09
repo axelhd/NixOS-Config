@@ -105,6 +105,9 @@ in
     imagemagick
 
     libreoffice-qt6-fresh
+    hunspell
+    hunspellDicts.da_DK
+    hunspellDicts.en_GB-large
     xclicker
     #kdePackages.kwallet
     bc
@@ -177,6 +180,9 @@ in
     #kdePackages.kdenlive
     forge-mtg
     pscircle
+    upscayl
+    arma3-unix-launcher
+    protonup-qt
 
     (modrinth-app.overrideAttrs (oldAttrs: {
       buildCommand = ''

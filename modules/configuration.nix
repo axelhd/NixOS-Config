@@ -194,6 +194,7 @@
   security.polkit.enable = true;
 
   programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
 
   services.flatpak.enable = true;
 

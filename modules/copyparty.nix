@@ -18,7 +18,7 @@
     };
     volumes = {
       "/" = {
-        path = "/home/ahd/zomboid/";
+        path = "/home/ahd/copyparty/";
         access = {
           r = "*";
         };

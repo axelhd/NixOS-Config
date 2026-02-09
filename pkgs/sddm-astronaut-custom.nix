@@ -9,15 +9,15 @@
 }:
 stdenvNoCC.mkDerivation rec {
   pname = "sddm-astronaut";
-  version = "1.0-unstable-2025-01-05";
+  version = "1.5";
 
-  src = fetchFromGitea {
+  src = /home/ahd/sddm-astronaut-theme-master; /* fetchFromGitea {
     domain = "codeberg.org";
     owner = "Axe";
     repo = "sddm-phantom-theme";
     rev = "4bfce425c952b66795e30c36c1ad8c8049a1e54c";
     hash = "sha256-Df7yXG7PIIYAETtM+XnrC8bh0tq9QCAQeLYCAeuy/8k="; # lib.fakeSha256; # replace after first build
-  };
+  }; */
 
   dontWrapQtApps = true;
 

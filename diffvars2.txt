@@ -1,0 +1,2937 @@
+1,2c1,2
+< BASH=/nix/store/x12lw455sq6qy2wcya85d7rb88ybc3df-bash-interactive-5.3p9/bin/bash
+< BASHOPTS=checkwinsize:cmdhist:complete_fullquote:extquote:force_fignore:globasciiranges:globskipdots:hostcomplete:interactive_comments:patsub_replacement:progcomp:promptvars:sourcepath
+---
+> BASH=/etc/profiles/per-user/ahd/bin/bash
+> BASHOPTS=checkjobs:checkwinsize:cmdhist:complete_fullquote:expand_aliases:extglob:extquote:force_fignore:globasciiranges:globskipdots:globstar:histappend:interactive_comments:patsub_replacement:progcomp:promptvars:sourcepath
+4c4
+< BASH_ARGC=()
+---
+> BASH_ARGC=([0]="0")
+7c7
+< BASH_EXECUTION_STRING='set > /tmp/sddmvars.txt'
+---
+> BASH_COMPLETION_VERSINFO=([0]="2" [1]="17" [2]="0")
+9a10
+> BASH_REMATCH=([0]=":emacs:" [1]="emacs")
+12a14,23
+> CMD_DURATION_MS=2
+> COLORTERM=truecolor
+> COLUMNS=189
+> COMP_FILEDIR_FALLBACK=BASH_COMPLETION_FILEDIR_FALLBACK
+> COMP_KNOWN_HOSTS_WITH_AVAHI=BASH_COMPLETION_KNOWN_HOSTS_WITH_AVAHI
+> COMP_KNOWN_HOSTS_WITH_HOSTFILE=BASH_COMPLETION_KNOWN_HOSTS_WITH_HOSTFILE
+> CUPS_DATADIR=/nix/store/2w9n66d88favly0bc7qinwqyzlnsd3jr-cups-progs/share/cups
+> CURRENT_FILE=/nix/store/immpdv6r6yx0ymfk5fagdc6z9inid0vy-starship-nushell-config.nu
+> DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+> DESKTOP_SESSION=hyprland
+14c25,29
+< EUID=0
+---
+> DISPLAY=:0
+> EDITOR=nano
+> EUID=1000
+> FILE_PWD=/nix/store
+> GIO_EXTRA_MODULES=/nix/store/y6g997yn1jkg03lb9j2y5gih7ljxkg5s-dconf-0.49.0-lib/lib/gio/modules
+15a31,38
+> GTK2_RC_FILES=/home/ahd/.gtkrc-2.0
+> GTK_A11Y=none
+> GTK_PATH=/home/ahd/.local/share/flatpak/exports/lib/gtk-2.0:/home/ahd/.local/share/flatpak/exports/lib/gtk-3.0:/home/ahd/.local/share/flatpak/exports/lib/gtk-4.0:/var/lib/flatpak/exports/lib/gtk-2.0:/var/lib/flatpak/exports/lib/gtk-3.0:/var/lib/flatpak/exports/lib/gtk-4.0:/home/ahd/.nix-profile/lib/gtk-2.0:/home/ahd/.nix-profile/lib/gtk-3.0:/home/ahd/.nix-profile/lib/gtk-4.0:/nix/profile/lib/gtk-2.0:/nix/profile/lib/gtk-3.0:/nix/profile/lib/gtk-4.0:/home/ahd/.local/state/nix/profile/lib/gtk-2.0:/home/ahd/.local/state/nix/profile/lib/gtk-3.0:/home/ahd/.local/state/nix/profile/lib/gtk-4.0:/etc/profiles/per-user/ahd/lib/gtk-2.0:/etc/profiles/per-user/ahd/lib/gtk-3.0:/etc/profiles/per-user/ahd/lib/gtk-4.0:/nix/var/nix/profiles/default/lib/gtk-2.0:/nix/var/nix/profiles/default/lib/gtk-3.0:/nix/var/nix/profiles/default/lib/gtk-4.0:/run/current-system/sw/lib/gtk-2.0:/run/current-system/sw/lib/gtk-3.0:/run/current-system/sw/lib/gtk-4.0
+> HISTFILE=/home/ahd/.bash_history
+> HISTFILESIZE=100000
+> HISTSIZE=10000
+> HL_INITIAL_WORKSPACE_TOKEN=c1d719a5-cc95-416b-90d8-4d692a91f176
+> HOME=/home/ahd
+17a41,42
+> HYPRLAND_CMD='/etc/profiles/per-user/ahd/bin/Hyprland --watchdog-fd 4'
+> HYPRLAND_INSTANCE_SIGNATURE=dd220efe7b1e292415bd0ea7161f63df9c95bfd3_1770474554_1758527500
+19,20c44,48
+< INVOCATION_ID=0ff59fc4e7a24cdc83fa8fa8f943d7c6
+< JOURNAL_STREAM=9:9978
+---
+> INFOPATH=/home/ahd/.local/share/flatpak/exports/info:/home/ahd/.local/share/flatpak/exports/share/info:/var/lib/flatpak/exports/info:/var/lib/flatpak/exports/share/info:/home/ahd/.nix-profile/info:/home/ahd/.nix-profile/share/info:/nix/profile/info:/nix/profile/share/info:/home/ahd/.local/state/nix/profile/info:/home/ahd/.local/state/nix/profile/share/info:/etc/profiles/per-user/ahd/info:/etc/profiles/per-user/ahd/share/info:/nix/var/nix/profiles/default/info:/nix/var/nix/profiles/default/share/info:/run/current-system/sw/info:/run/current-system/sw/share/info
+> KITTY_INSTALLATION_DIR=/nix/store/qdasxfq8h98a834hva8hkvrynpamwa0z-kitty-0.45.0/lib/kitty
+> KITTY_PID=56372
+> KITTY_PUBLIC_KEY='1:MdCskLp#hDl}r-L5-hB(arXzSyVE+=AMfJ_>MuwU'
+> KITTY_WINDOW_ID=1
+21a50
+> LAST_EXIT_CODE=0
+31c60,66
+< LOCALE_ARCHIVE=/nix/store/y8apx4v2c16qak8c7i95zzrppf9rcbh1-glibc-locales-2.42-47/lib/locale/locale-archive
+---
+> LESSKEYIN_SYSTEM=/nix/store/qg4r1hfknh537410fpiz8x83d2wzkq6f-lessconfig
+> LIBEXEC_PATH=/home/ahd/.local/share/flatpak/exports/libexec:/var/lib/flatpak/exports/libexec:/home/ahd/.nix-profile/libexec:/nix/profile/libexec:/home/ahd/.local/state/nix/profile/libexec:/etc/profiles/per-user/ahd/libexec:/nix/var/nix/profiles/default/libexec:/run/current-system/sw/libexec
+> LINES=61
+> LOCALE_ARCHIVE=/run/current-system/sw/lib/locale/locale-archive
+> LOCALE_ARCHIVE_2_27=/nix/store/y8apx4v2c16qak8c7i95zzrppf9rcbh1-glibc-locales-2.42-47/lib/locale/locale-archive
+> LOGNAME=ahd
+> LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+33,36c68,77
+< MAINPID=2076
+< MAINPIDFDID=2376
+< MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/system.slice/display-manager.service/memory.pressure
+< MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=
+---
+> MAILCHECK=60
+> MOZ_ENABLE_WAYLAND=1
+> NIXOS_OZONE_WL=1
+> NIXPKGS_CONFIG=/etc/nix/nixpkgs-config.nix
+> NIX_PATH=nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels
+> NIX_PROFILES='/run/current-system/sw /nix/var/nix/profiles/default /etc/profiles/per-user/ahd /home/ahd/.local/state/nix/profile /nix/profile /home/ahd/.nix-profile /var/lib/flatpak/exports /home/ahd/.local/share/flatpak/exports'
+> NIX_USER_PROFILE_DIR=/nix/var/nix/profiles/per-user/ahd
+> NIX_XDG_DESKTOP_PORTAL_DIR=/etc/profiles/per-user/ahd/share/xdg-desktop-portal/portals
+> NO_AT_BRIDGE=1
+> NU_VERSION=0.110.0
+40,41c81,93
+< PATH=/nix/store/i2vmgx46q9hd3z6rigaiman3wl3i2gc4-coreutils-9.9/bin:/nix/store/16wfacfgap3chf7mcjnd8dwi85dj4qqi-findutils-4.10.0/bin:/nix/store/02vv0r262agf9j5n2y1gmbjvdf12zkl0-gnugrep-3.12/bin:/nix/store/ryz8kcrm2bxpccllfqlb7qldsfnqp5c2-gnused-4.9/bin:/nix/store/5j9cg6adv3d2l403fcfklz4lmf9fd0l8-systemd-258.3/bin:/nix/store/i2vmgx46q9hd3z6rigaiman3wl3i2gc4-coreutils-9.9/sbin:/nix/store/16wfacfgap3chf7mcjnd8dwi85dj4qqi-findutils-4.10.0/sbin:/nix/store/02vv0r262agf9j5n2y1gmbjvdf12zkl0-gnugrep-3.12/sbin:/nix/store/ryz8kcrm2bxpccllfqlb7qldsfnqp5c2-gnused-4.9/sbin:/nix/store/5j9cg6adv3d2l403fcfklz4lmf9fd0l8-systemd-258.3/sbin
+< PPID=2077
+---
+> PAGER=less
+> PATH=/home/myuser/.apps:/run/wrappers/bin:/home/ahd/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/home/ahd/.nix-profile/bin:/nix/profile/bin:/home/ahd/.local/state/nix/profile/bin:/etc/profiles/per-user/ahd/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/nix/store/i6ppbrlpp6yki8qvka7nyv091xa8dchx-binutils-wrapper-2.44/bin:/nix/store/gcky3s6ya5z31lxzzvvj0l43g8yv50dp-hyprland-qtutils-0.1.5/bin:/nix/store/sxffphd8apxrladk3i8fl0g366001vx8-pciutils-3.14.0/bin:/nix/store/bblm9zmf9ylcf7w5mb3swa9lfrs1plh9-pkgconf-wrapper-2.4.3/bin:/nix/store/qdasxfq8h98a834hva8hkvrynpamwa0z-kitty-0.45.0/bin:/nix/store/x60ccfr9gd8dqm91aqz8x5s8dhsdvr69-imagemagick-7.1.2-12/bin:/nix/store/n7iyqawbhv90ikx7casy5sapwpqj870b-ncurses-6.6-dev/bin:/usr/bin/env:/home/ahd/bin:/home/ahd/.local/bin:/home/ahd/go/bin
+> PIPESTATUS=([0]="0")
+> PPID=56382
+> PROMPT_COLOR='1;32m'
+> PROMPT_COMMAND='starship_precmd;__zoxide_hook'
+> PROMPT_INDICATOR=
+> PROMPT_INDICATOR_VI_INSERT=': '
+> PROMPT_INDICATOR_VI_NORMAL='> '
+> PROMPT_MULTILINE_INDICATOR=$'\E[90m∙\E[0m '
+> PS0='\[\e]133;k;start_kitty\a\]$(_ksi_get_current_command > /dev/tty)\[\e]133;k;end_kitty\a\]${STARSHIP_START_TIME:$((STARSHIP_START_TIME="$(starship_preexec_ps0)",STARSHIP_PREEXEC_READY=0,0)):0}\[\e]133;k;start_suffix_kitty\a\]\[\e[0 q\]\[\e]133;k;end_suffix_kitty\a\]'
+> PS1=$'\n\\[\E[38;2;5;31;32m\\]\\[\E[48;2;5;31;32;38;2;218;241;222m\\]❄️  ahd@cesar\\[\E[48;2;11;43;38;38;2;5;31;32m\\]\\[\E[38;2;218;241;222m\\] ~ \\[\E[48;2;22;56;50;38;2;11;43;38m\\]\\[\E[48;2;35;83;71;38;2;22;56;50m\\]\\[\E[48;2;142;182;155;38;2;35;83;71m\\]\\[\E[48;2;218;241;222;38;2;142;182;155m\\]\\[\E[38;2;5;31;32m\\]  15:29 \\[\E[0m\\]\\[\E[38;2;218;241;222m\\] \\[\E[0m\\]\n\\[\E[1;32m\\]❯\\[\E[0m\\] '
+> PS2=$'\\[\\e]133;k;start_kitty\\a\\]\\[\\e]133;A;k=s\\a\\]\\[\\e]133;k;end_kitty\\a\\]\\[\E[90m\\]∙\\[\E[0m\\] '
+43,45c95,103
+< PWD=/
+< SHELL=/run/current-system/sw/bin/bash
+< SHELLOPTS=braceexpand:hashall:interactive-comments
+---
+> PWD=/home/ahd
+> QML2_IMPORT_PATH=/etc/profiles/per-user/ahd/lib/qt-5.15.18/qml:/etc/profiles/per-user/ahd/lib/qt-6/qml:/home/ahd/.local/share/flatpak/exports/lib/qt-5.15.18/qml:/home/ahd/.local/share/flatpak/exports/lib/qt-6/qml:/var/lib/flatpak/exports/lib/qt-5.15.18/qml:/var/lib/flatpak/exports/lib/qt-6/qml:/home/ahd/.nix-profile/lib/qt-5.15.18/qml:/home/ahd/.nix-profile/lib/qt-6/qml:/nix/profile/lib/qt-5.15.18/qml:/nix/profile/lib/qt-6/qml:/home/ahd/.local/state/nix/profile/lib/qt-5.15.18/qml:/home/ahd/.local/state/nix/profile/lib/qt-6/qml:/etc/profiles/per-user/ahd/lib/qt-5.15.18/qml:/etc/profiles/per-user/ahd/lib/qt-6/qml:/nix/var/nix/profiles/default/lib/qt-5.15.18/qml:/nix/var/nix/profiles/default/lib/qt-6/qml:/run/current-system/sw/lib/qt-5.15.18/qml:/run/current-system/sw/lib/qt-6/qml
+> QTWEBKIT_PLUGIN_PATH=/home/ahd/.local/share/flatpak/exports/lib/mozilla/plugins/:/var/lib/flatpak/exports/lib/mozilla/plugins/:/home/ahd/.nix-profile/lib/mozilla/plugins/:/nix/profile/lib/mozilla/plugins/:/home/ahd/.local/state/nix/profile/lib/mozilla/plugins/:/etc/profiles/per-user/ahd/lib/mozilla/plugins/:/nix/var/nix/profiles/default/lib/mozilla/plugins/:/run/current-system/sw/lib/mozilla/plugins/
+> QT_PLUGIN_PATH=/etc/profiles/per-user/ahd/lib/qt-5.15.18/plugins:/etc/profiles/per-user/ahd/lib/qt-6/plugins:/home/ahd/.local/share/flatpak/exports/lib/qt-5.15.18/plugins:/home/ahd/.local/share/flatpak/exports/lib/qt-6/plugins:/var/lib/flatpak/exports/lib/qt-5.15.18/plugins:/var/lib/flatpak/exports/lib/qt-6/plugins:/home/ahd/.nix-profile/lib/qt-5.15.18/plugins:/home/ahd/.nix-profile/lib/qt-6/plugins:/nix/profile/lib/qt-5.15.18/plugins:/nix/profile/lib/qt-6/plugins:/home/ahd/.local/state/nix/profile/lib/qt-5.15.18/plugins:/home/ahd/.local/state/nix/profile/lib/qt-6/plugins:/etc/profiles/per-user/ahd/lib/qt-5.15.18/plugins:/etc/profiles/per-user/ahd/lib/qt-6/plugins:/nix/var/nix/profiles/default/lib/qt-5.15.18/plugins:/nix/var/nix/profiles/default/lib/qt-6/plugins:/run/current-system/sw/lib/qt-5.15.18/plugins:/run/current-system/sw/lib/qt-6/plugins
+> QT_QPA_PLATFORMTHEME=qt5ct
+> QT_STYLE_OVERRIDE=kvantum
+> RANDOM=25374
+> SHELL=/run/current-system/sw/bin/nu
+> SHELLOPTS=braceexpand:emacs:histexpand:history:interactive-comments:monitor
+47,52c105,2918
+< SYSTEMD_EXEC_PID=2077
+< TERM=dumb
+< TZDIR=/nix/store/r29gp232igs3m47s7lfcaalfashd82bf-tzdata-2025c/share/zoneinfo
+< UID=0
+< USER=root
+< _=/nix/store/x12lw455sq6qy2wcya85d7rb88ybc3df-bash-interactive-5.3p9/bin/bash
+---
+> SSH_ASKPASS=
+> STARSHIP_CMD_STATUS=0
+> STARSHIP_CONFIG=/home/ahd/.config/starship.toml
+> STARSHIP_DURATION=9
+> STARSHIP_END_TIME=1770474570075
+> STARSHIP_PIPE_STATUS=([0]="0")
+> STARSHIP_PREEXEC_READY=0
+> STARSHIP_PROMPT_COMMAND='__zoxide_hook; builtin declare -F _ksi_prompt_command > /dev/null 2> /dev/null && _ksi_prompt_command'
+> STARSHIP_SESSION_KEY=3671286452699621
+> STARSHIP_SHELL=bash
+> STARSHIP_START_TIME=1770474578936
+> SVN_EDITOR=nvim
+> TERM=xterm-kitty
+> TERMINFO=/nix/store/qdasxfq8h98a834hva8hkvrynpamwa0z-kitty-0.45.0/lib/kitty/terminfo
+> TERMINFO_DIRS=/home/ahd/.local/share/flatpak/exports/share/terminfo:/var/lib/flatpak/exports/share/terminfo:/home/ahd/.nix-profile/share/terminfo:/nix/profile/share/terminfo:/home/ahd/.local/state/nix/profile/share/terminfo:/etc/profiles/per-user/ahd/share/terminfo:/nix/var/nix/profiles/default/share/terminfo:/run/current-system/sw/share/terminfo
+> TRANSIENT_PROMPT_COMMAND_RIGHT=
+> TRANSIENT_PROMPT_MULTILINE_INDICATOR=
+> TZDIR=/etc/zoneinfo
+> UID=1000
+> USER=ahd
+> WAYLAND_DISPLAY=wayland-1
+> XCURSOR_PATH=/etc/profiles/per-user/ahd/share/icons:/home/ahd/.icons:/home/ahd/.local/share/icons:/home/ahd/.local/share/flatpak/exports/share/icons:/home/ahd/.local/share/flatpak/exports/share/pixmaps:/var/lib/flatpak/exports/share/icons:/var/lib/flatpak/exports/share/pixmaps:/home/ahd/.nix-profile/share/icons:/home/ahd/.nix-profile/share/pixmaps:/nix/profile/share/icons:/nix/profile/share/pixmaps:/home/ahd/.local/state/nix/profile/share/icons:/home/ahd/.local/state/nix/profile/share/pixmaps:/etc/profiles/per-user/ahd/share/icons:/etc/profiles/per-user/ahd/share/pixmaps:/nix/var/nix/profiles/default/share/icons:/nix/var/nix/profiles/default/share/pixmaps:/run/current-system/sw/share/icons:/run/current-system/sw/share/pixmaps
+> XCURSOR_SIZE=24
+> XCURSOR_THEME=Catppuccin-Mocha-Dark-Cursors
+> XDG_BACKEND=wayland
+> XDG_CONFIG_DIRS=/nix/store/bn9783j1j06ghiav2hi3fy8f60vj9211-stylix-kde-config:/etc/xdg:/home/ahd/.local/share/flatpak/exports/etc/xdg:/var/lib/flatpak/exports/etc/xdg:/home/ahd/.nix-profile/etc/xdg:/nix/profile/etc/xdg:/home/ahd/.local/state/nix/profile/etc/xdg:/etc/profiles/per-user/ahd/etc/xdg:/nix/var/nix/profiles/default/etc/xdg:/run/current-system/sw/etc/xdg
+> XDG_CURRENT_DESKTOP=Hyprland
+> XDG_DATA_DIRS=/nix/store/fpq7v9n2hm7j94fr2zh86nwr92m4ih0b-desktops/share:/home/ahd/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/home/ahd/.nix-profile/share:/nix/profile/share:/home/ahd/.local/state/nix/profile/share:/etc/profiles/per-user/ahd/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share
+> XDG_RUNTIME_DIR=/run/user/1000
+> XDG_SEAT=seat0
+> XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+> XDG_SESSION_CLASS=user
+> XDG_SESSION_DESKTOP=Hyprland
+> XDG_SESSION_ID=14
+> XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session3
+> XDG_SESSION_TYPE=wayland
+> XDG_VTNR=7
+> _=$'# shellcheck shell=bash\n\n# =============================================================================\n#\n# Utility functions for zoxide.\n#\n\n# pwd based on the value of _ZO_RESOLVE_SYMLINKS.\nfunction __zoxide_pwd() {\n    \\builtin pwd -L\n}\n\n# cd + custom logic based on the value of _ZO_ECHO.\nfunction __zoxide_cd() {\n    # shellcheck disable=SC2164\n    \\builtin cd -- "$@"\n}\n\n# =============================================================================\n#\n# Hook configuration for zoxide.\n#\n\n# Hook to add new entries to the database.\n__zoxide_oldpwd="$(__zoxide_pwd)"\n\nfunction __zoxide_hook() {\n    \\builtin local -r retval="$?"\n    \\builtin local pwd_tmp\n    pwd_tmp="$(__zoxide_pwd)"\n    if [[ ${__zoxide_oldpwd} != "${pwd_tmp}" ]]; then\n        __zoxide_oldpwd="${pwd_tmp}"\n        \\command zoxide add -- "${__zoxide_oldpwd}"\n    fi\n    return "${retval}"\n}\n\n# Initialize hook.\nif [[ ${PROMPT_COMMAND:=} != *\'__zoxide_hook\'* ]]; then\n    if [[ "$(declare -p PROMPT_COMMAND 2>&1)" == "declare -a"* ]]; then\n        PROMPT_COMMAND=("${PROMPT_COMMAND[@]}" __zoxide_hook)\n    else\n        # shellcheck disable=SC2128,SC2178\n        PROMPT_COMMAND="${PROMPT_COMMAND%"${PROMPT_COMMAND##*[![:space:]]}"}"\n        # shellcheck disable=SC2128,SC2178\n        PROMPT_COMMAND="${PROMPT_COMMAND:+${PROMPT_COMMAND};}__zoxide_hook"\n    fi\nfi\n\n# Report common issues.\nfunction __zoxide_doctor() {\n    [[ ${_ZO_DOCTOR:-1} -eq 0 ]] && return 0\n    # shellcheck disable=SC2199\n    [[ ${PROMPT_COMMAND[@]:-} == *\'__zoxide_hook\'* ]] && return 0\n    # shellcheck disable=SC2199\n    [[ ${__vsc_original_prompt_command[@]:-} == *\'__zoxide_hook\'* ]] && return 0\n\n    _ZO_DOCTOR=0\n    \\builtin printf \'%s\\n\' \\\n        \'zoxide: detected a possible configuration issue.\' \\\n        \'Please ensure that zoxide is initialized right at the end of your shell configuration file (usually ~/.bashrc).\' \\\n        \'\' \\\n        \'If the issue persists, consider filing an issue at:\' \\\n        \'https://github.com/ajeetdsouza/zoxide/issues\' \\\n        \'\' \\\n        \'Disable this message by setting _ZO_DOCTOR=0.\' \\\n        \'\' >&2\n}\n\n# =============================================================================\n#\n# When using zoxide with --no-cmd, alias these internal functions as desired.\n#\n\n__zoxide_z_prefix=\'z#\'\n\n# Jump to a directory using only keywords.\nfunction __zoxide_z() {\n    __zoxide_doctor\n\n    # shellcheck disable=SC2199\n    if [[ $# -eq 0 ]]; then\n        __zoxide_cd ~\n    elif [[ $# -eq 1 && $1 == \'-\' ]]; then\n        __zoxide_cd "${OLDPWD}"\n    elif [[ $# -eq 1 && -d $1 ]]; then\n        __zoxide_cd "$1"\n    elif [[ $# -eq 2 && $1 == \'--\' ]]; then\n        __zoxide_cd "$2"\n    elif [[ ${@: -1} == "${__zoxide_z_prefix}"?* ]]; then\n        # shellcheck disable=SC2124\n        \\builtin local result="${@: -1}"\n        __zoxide_cd "${result:${#__zoxide_z_prefix}}"\n    else\n        \\builtin local result\n        # shellcheck disable=SC2312\n        result="$(\\command zoxide query --exclude "$(__zoxide_pwd)" -- "$@")" &&\n            __zoxide_cd "${result}"\n    fi\n}\n\n# Jump to a directory using interactive search.\nfunction __zoxide_zi() {\n    __zoxide_doctor\n    \\builtin local result\n    result="$(\\command zoxide query --interactive -- "$@")" && __zoxide_cd "${result}"\n}\n\n# =============================================================================\n#\n# Commands for zoxide. Disable these using --no-cmd.\n#\n\n\\builtin unalias z &>/dev/null || \\builtin true\nfunction z() {\n    __zoxide_z "$@"\n}\n\n\\builtin unalias zi &>/dev/null || \\builtin true\nfunction zi() {\n    __zoxide_zi "$@"\n}\n\n# Load completions.\n# - Bash 4.4+ is required to use `@Q`.\n# - Completions require line editing. Since Bash supports only two modes of\n#   line editing (`vim` and `emacs`), we check if either them is enabled.\n# - Completions don\'t work on `dumb` terminals.\nif [[ ${BASH_VERSINFO[0]:-0} -eq 4 && ${BASH_VERSINFO[1]:-0} -ge 4 || ${BASH_VERSINFO[0]:-0} -ge 5 ]] &&\n    [[ :"${SHELLOPTS}": =~ :(vi|emacs): && ${TERM} != \'dumb\' ]]; then\n\n    function __zoxide_z_complete_helper() {\n        READLINE_LINE="z ${__zoxide_result@Q}"\n        READLINE_POINT=${#READLINE_LINE}\n        bind \'"\\e[0n": accept-line\'\n        \\builtin printf \'\\e[5n\' >/dev/tty\n    }\n\n    function __zoxide_z_complete() {\n        # Only show completions when the cursor is at the end of the line.\n        [[ ${#COMP_WORDS[@]} -eq $((COMP_CWORD + 1)) ]] || return\n\n        # If there is only one argument, use `cd` completions.\n        if [[ ${#COMP_WORDS[@]} -eq 2 ]]; then\n            \\builtin mapfile -t COMPREPLY < <(\n                \\builtin compgen -A directory -- "${COMP_WORDS[-1]}" || \\builtin true\n            )\n        # If there is a space after the last word, use interactive selection.\n        elif [[ -z ${COMP_WORDS[-1]} ]]; then\n            # shellcheck disable=SC2312\n            __zoxide_result="$(\\command zoxide query --exclude "$(__zoxide_pwd)" --interactive -- "${COMP_WORDS[@]:1:${#COMP_WORDS[@]}-2}")" && {\n                # In case the terminal does not respond to \\e[5n or another\n                # mechanism steals the response, it is still worth completing\n                # the directory in the command line.\n                COMPREPLY=("${__zoxide_z_prefix}${__zoxide_result}/")\n\n                # Note: We here call "bind" without prefixing "\\builtin" to be\n                # compatible with frameworks like ble.sh, which emulates Bash\'s\n                # builtin "bind".\n                bind -x \'"\\e[0n": __zoxide_z_complete_helper\'\n                \\builtin printf \'\\e[5n\' >/dev/tty\n            }\n        fi\n    }\n\n    \\builtin complete -F __zoxide_z_complete -o filenames -- z\n    \\builtin complete -r zi &>/dev/null || \\builtin true\nfi\n\n# =============================================================================\n#\n# To initialize zoxide, add this to your shell configuration file (usually ~/.bashrc):\n#\n# eval "$(zoxide init bash)"'
+> _JAVA_AWT_WM_NONREPARENTING=1
+> __ETC_BASHRC_SOURCED=1
+> __ETC_PROFILE_DONE=1
+> __HM_SESS_VARS_SOURCED=1
+> __NIXOS_SET_ENVIRONMENT_DONE=1
+> __zoxide_oldpwd=/home/ahd
+> __zoxide_z_prefix=z#
+> _backup_glob='@(#*#|*@(~|.@(bak|orig|rej|swp|@(dpkg|ucf)-*|rpm@(orig|new|save)|zs-old)))'
+> _comp__base_directory=/nix/store/jm69hfyrn77zkdxxdl0bwlmijp162rp6-bash-completion-2.17.0/share/bash-completion
+> _comp_backup_glob='@(#*#|*@(~|.@(bak|orig|rej|swp|@(dpkg|ucf)-*|rpm@(orig|new|save)|zs-old)))'
+> _comp_dequote__regex_safe_word='^([^\'\''"$`;&|<>()!]|\\.|'\''[^'\'']*'\''|\$?"([^\"$`!]|\$([_a-zA-Z][_a-zA-Z0-9]*|[-*@#?$!0-9_])|\$\{[!#]?([_a-zA-Z][_a-zA-Z0-9]*(\[([0-9]+|[*@])\])?|[-*@#?$!0-9_])\}|\\.)*"|\$'\''([^\'\'']|\\.)*'\''|\$([_a-zA-Z][_a-zA-Z0-9]*|[-*@#?$!0-9_])|\$\{[!#]?([_a-zA-Z][_a-zA-Z0-9]*(\[([0-9]+|[*@])\])?|[-*@#?$!0-9_])\})*$'
+> _comp_xspecs=([tex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [freeamp]="!*.@(mp3|og[ag]|pls|m3u)" [gqmpeg]="!*.@(mp3|og[ag]|pls|m3u)" [texi2html]="!*.texi*" [hbpp]="!*.@([Pp][Rr][Gg]|[Cc][Ll][Pp])" [lowriter]="!*.@(sxw|stw|sxg|sgl|doc?([mx])|dot?([mx])|rtf|txt|htm|html|?(f)odt|ott|odm|pdf)" [rpm2cpio]="!*.[rs]pm" [localc]="!*.@(sxc|stc|xls?([bmx])|xlw|xlt?([mx])|[ct]sv|?(f)ods|ots)" [hbrun]="!*.[Hh][Rr][Bb]" [vi]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [latex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [view]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [madplay]="!*.mp3" [compress]="*.Z" [pdfjadetex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [pbunzip2]="!*.?(t)bz?(2)" [lrunzip]="!*.lrz" [gunzip]="!*.@(Z|[gGd]z|t[ag]z)" [oowriter]="!*.@(sxw|stw|sxg|sgl|doc?([mx])|dot?([mx])|rtf|txt|htm|html|?(f)odt|ott|odm|pdf)" [epiphany]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [acroread]="!*.[pf]df" [znew]="*.Z" [kwrite]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [xemacs]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [gview]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [lzfgrep]="!*.@(tlz|lzma)" [lzless]="!*.@(tlz|lzma)" [cdiff]="!*.@(dif?(f)|?(d)patch)?(.@([gx]z|bz2|lzma))" [zipinfo]="!*.@(zip|[aegjkswx]ar|exe|pk3|wsz|zargo|xpi|crx|s[tx][cdiw]|sx[gm]|o[dt][tspgfc]|od[bm]|oxt|?(o)xps|epub|cbz|apk|apk[ms]|aab|xapk|ipa|hap|do[ct][xm]|p[op]t[mx]|xl[st][xm]|pyz|vsix|whl|[Ff][Cc][Ss]td)" [pdflatex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [portecle]="!@(*.@(ks|jks|jceks|p12|pfx|bks|ubr|gkr|cer|crt|cert|p7b|pkipath|pem|p10|csr|crl)|cacerts)" [modplugplay]="!*.@(669|abc|am[fs]|d[bs]m|dmf|far|it|mdl|m[eo]d|mid?(i)|mt[2m]|oct|okt?(a)|p[st]m|s[3t]m|ult|umx|wav|xm)" [lokalize]="!*.po" [lbzcat]="!*.?(t)bz?(2)" [qiv]="!*.@(gif|jp?(e)g|tif?(f)|png|p[bgp]m|bmp|x[bp]m|rle|rgb|pcx|fits|pm|svg)" [totem]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|opus|OPUS|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM|iso|ISO)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [ps2pdfwr]="!*.@(?(e)ps|pdf)" [dvitype]="!*.dvi" [unpigz]="!*.@(Z|[gGdz]z|t[ag]z)" [mozilla]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [pdfunite]="!*.pdf" [gpdf]="!*.[pf]df" [texi2dvi]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [bunzip2]="!*.?(t)bz?(2)" [zathura]="!*.@(cb[rz7t]|djv?(u)|?(e)ps|pdf)" [kaffeine]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|opus|OPUS|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM|iso|ISO)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [mpg123]="!*.mp3" [lzegrep]="!*.@(tlz|lzma)" [xv]="!*.@(gif|jp?(e)g?(2)|j2[ck]|jp[2f]|tif?(f)|png|p[bgpn]m|webp|bmp|x[bp]m|rle|rgb|pcx|fits|pm|?(e)ps)" [xdvi]="!*.@(dvi|DVI)?(.@(gz|Z|bz2))" [xfig]="!*.fig" [xpdf]="!*.[pf]df" [oobase]="!*.odb" [xelatex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [gharbour]="!*.@([Pp][Rr][Gg]|[Cc][Ll][Pp])" [bzcat]="!*.?(t)bz?(2)" [dragon]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|opus|OPUS|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM|iso|ISO)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [xanim]="!*.@(mpg|mpeg|avi|mov|qt)" [lualatex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [rgview]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [rvim]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [xetex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [lomath]="!*.@(sxm|smf|mml|odf)" [zcat]="!*.@(Z|[gGd]z|t[ag]z)" [lynx]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [uncompress]="!*.Z" [xzcat]="!*.@(?(t)xz|tlz|lzma)" [vim]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [loimpress]="!*.@(sxi|sti|pps?(x)|ppt?([mx])|pot?([mx])|?(f)odp|otp)" [dvipdf]="!*.dvi" [mpg321]="!*.mp3" [jadetex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [lobase]="!*.odb" [epdfview]="!*.pdf" [ps2pdf14]="!*.@(?(e)ps|pdf)" [ps2pdf13]="!*.@(?(e)ps|pdf)" [ps2pdf12]="!*.@(?(e)ps|pdf)" [poedit]="!*.po" [luatex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [kbabel]="!*.po" [bzme]="!*.@(zip|z|gz|tgz)" [dviselect]="!*.dvi" [realplay]="!*.@(rm?(j)|ra?(m)|smi?(l))" [kdvi]="!*.@(dvi|DVI)?(.@(gz|Z|bz2))" [elinks]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [kghostview]="!*.@(@(?(e)ps|?(E)PS|pdf|PDF)?(.gz|.GZ|.bz2|.BZ2|.Z))" [gtranslator]="!*.po" [unzip]="!*.@(zip|[aegjkswx]ar|exe|pk3|wsz|zargo|xpi|crx|s[tx][cdiw]|sx[gm]|o[dt][tspgfc]|od[bm]|oxt|?(o)xps|epub|cbz|apk|apk[ms]|aab|xapk|ipa|hap|do[ct][xm]|p[op]t[mx]|xl[st][xm]|pyz|vsix|whl|[Ff][Cc][Ss]td)" [ggv]="!*.@(@(?(e)ps|?(E)PS|pdf|PDF)?(.gz|.GZ|.bz2|.BZ2|.Z))" [oomath]="!*.@(sxm|smf|mml|odf)" [dvipdfmx]="!*.dvi" [makeinfo]="!*.texi*" [okular]="!*.@(okular|@(?(e|x)ps|?(E|X)PS|[pf]df|[PF]DF|dvi|DVI|cb[rz]|CB[RZ]|djv?(u)|DJV?(U)|dvi|DVI|gif|jp?(e)g|miff|tif?(f)|pn[gm]|p[bgp]m|bmp|xpm|ico|xwd|tga|pcx|GIF|JP?(E)G|MIFF|TIF?(F)|PN[GM]|P[BGP]M|BMP|XPM|ICO|XWD|TGA|PCX|epub|EPUB|odt|ODT|fb?(2)|FB?(2)|mobi|MOBI|g3|G3|chm|CHM|md|markdown)?(.?(gz|GZ|bz2|BZ2|xz|XZ)))" [cacaxine]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [sxemacs]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [aviplay]="!*.@(avi|asf|wmv)" [rgvim]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [dvipdfm]="!*.dvi" [ly2dvi]="!*.ly" [oodraw]="!*.@(sxd|std|sda|sdd|?(f)odg|otg)" [kpdf]="!*.@(?(e)ps|pdf)" [bibtex]="!*.aux" [netscape]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [emacs]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [rview]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [galeon]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [dillo]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [fbxine]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [oocalc]="!*.@(sxc|stc|xls?([bmx])|xlw|xlt?([mx])|[ct]sv|?(f)ods|ots)" [harbour]="!*.@([Pp][Rr][Gg]|[Cc][Ll][Pp])" [lodraw]="!*.@(sxd|std|sda|sdd|?(f)odg|otg)" [dvips]="!*.dvi" [ps2pdf]="!*.@(?(e)ps|pdf)" [kate]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [kid3-qt]="!*.@(mp[234c]|og[ag]|@(fl|a)ac|m4[abp]|spx|tta|w?(a)v|wma|aif?(f)|asf|ape)" [pdftex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [gvim]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [timidity]="!*.@(mid?(i)|rmi|rcp|[gr]36|g18|mod|xm|it|x3m|s[3t]m|kar)" [ogg123]="!*.@(og[ag]|m3u|flac|spx)" [lzgrep]="!*.@(tlz|lzma)" [ee]="!*.@(gif|jp?(e)g|miff|tif?(f)|pn[gm]|p[bgp]m|bmp|xpm|ico|xwd|tga|pcx)" [unlzma]="!*.@(tlz|lzma)" [lbunzip2]="!*.?(t)bz?(2)" [ooimpress]="!*.@(sxi|sti|pps?(x)|ppt?([mx])|pot?([mx])|?(f)odp|otp)" [xine]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [amaya]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [gv]="!*.@(@(?(e)ps|?(E)PS|pdf|PDF)?(.gz|.GZ|.bz2|.BZ2|.Z))" [kid3]="!*.@(mp[234c]|og[ag]|@(fl|a)ac|m4[abp]|spx|tta|w?(a)v|wma|aif?(f)|asf|ape)" [lilypond]="!*.ly" [modplug123]="!*.@(669|abc|am[fs]|d[bs]m|dmf|far|it|mdl|m[eo]d|mid?(i)|mt[2m]|oct|okt?(a)|p[st]m|s[3t]m|ult|umx|wav|xm)" [pbzcat]="!*.?(t)bz?(2)" [unxz]="!*.@(?(t)xz|tlz|lzma)" [playmidi]="!*.@(mid?(i)|cmf)" [lzcat]="!*.@(tlz|lzma)" [slitex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [aaxine]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [advi]="!*.dvi" [lzmore]="!*.@(tlz|lzma)" )
+> _ksi_prompt=([ps1_suffix]="\\[\\e]133;k;start_suffix_kitty\\a\\]\\[\\e[5 q\\]\\[\\e]2;\\w\\a\\]\\[\\e]133;k;end_suffix_kitty\\a\\]" [hostname_prefix]="" [sudo]="y" [secondary_prompt]="\\n\\[\\e]133;k;start_secondary_kitty\\a\\]\\[\\e]133;A;k=s\\a\\]\\[\\e]133;k;end_secondary_kitty\\a\\]" [last_reported_cwd]="/home/ahd" [mark]="y" [title]="y" [cursor]="y" [ps0_suffix]="\\[\\e]133;k;start_suffix_kitty\\a\\]\\[\\e[0 q\\]\\[\\e]133;k;end_suffix_kitty\\a\\]" [cwd]="y" [complete]="y" [ps2]="\\[\\e]133;k;start_kitty\\a\\]\\[\\e]133;A;k=s\\a\\]\\[\\e]133;k;end_kitty\\a\\]" [ps0]="\\[\\e]133;k;start_kitty\\a\\]\$(_ksi_get_current_command > /dev/tty)\\[\\e]133;k;end_kitty\\a\\]" [ps1]="\\[\\e]133;k;start_kitty\\a\\]\\[\\e]133;D;\$?\\a\\e]133;A\\a\\]\\[\\e]133;k;end_kitty\\a\\]" [sourced]="y" )
+> __expand_tilde_by_ref () 
+> { 
+>     [[ -n ${1+set} ]] || return 0;
+>     [[ $1 == REPLY ]] || local REPLY;
+>     _comp_expand_tilde "${!1-}";
+>     [[ $1 == REPLY ]] || printf -v "$1" "$REPLY"
+> }
+> __load_completion () 
+> { 
+>     _comp_load "$@"
+> }
+> __ltrim_colon_completions () 
+> { 
+>     _comp_ltrim_colon_completions "$@"
+> }
+> __parse_options () 
+> { 
+>     local -a _options=();
+>     _comp_compgen_help__parse "$1";
+>     printf '%s\n' "${_options[@]}"
+> }
+> __zoxide_cd () 
+> { 
+>     \builtin cd -- "$@"
+> }
+> __zoxide_doctor () 
+> { 
+>     [[ ${_ZO_DOCTOR:-1} -eq 0 ]] && return 0;
+>     [[ ${PROMPT_COMMAND[@]:-} == *'__zoxide_hook'* ]] && return 0;
+>     [[ ${__vsc_original_prompt_command[@]:-} == *'__zoxide_hook'* ]] && return 0;
+>     _ZO_DOCTOR=0;
+>     \builtin printf '%s\n' 'zoxide: detected a possible configuration issue.' 'Please ensure that zoxide is initialized right at the end of your shell configuration file (usually ~/.bashrc).' '' 'If the issue persists, consider filing an issue at:' 'https://github.com/ajeetdsouza/zoxide/issues' '' 'Disable this message by setting _ZO_DOCTOR=0.' '' 1>&2
+> }
+> __zoxide_hook () 
+> { 
+>     \builtin local -r retval="$?";
+>     \builtin local pwd_tmp;
+>     pwd_tmp="$(__zoxide_pwd)";
+>     if [[ ${__zoxide_oldpwd} != "${pwd_tmp}" ]]; then
+>         __zoxide_oldpwd="${pwd_tmp}";
+>         \command zoxide add -- "${__zoxide_oldpwd}";
+>     fi;
+>     return "${retval}"
+> }
+> __zoxide_pwd () 
+> { 
+>     \builtin pwd -L
+> }
+> __zoxide_z () 
+> { 
+>     __zoxide_doctor;
+>     if [[ $# -eq 0 ]]; then
+>         __zoxide_cd ~;
+>     else
+>         if [[ $# -eq 1 && $1 == '-' ]]; then
+>             __zoxide_cd "${OLDPWD}";
+>         else
+>             if [[ $# -eq 1 && -d $1 ]]; then
+>                 __zoxide_cd "$1";
+>             else
+>                 if [[ $# -eq 2 && $1 == '--' ]]; then
+>                     __zoxide_cd "$2";
+>                 else
+>                     if [[ ${@: -1} == "${__zoxide_z_prefix}"?* ]]; then
+>                         \builtin local result="${@: -1}";
+>                         __zoxide_cd "${result:${#__zoxide_z_prefix}}";
+>                     else
+>                         \builtin local result;
+>                         result="$(\command zoxide query --exclude "$(__zoxide_pwd)" -- "$@")" && __zoxide_cd "${result}";
+>                     fi;
+>                 fi;
+>             fi;
+>         fi;
+>     fi
+> }
+> __zoxide_z_complete () 
+> { 
+>     [[ ${#COMP_WORDS[@]} -eq $((COMP_CWORD + 1)) ]] || return;
+>     if [[ ${#COMP_WORDS[@]} -eq 2 ]]; then
+>         \builtin mapfile -t COMPREPLY < <(\builtin compgen -A directory -- "${COMP_WORDS[-1]}" || \builtin true);
+>     else
+>         if [[ -z ${COMP_WORDS[-1]} ]]; then
+>             __zoxide_result="$(\command zoxide query --exclude "$(__zoxide_pwd)" --interactive -- "${COMP_WORDS[@]:1:${#COMP_WORDS[@]}-2}")" && { 
+>                 COMPREPLY=("${__zoxide_z_prefix}${__zoxide_result}/");
+>                 bind -x '"\e[0n": __zoxide_z_complete_helper';
+>                 \builtin printf '\e[5n' > /dev/tty
+>             };
+>         fi;
+>     fi
+> }
+> __zoxide_z_complete_helper () 
+> { 
+>     READLINE_LINE="z ${__zoxide_result@Q}";
+>     READLINE_POINT=${#READLINE_LINE};
+>     bind '"\e[0n": accept-line';
+>     \builtin printf '\e[5n' > /dev/tty
+> }
+> __zoxide_zi () 
+> { 
+>     __zoxide_doctor;
+>     \builtin local result;
+>     result="$(\command zoxide query --interactive -- "$@")" && __zoxide_cd "${result}"
+> }
+> _allowed_groups () 
+> { 
+>     _comp_compgen -c "${1:-$cur}" allowed_groups
+> }
+> _allowed_users () 
+> { 
+>     _comp_compgen -c "${1:-$cur}" allowed_users
+> }
+> _available_interfaces () 
+> { 
+>     _comp_compgen_available_interfaces "$@"
+> }
+> _bashcomp_try_faketty () 
+> { 
+>     _comp_try_faketty "$@"
+> }
+> _cd () 
+> { 
+>     declare -F _comp_cmd_cd &> /dev/null || __load_completion cd;
+>     _comp_cmd_cd "$@"
+> }
+> _cd_devices () 
+> { 
+>     _comp_compgen -a cd_devices
+> }
+> _command () 
+> { 
+>     _comp_command "$@"
+> }
+> _command_offset () 
+> { 
+>     local words;
+>     unset -v words;
+>     _comp_command_offset "$@"
+> }
+> _comp__find_original_word () 
+> { 
+>     REPLY=$1;
+>     [[ -v cword && -v words ]] || return 0;
+>     local reassembled_offset=$1 i=0 j;
+>     for ((j = 0; j < reassembled_offset; j++))
+>     do
+>         local word=${words[j]};
+>         while [[ -n $word && i -lt ${#COMP_WORDS[@]} && $word == *"${COMP_WORDS[i]}"* ]]; do
+>             word=${word#*"${COMP_WORDS[i++]}"};
+>         done;
+>     done;
+>     REPLY=$i
+> }
+> _comp__get_cword_at_cursor () 
+> { 
+>     local cword words=();
+>     _comp__reassemble_words "$1" words cword;
+>     local i cur="" index=$COMP_POINT lead=${COMP_LINE:0:COMP_POINT};
+>     if [[ $index -gt 0 && ( -n $lead && -n ${lead//[[:space:]]/} ) ]]; then
+>         cur=$COMP_LINE;
+>         for ((i = 0; i <= cword; ++i))
+>         do
+>             while [[ ${#cur} -ge ${#words[i]} && ${cur:0:${#words[i]}} != "${words[i]-}" ]]; do
+>                 cur=${cur:1};
+>                 ((index > 0)) && ((index--));
+>             done;
+>             if ((i < cword)); then
+>                 local old_size=${#cur};
+>                 cur=${cur#"${words[i]}"};
+>                 local new_size=${#cur};
+>                 ((index -= old_size - new_size));
+>             fi;
+>         done;
+>         [[ -n $cur && ! -n ${cur//[[:space:]]/} ]] && cur=;
+>         ((index < 0)) && index=0;
+>     fi;
+>     local IFS=' 	
+> ';
+>     local "$2" "$3" "$4" && _comp_upvars -a"${#words[@]}" "$2" ${words[@]+"${words[@]}"} -v "$3" "$cword" -v "$4" "${cur:0:index}"
+> }
+> _comp__included_ssh_config_files () 
+> { 
+>     (($# < 1)) && echo "bash_completion: $FUNCNAME: missing mandatory argument CONFIG" 1>&2;
+>     local configfile i files f REPLY;
+>     configfile=$1;
+>     local relative_include_base;
+>     if [[ $configfile == /etc/ssh* ]]; then
+>         relative_include_base="/etc/ssh";
+>     else
+>         relative_include_base="$HOME/.ssh";
+>     fi;
+>     local depth=1;
+>     local -a included;
+>     local -a include_files;
+>     included=("$configfile");
+>     local max_depth=16;
+>     while ((${#included[@]} > 0 && depth++ < max_depth)); do
+>         _comp_split include_files "$(command sed -ne 's/^[[:blank:]]*[Ii][Nn][Cc][Ll][Uu][Dd][Ee][[:blank:]]\(.*\)$/\1/p' "${included[@]}")" || return;
+>         included=();
+>         for i in "${include_files[@]}";
+>         do
+>             if [[ $i != [~/]* ]]; then
+>                 i="${relative_include_base}/${i}";
+>             fi;
+>             _comp_expand_tilde "$i";
+>             if _comp_expand_glob files '$REPLY'; then
+>                 for f in "${files[@]}";
+>                 do
+>                     if [[ -r $f && ! -d $f ]]; then
+>                         config+=("$f");
+>                         included+=("$f");
+>                     fi;
+>                 done;
+>             fi;
+>         done;
+>     done
+> }
+> _comp__reassemble_words () 
+> { 
+>     local exclude="" i j line ref;
+>     if [[ -n $1 ]]; then
+>         exclude="[${1//[^$COMP_WORDBREAKS]/}]";
+>     fi;
+>     printf -v "$3" %s "$COMP_CWORD";
+>     if [[ -n $exclude ]]; then
+>         line=$COMP_LINE;
+>         for ((i = 0, j = 0; i < ${#COMP_WORDS[@]}; i++, j++))
+>         do
+>             while [[ $i -gt 0 && ${COMP_WORDS[i]} == +($exclude) ]]; do
+>                 [[ $line != [[:blank:]]* ]] && ((j >= 2)) && ((j--));
+>                 ref="$2[$j]";
+>                 printf -v "$ref" %s "${!ref-}${COMP_WORDS[i]}";
+>                 ((i == COMP_CWORD)) && printf -v "$3" %s "$j";
+>                 line=${line#*"${COMP_WORDS[i]}"};
+>                 if ((i < ${#COMP_WORDS[@]} - 1)); then
+>                     ((i++));
+>                 else
+>                     break 2;
+>                 fi;
+>                 [[ $line == [[:blank:]]* ]] && ((j++));
+>             done;
+>             ref="$2[$j]";
+>             printf -v "$ref" %s "${!ref-}${COMP_WORDS[i]}";
+>             line=${line#*"${COMP_WORDS[i]}"};
+>             ((i == COMP_CWORD)) && printf -v "$3" %s "$j";
+>         done;
+>         ((i == COMP_CWORD)) && printf -v "$3" %s "$j";
+>     else
+>         for i in "${!COMP_WORDS[@]}";
+>         do
+>             printf -v "$2[i]" %s "${COMP_WORDS[i]}";
+>         done;
+>     fi
+> }
+> _comp__split_longopt () 
+> { 
+>     if [[ $cur == --?*=* ]]; then
+>         prev=${cur%%?(\\)=*};
+>         cur=${cur#*=};
+>         return 0;
+>     fi;
+>     return 1
+> }
+> _comp_abspath () 
+> { 
+>     REPLY=$1;
+>     [[ $REPLY == /* ]] || REPLY=$PWD/$REPLY;
+>     REPLY=${REPLY//+(\/)/\/};
+>     while true; do
+>         case $REPLY in 
+>             */./*)
+>                 REPLY=${REPLY//\/.\//\/}
+>             ;;
+>             */.)
+>                 REPLY=${REPLY%/.}
+>             ;;
+>             /..?(/*))
+>                 REPLY=${REPLY#/..}
+>             ;;
+>             */+([^/])/../*)
+>                 REPLY=${REPLY/\/+([^\/])\/..\//\/}
+>             ;;
+>             */+([^/])/..)
+>                 REPLY=${REPLY%/+([^/])/..}
+>             ;;
+>             *)
+>                 break
+>             ;;
+>         esac;
+>     done;
+>     [[ -n $REPLY ]] || REPLY=/
+> }
+> _comp_as_root () 
+> { 
+>     [[ $EUID -eq 0 || -n ${_comp_root_command-} ]]
+> }
+> _comp_awk () 
+> { 
+>     command awk "$@"
+> }
+> _comp_command () 
+> { 
+>     local words;
+>     unset -v words;
+>     local offset i;
+>     offset=1;
+>     for ((i = 1; i <= COMP_CWORD; i++))
+>     do
+>         if [[ ${COMP_WORDS[i]} != -* ]]; then
+>             offset=$i;
+>             break;
+>         fi;
+>     done;
+>     _comp_command_offset $offset
+> }
+> _comp_command_offset () 
+> { 
+>     local REPLY;
+>     _comp__find_original_word "$1";
+>     local word_offset=$REPLY;
+>     local COMP_LINE=$COMP_LINE COMP_POINT=$COMP_POINT COMP_CWORD=$COMP_CWORD;
+>     local -a comp_words=("${COMP_WORDS[@]}");
+>     local -a COMP_WORDS=("${comp_words[@]}");
+>     local i tail;
+>     for ((i = 0; i < word_offset; i++))
+>     do
+>         tail=${COMP_LINE#*"${COMP_WORDS[i]}"};
+>         ((COMP_POINT -= ${#COMP_LINE} - ${#tail}));
+>         COMP_LINE=$tail;
+>     done;
+>     COMP_WORDS=("${COMP_WORDS[@]:word_offset}");
+>     ((COMP_CWORD -= word_offset));
+>     COMPREPLY=();
+>     local cur;
+>     _comp_get_words cur;
+>     if ((COMP_CWORD == 0)); then
+>         _comp_compgen_commands;
+>     else
+>         _comp_dequote "${COMP_WORDS[0]}";
+>         local cmd=${REPLY-} compcmd=${REPLY-};
+>         local cspec=$(complete -p -- "$cmd" 2> /dev/null);
+>         if [[ ! -n $cspec && $cmd == */* ]]; then
+>             cspec=$(complete -p -- "${cmd##*/}" 2> /dev/null);
+>             [[ -n $cspec ]] && compcmd=${cmd##*/};
+>         fi;
+>         if [[ ! -n $cspec ]]; then
+>             compcmd=${cmd##*/};
+>             _comp_load -D -- "$compcmd";
+>             cspec=$(complete -p -- "$compcmd" 2> /dev/null);
+>         fi;
+>         local retry_count=0;
+>         while true; do
+>             local args original_cur=${comp_args[1]-$cur};
+>             if ((${#COMP_WORDS[@]} >= 2)); then
+>                 args=("$cmd" "$original_cur" "${COMP_WORDS[-2]}");
+>             else
+>                 args=("$cmd" "$original_cur");
+>             fi;
+>             if [[ ! -n $cspec ]]; then
+>                 if ((${#COMPREPLY[@]} == 0)); then
+>                     _comp_complete_minimal "${args[@]}";
+>                 fi;
+>             else
+>                 if [[ $cspec == *\ -[CF]\ * ]]; then
+>                     if [[ $cspec == *' -F '* ]]; then
+>                         local func=${cspec#* -F };
+>                         func=${func%% *};
+>                         $func "${args[@]}";
+>                         if (($? == 124 && retry_count++ == 0)); then
+>                             COMPREPLY=();
+>                             cspec=$(complete -p -- "$compcmd" 2> /dev/null);
+>                             [[ -n $cspec ]] || break;
+>                             continue;
+>                         fi;
+>                     else
+>                         local completer=${cspec#* -C \'};
+>                         if ! _comp_dequote "'$completer"; then
+>                             _minimal "${args[@]}";
+>                             break;
+>                         fi;
+>                         completer=${REPLY[0]};
+>                         local -a suggestions;
+>                         local IFS=' 	
+> ';
+>                         local reset_monitor=$(shopt -po monitor) reset_lastpipe=$(shopt -p lastpipe) reset_noglob=$(shopt -po noglob);
+>                         set +o monitor;
+>                         shopt -s lastpipe;
+>                         set -o noglob;
+>                         COMP_KEY="$COMP_KEY" COMP_LINE="$COMP_LINE" COMP_POINT="$COMP_POINT" COMP_TYPE="$COMP_TYPE" $completer "${args[@]}" | mapfile -t suggestions;
+>                         $reset_monitor;
+>                         $reset_lastpipe;
+>                         $reset_noglob;
+>                         _comp_unlocal IFS;
+>                         local suggestion;
+>                         local i=0;
+>                         COMPREPLY=();
+>                         for suggestion in "${suggestions[@]}";
+>                         do
+>                             COMPREPLY[i]+=${COMPREPLY[i]+'
+> '}$suggestion;
+>                             if [[ $suggestion != *\\ ]]; then
+>                                 ((i++));
+>                             fi;
+>                         done;
+>                     fi;
+>                     local opt;
+>                     while [[ $cspec == *" -o "* ]]; do
+>                         cspec=${cspec#*-o };
+>                         opt=${cspec%% *};
+>                         compopt -o "$opt";
+>                         cspec=${cspec#"$opt"};
+>                     done;
+>                 else
+>                     cspec=${cspec#complete};
+>                     cspec=${cspec%%@("$compcmd"|"'${compcmd//\'/\'\\\'\'}'")};
+>                     eval "_comp_compgen -- $cspec";
+>                 fi;
+>             fi;
+>             break;
+>         done;
+>     fi
+> }
+> _comp_compgen () 
+> { 
+>     local _append=;
+>     local _var=;
+>     local _cur=${_comp_compgen__cur-${cur-}};
+>     local _dir="";
+>     local _prefix="";
+>     local _ifs=' 	
+> ' _has_ifs="";
+>     local _icmd="" _xcmd="";
+>     local -a _upvars=();
+>     local _old_nocasematch="";
+>     if shopt -q nocasematch; then
+>         _old_nocasematch=set;
+>         shopt -u nocasematch;
+>     fi;
+>     local OPTIND=1 OPTARG="" OPTERR=0 _opt;
+>     while getopts ':av:U:Rc:C:P:lF:i:x:' _opt "$@"; do
+>         case $_opt in 
+>             a)
+>                 _append=set
+>             ;;
+>             v)
+>                 if [[ $OPTARG == @(*[^_a-zA-Z0-9]*|[0-9]*|''|_*|IFS|OPTIND|OPTARG|OPTERR|cur) ]]; then
+>                     printf 'bash_completion: %s: -v: invalid array name `%s'\''\n' "$FUNCNAME" "$OPTARG" 1>&2;
+>                     return 2;
+>                 fi;
+>                 _var=$OPTARG
+>             ;;
+>             U)
+>                 if [[ $OPTARG == @(*[^_a-zA-Z0-9]*|[0-9]*|'') ]]; then
+>                     printf 'bash_completion: %s: -U: invalid variable name `%s'\''\n' "$FUNCNAME" "$OPTARG" 1>&2;
+>                     return 2;
+>                 else
+>                     if [[ $OPTARG == @(_*|IFS|OPTIND|OPTARG|OPTERR|cur) ]]; then
+>                         printf 'bash_completion: %s: -U: unnecessary to mark `%s'\'' as upvar\n' "$FUNCNAME" "$OPTARG" 1>&2;
+>                         return 2;
+>                     fi;
+>                 fi;
+>                 _upvars+=("$OPTARG")
+>             ;;
+>             c)
+>                 _cur=$OPTARG
+>             ;;
+>             R)
+>                 _cur=""
+>             ;;
+>             C)
+>                 if [[ ! -n $OPTARG ]]; then
+>                     printf 'bash_completion: %s: -C: invalid directory name `%s'\''\n' "$FUNCNAME" "$OPTARG" 1>&2;
+>                     return 2;
+>                 fi;
+>                 _dir=$OPTARG
+>             ;;
+>             P)
+>                 _prefix=$OPTARG
+>             ;;
+>             l)
+>                 _has_ifs=set _ifs='
+> '
+>             ;;
+>             F)
+>                 _has_ifs=set _ifs=$OPTARG
+>             ;;
+>             [ix])
+>                 if [[ ! -n $OPTARG ]]; then
+>                     printf 'bash_completion: %s: -%s: invalid command name `%s'\''\n' "$FUNCNAME" "$_opt" "$OPTARG" 1>&2;
+>                     return 2;
+>                 else
+>                     if [[ -n $_icmd ]]; then
+>                         printf 'bash_completion: %s: -%s: `-i %s'\'' is already specified\n' "$FUNCNAME" "$_opt" "$_icmd" 1>&2;
+>                         return 2;
+>                     else
+>                         if [[ -n $_xcmd ]]; then
+>                             printf 'bash_completion: %s: -%s: `-x %s'\'' is already specified\n' "$FUNCNAME" "$_opt" "$_xcmd" 1>&2;
+>                             return 2;
+>                         fi;
+>                     fi;
+>                 fi
+>             ;;&
+>             i)
+>                 _icmd=$OPTARG
+>             ;;
+>             x)
+>                 _xcmd=$OPTARG
+>             ;;
+>             *)
+>                 printf 'bash_completion: %s: usage error\n' "$FUNCNAME" 1>&2;
+>                 return 2
+>             ;;
+>         esac;
+>     done;
+>     [[ -n $_old_nocasematch ]] && shopt -s nocasematch;
+>     shift "$((OPTIND - 1))";
+>     if (($# == 0)); then
+>         printf 'bash_completion: %s: unexpected number of arguments\n' "$FUNCNAME" 1>&2;
+>         printf 'usage: %s [-alR|-F SEP|-v ARR|-c CUR] -- ARGS...' "$FUNCNAME" 1>&2;
+>         return 2;
+>     fi;
+>     if [[ ! -n $_var ]]; then
+>         _var=${_comp_compgen__var-COMPREPLY};
+>         [[ -n $_append ]] || _append=${_comp_compgen__append-};
+>     fi;
+>     local _prefix_fail="";
+>     if [[ -n $_prefix ]]; then
+>         if [[ $_cur == "$_prefix"* ]]; then
+>             _cur=${_cur#"$_prefix"};
+>         else
+>             if [[ $_prefix == "$_cur"* ]]; then
+>                 _cur="";
+>             else
+>                 _prefix_fail=set;
+>             fi;
+>         fi;
+>     fi;
+>     if [[ $1 != -* ]]; then
+>         if [[ -n $_has_ifs ]]; then
+>             printf 'bash_completion: %s: `-l'\'' and `-F sep'\'' are not supported for generators\n' "$FUNCNAME" 1>&2;
+>             return 2;
+>         fi;
+>         local -a _generator;
+>         if [[ -n $_icmd ]]; then
+>             _generator=("_comp_cmd_${_icmd//[^a-zA-Z0-9_]/_}__compgen_$1");
+>         else
+>             if [[ -n $_xcmd ]]; then
+>                 _generator=(_comp_xfunc "$_xcmd" "compgen_$1");
+>             else
+>                 _generator=("_comp_compgen_$1");
+>             fi;
+>         fi;
+>         if ! declare -F -- "${_generator[0]}" &> /dev/null; then
+>             printf 'bash_completion: %s: unrecognized generator `%s'\'' (function %s not found)\n' "$FUNCNAME" "$1" "${_generator[0]}" 1>&2;
+>             return 2;
+>         fi;
+>         shift;
+>         if [[ -n $_prefix_fail ]]; then
+>             _comp_compgen__error_fallback;
+>             return 1;
+>         fi;
+>         _comp_compgen__call_generator "$@";
+>     else
+>         if [[ -n $_icmd || -n $_xcmd ]]; then
+>             printf 'bash_completion: %s: generator name is unspecified for `%s'\''\n' "$FUNCNAME" "${_icmd:+-i $_icmd}${_xcmd:+x $_xcmd}" 1>&2;
+>             return 2;
+>         fi;
+>         local IFS=' 	
+> ';
+>         if [[ $* == *\$[0-9]* || $* == *\$\{[0-9]* ]]; then
+>             printf 'bash_completion: %s: positional parameter $1, $2, ... do not work inside this function\n' "$FUNCNAME" 1>&2;
+>             return 2;
+>         fi;
+>         if [[ -n $_prefix_fail ]]; then
+>             _comp_compgen__error_fallback;
+>             return 1;
+>         fi;
+>         _comp_compgen__call_builtin "$@";
+>     fi
+> }
+> _comp_compgen__call_builtin () 
+> { 
+>     if [[ -n $_dir ]]; then
+>         local _original_pwd=$PWD;
+>         local PWD=${PWD-} OLDPWD=${OLDPWD-};
+>         command cd -- "$_dir" &> /dev/null || { 
+>             _comp_compgen__error_fallback;
+>             return
+>         };
+>     fi;
+>     local -a _result=();
+>     IFS=$_ifs compgen -V _result -X '' "$@" ${_cur:+-- "$_cur"} || { 
+>         _comp_compgen__error_fallback;
+>         [[ -n $_dir ]] && command cd -- "$_original_pwd";
+>         return
+>     };
+>     [[ -n $_dir ]] && command cd -- "$_original_pwd";
+>     ((${#_upvars[@]})) && _comp_unlocal "${_upvars[@]}";
+>     ((${#_result[@]})) || return;
+>     if [[ -n $_prefix ]]; then
+>         local _i;
+>         for _i in "${!_result[@]}";
+>         do
+>             _result[_i]=$_prefix${_result[_i]};
+>         done;
+>     fi;
+>     if [[ -n $_append ]]; then
+>         eval -- "$_var+=(\"\${_result[@]}\")";
+>     else
+>         eval -- "$_var=(\"\${_result[@]}\")";
+>     fi;
+>     return
+> }
+> _comp_compgen__call_generator () 
+> { 
+>     if [[ -n $_dir ]]; then
+>         local _original_pwd=$PWD;
+>         local PWD=${PWD-} OLDPWD=${OLDPWD-};
+>         command cd -- "$_dir" &> /dev/null || { 
+>             _comp_compgen__error_fallback;
+>             return
+>         };
+>     fi;
+>     ((${#_upvars[@]})) && _comp_unlocal "${_upvars[@]}";
+>     local _comp_compgen__append=$_append;
+>     local _comp_compgen__var=$_var;
+>     local _comp_compgen__cur=$_cur cur=$_cur;
+>     if [[ -n $_prefix ]]; then
+>         local -a tmp=();
+>         local _comp_compgen__var=tmp;
+>         local _comp_compgen__append="";
+>     fi;
+>     "${_generator[@]}" "$@";
+>     local _status=$?;
+>     if [[ -n $_prefix ]]; then
+>         local _i;
+>         for _i in "${!tmp[@]}";
+>         do
+>             tmp[_i]=$_prefix${tmp[_i]};
+>         done;
+>         _comp_compgen -RU tmp ${_append:+-a} -v "$_var" -- -W '"${tmp[@]}"';
+>     fi;
+>     [[ -n $_dir ]] && command cd -- "$_original_pwd";
+>     return "$_status"
+> }
+> _comp_compgen__error_fallback () 
+> { 
+>     local _status=$?;
+>     if [[ -n $_append ]]; then
+>         eval -- "$_var+=()";
+>     else
+>         eval -- "$_var=()";
+>     fi;
+>     if ((${#_upvars[@]})); then
+>         _comp_unlocal "${_upvars[@]}";
+>         _upvars=();
+>     fi;
+>     return "$_status"
+> }
+> _comp_compgen_allowed_groups () 
+> { 
+>     if _comp_as_root; then
+>         _comp_compgen -- -g;
+>     else
+>         _comp_compgen_split -- "$(id -Gn 2> /dev/null || groups 2> /dev/null)";
+>     fi
+> }
+> _comp_compgen_allowed_users () 
+> { 
+>     if _comp_as_root; then
+>         _comp_compgen -- -u;
+>     else
+>         _comp_compgen_split -- "$(id -un 2> /dev/null || whoami 2> /dev/null)";
+>     fi
+> }
+> _comp_compgen_available_interfaces () 
+> { 
+>     local PATH=$PATH:/sbin;
+>     local generated;
+>     _comp_compgen -v generated split -- "$({ if [[ ${1-} == -w ]]; then
+>     iwconfig;
+> else
+>     if [[ ${1-} == -a ]]; then
+>         ip -c=never link show up || ip link show up || ifconfig;
+>     else
+>         ip -c=never link show || ip link show || ifconfig -a;
+>     fi;
+> fi; } 2> /dev/null | _comp_awk '/^[^ \t]/ { if ($1 ~ /^[0-9]+:/) { sub(/@.*/, "", $2); print $2 } else { print $1 } }')" && _comp_compgen -U generated set "${generated[@]%:}"
+> }
+> _comp_compgen_cd_devices () 
+> { 
+>     _comp_compgen -c "${cur:-/dev/}" -- -f -d -X "!*/?([amrs])cd!(c-*)"
+> }
+> _comp_compgen_commands () 
+> { 
+>     [[ ! -n ${cur-} ]] && shopt -q no_empty_cmd_completion && return 1;
+>     _comp_compgen -- -c -o plusdirs && compopt -o filenames
+> }
+> _comp_compgen_configured_interfaces () 
+> { 
+>     local -a files;
+>     if [[ -f /etc/debian_version ]]; then
+>         _comp_expand_glob files '/etc/network/interfaces /etc/network/interfaces.d/*' || return 0;
+>         _comp_compgen -U files split -- "$(command sed -ne 's|^iface \([^ ]\{1,\}\).*$|\1|p' "${files[@]}" 2> /dev/null)";
+>     else
+>         if [[ -f /etc/SuSE-release ]]; then
+>             _comp_expand_glob files '/etc/sysconfig/network/ifcfg-*' || return 0;
+>             _comp_compgen -U files split -- "$(printf '%s\n' "${files[@]}" | command sed -ne 's|.*ifcfg-\([^*].*\)$|\1|p')";
+>         else
+>             if [[ -f /etc/pld-release ]]; then
+>                 _comp_compgen -U files split -- "$(command ls -B /etc/sysconfig/interfaces | command sed -ne 's|.*ifcfg-\([^*].*\)$|\1|p')";
+>             else
+>                 _comp_expand_glob files '/etc/sysconfig/network-scripts/ifcfg-*' || return 0;
+>                 _comp_compgen -U files split -- "$(printf '%s\n' "${files[@]}" | command sed -ne 's|.*ifcfg-\([^*].*\)$|\1|p')";
+>             fi;
+>         fi;
+>     fi
+> }
+> _comp_compgen_dvd_devices () 
+> { 
+>     _comp_compgen -c "${cur:-/dev/}" -- -f -d -X "!*/?(r)dvd*"
+> }
+> _comp_compgen_filedir () 
+> { 
+>     _comp_compgen_tilde && return;
+>     local -a toks;
+>     local _dir="" _filenames="";
+>     local OPTIND=1 OPTARG="" OPTERR=0 _opt;
+>     while getopts ":df" _opt "$@"; do
+>         case $_opt in 
+>             d)
+>                 _dir=set
+>             ;;
+>             f)
+>                 _filenames=set
+>             ;;
+>             *)
+>                 printf "bash_completion: %s: usage error\n" "$FUNCNAME" 1>&2;
+>                 return 2
+>             ;;
+>         esac;
+>     done;
+>     shift "$((OPTIND - 1))";
+>     local _arg=${1-};
+>     if [[ -n $_dir ]]; then
+>         _comp_compgen -v toks -- -d;
+>     else
+>         local REPLY;
+>         _comp_quote_compgen "${cur-}";
+>         local _quoted=$REPLY;
+>         _comp_unlocal REPLY;
+>         [[ $_quoted == "''" ]] && _quoted="";
+>         local _xspec=${_arg:+"!*.@($_arg|${_arg^^})"} _plusdirs=();
+>         local _opts=(-f -X "$_xspec");
+>         [[ -n $_xspec ]] && _plusdirs=(-o plusdirs);
+>         [[ -n ${BASH_COMPLETION_FILEDIR_FALLBACK-} || ! -n ${_plusdirs-} ]] || _opts+=("${_plusdirs[@]}");
+>         _comp_compgen -v toks -c "$_quoted" -- "${_opts[@]}";
+>         [[ -n ${BASH_COMPLETION_FILEDIR_FALLBACK-} && -n $_arg && ${#toks[@]} -lt 1 ]] && _comp_compgen -av toks -c "$_quoted" -- -f ${_plusdirs+"${_plusdirs[@]}"};
+>     fi;
+>     if ((${#toks[@]} != 0)); then
+>         if [[ $cur != ?(*/).. ]]; then
+>             _comp_compgen -Rv toks -- -X '?(*/)@(.|..)' -W '"${toks[@]}"';
+>         fi;
+>     fi;
+>     if ((${#toks[@]} != 0)); then
+>         if [[ -n $_filenames ]]; then
+>             local i;
+>             for i in "${!toks[@]}";
+>             do
+>                 if [[ -d ${toks[i]} ]]; then
+>                     toks[i]+=/;
+>                     compopt -o nospace 2> /dev/null;
+>                 fi;
+>             done;
+>         fi;
+>         compopt -o filenames 2> /dev/null;
+>     fi;
+>     local IFS=' 	
+> ';
+>     _comp_compgen -U toks set ${toks[@]+"${toks[@]}"}
+> }
+> _comp_compgen_filedir_xspec () 
+> { 
+>     _comp_compgen_tilde && return;
+>     local REPLY;
+>     _comp_quote_compgen "$cur";
+>     local quoted=$REPLY;
+>     local xspec=${_comp_xspecs[${1##*/}]-${_xspecs[${1##*/}]-}};
+>     local -a toks;
+>     _comp_compgen -v toks -c "$quoted" -- -d;
+>     eval xspec="${xspec}";
+>     local matchop=!;
+>     if [[ $xspec == !* ]]; then
+>         xspec=${xspec#!};
+>         matchop=@;
+>     fi;
+>     xspec="$matchop($xspec|${xspec^^})";
+>     _comp_compgen -av toks -c "$quoted" -- -f -X "@(|!($xspec))";
+>     [[ -n ${BASH_COMPLETION_FILEDIR_FALLBACK-} && ${#toks[@]} -lt 1 ]] && _comp_compgen -av toks -c "$quoted" -- -f;
+>     ((${#toks[@]})) || return 1;
+>     if [[ $cur != ?(*/).. ]]; then
+>         _comp_compgen -Rv toks -- -X '?(*/)@(.|..)' -W '"${toks[@]}"' || return 1;
+>     fi;
+>     compopt -o filenames;
+>     _comp_compgen -RU toks -- -W '"${toks[@]}"'
+> }
+> _comp_compgen_fstypes () 
+> { 
+>     local _fss;
+>     if [[ -e /proc/filesystems ]]; then
+>         _fss="$(cut -d'	' -f2 /proc/filesystems)
+>              $(_comp_awk '! /\*/ { print $NF }' /etc/filesystems 2> /dev/null)";
+>     else
+>         _fss="$(_comp_awk '/^[ \t]*[^#]/ { print $3 }' /etc/fstab 2> /dev/null)
+>              $(_comp_awk '/^[ \t]*[^#]/ { print $3 }' /etc/mnttab 2> /dev/null)
+>              $(_comp_awk '/^[ \t]*[^#]/ { print $4 }' /etc/vfstab 2> /dev/null)
+>              $(_comp_awk '{ print $1 }' /etc/dfs/fstypes 2> /dev/null)
+>              $(lsvfs 2> /dev/null | _comp_awk '$1 !~ /^(Filesystem|[^a-zA-Z])/ { print $1 }')
+>              $([[ -d /etc/fs ]] && command ls /etc/fs)";
+>     fi;
+>     [[ -n $_fss ]] && _comp_compgen_split -- "$_fss"
+> }
+> _comp_compgen_gids () 
+> { 
+>     if type getent &> /dev/null; then
+>         _comp_compgen_split -- "$(getent group | cut -d: -f3)";
+>     else
+>         if type perl &> /dev/null; then
+>             _comp_compgen_split -- "$(perl -e 'while (($gid) = (getgrent)[2]) { print $gid . "\n" }')";
+>         else
+>             _comp_compgen_split -- "$(cut -d: -f3 /etc/group)";
+>         fi;
+>     fi
+> }
+> _comp_compgen_help () 
+> { 
+>     (($#)) || set -- -- --help;
+>     local -a _lines;
+>     _comp_compgen_help__get_help_lines "$@" || return "$?";
+>     local -a options=();
+>     local _line;
+>     for _line in "${_lines[@]}";
+>     do
+>         [[ $_line == *([[:blank:]])-* ]] || continue;
+>         while [[ $_line =~ ((^|[^-])-[A-Za-z0-9?][[:space:]]+)(\[,?)?[A-Z0-9+]+([,_-]+[A-Z0-9]+)?(\.\.+)?\]* ]]; do
+>             _line=${_line/"${BASH_REMATCH[0]}"/"${BASH_REMATCH[1]}"};
+>         done;
+>         _comp_compgen_help__parse "${_line// or /, }";
+>     done;
+>     ((${#options[@]})) || return 1;
+>     _comp_compgen -U options -- -W '"${options[@]}"';
+>     return 0
+> }
+> _comp_compgen_help__get_help_lines () 
+> { 
+>     local -a help_cmd;
+>     case ${1-} in 
+>         -)
+>             if (($# > 1)); then
+>                 printf 'bash_completion: %s -: extra arguments for -\n' "${FUNCNAME[1]}" 1>&2;
+>                 printf 'usage: %s -\n' "${FUNCNAME[1]}" 1>&2;
+>                 printf 'usage: %s -c cmd args...\n' "${FUNCNAME[1]}" 1>&2;
+>                 printf 'usage: %s [-- args...]\n' "${FUNCNAME[1]}" 1>&2;
+>                 return 2;
+>             fi;
+>             help_cmd=(exec cat)
+>         ;;
+>         -c)
+>             if (($# < 2)); then
+>                 printf 'bash_completion: %s -c: no command is specified\n' "${FUNCNAME[1]}" 1>&2;
+>                 printf 'usage: %s -\n' "${FUNCNAME[1]}" 1>&2;
+>                 printf 'usage: %s -c cmd args...\n' "${FUNCNAME[1]}" 1>&2;
+>                 printf 'usage: %s [-- args...]\n' "${FUNCNAME[1]}" 1>&2;
+>                 return 2;
+>             fi;
+>             help_cmd=("${@:2}")
+>         ;;
+>         --)
+>             shift 1
+>         ;&
+>         *)
+>             local REPLY;
+>             _comp_dequote "${comp_args[0]-}";
+>             help_cmd=("${REPLY:-false}" "$@")
+>         ;;
+>     esac;
+>     local REPLY;
+>     _comp_split -l REPLY "$(LC_ALL=C "${help_cmd[@]}" 2>&1)" && _lines=("${REPLY[@]}")
+> }
+> _comp_compgen_help__parse () 
+> { 
+>     local option option2 i;
+>     option=;
+>     local -a array;
+>     if _comp_split -F ' 	
+> ,/|' array "$1"; then
+>         for i in "${array[@]}";
+>         do
+>             case "$i" in 
+>                 ---*)
+>                     break
+>                 ;;
+>                 --?*)
+>                     option=$i;
+>                     break
+>                 ;;
+>                 -?*)
+>                     [[ -n $option ]] || option=$i
+>                 ;;
+>                 *)
+>                     break
+>                 ;;
+>             esac;
+>         done;
+>     fi;
+>     [[ -n $option ]] || return 1;
+>     if [[ $option =~ (\[((no|dont)-?)\]). ]]; then
+>         option2=${option/"${BASH_REMATCH[1]}"/};
+>         option2=${option2%%[<{().[]*};
+>         options+=("${option2/=*/=}");
+>         option=${option/"${BASH_REMATCH[1]}"/"${BASH_REMATCH[2]}"};
+>     fi;
+>     [[ $option =~ ^([^=<{().[]|\.[A-Za-z0-9])+=? ]] && options+=("$BASH_REMATCH")
+> }
+> _comp_compgen_inserted_kernel_modules () 
+> { 
+>     _comp_compgen -c "${1:-$cur}" split -- "$(PATH="$PATH:/sbin" lsmod | _comp_awk '{if (NR != 1) print $1}')"
+> }
+> _comp_compgen_ip_addresses () 
+> { 
+>     local _n;
+>     case ${1-} in 
+>         -a)
+>             _n='6\{0,1\}'
+>         ;;
+>         -6)
+>             _n='6'
+>         ;;
+>         *)
+>             _n=
+>         ;;
+>     esac;
+>     local PATH=$PATH:/sbin;
+>     local addrs;
+>     _comp_compgen -v addrs split -- "$({ ip -c=never addr show || ip addr show || LC_ALL=C ifconfig -a; } 2> /dev/null | command sed -e 's/[[:space:]]addr:/ /' -ne "s|.*inet${_n}[[:space:]]\{1,\}\([^[:space:]/]*\).*|\1|p")" || return;
+>     if [[ ! -n $_n ]]; then
+>         _comp_compgen -U addrs set "${addrs[@]}";
+>     else
+>         _comp_compgen -U addrs ltrim_colon "${addrs[@]}";
+>     fi
+> }
+> _comp_compgen_kernel_modules () 
+> { 
+>     local _modpath=/run/booted-system/kernel-modules/lib/modules/$1;
+>     _comp_compgen_split -- "$(command ls -RL "$_modpath" 2> /dev/null | command sed -ne 's/^\(.*\)\.k\{0,1\}o\(\.[gx]z\)\{0,1\}$/\1/p' -e 's/^\(.*\)\.ko\.zst$/\1/p')"
+> }
+> _comp_compgen_kernel_versions () 
+> { 
+>     _comp_compgen_split -- "$(command ls /run/booted-system/kernel-modules/lib/modules)"
+> }
+> _comp_compgen_known_hosts () 
+> { 
+>     local known_hosts;
+>     _comp_compgen_known_hosts__impl "$@" || return "$?";
+>     _comp_compgen -U known_hosts set "${known_hosts[@]}"
+> }
+> _comp_compgen_known_hosts__impl () 
+> { 
+>     known_hosts=();
+>     local configfile="" flag prefix="";
+>     local cur suffix="" aliases="" i host ipv4="" ipv6="";
+>     local -a kh tmpkh=() khd=() config=();
+>     local OPTIND=1;
+>     while getopts "ac46F:p:" flag "$@"; do
+>         case $flag in 
+>             a)
+>                 aliases=set
+>             ;;
+>             c)
+>                 suffix=':'
+>             ;;
+>             F)
+>                 if [[ ! -n $OPTARG ]]; then
+>                     echo "bash_completion: $FUNCNAME: -F: an empty filename is specified" 1>&2;
+>                     return 2;
+>                 fi;
+>                 configfile=$OPTARG
+>             ;;
+>             p)
+>                 prefix=$OPTARG
+>             ;;
+>             4)
+>                 ipv4=set
+>             ;;
+>             6)
+>                 ipv6=set
+>             ;;
+>             *)
+>                 echo "bash_completion: $FUNCNAME: usage error" 1>&2;
+>                 return 2
+>             ;;
+>         esac;
+>     done;
+>     if (($# < OPTIND)); then
+>         echo "bash_completion: $FUNCNAME: missing mandatory argument CWORD" 1>&2;
+>         return 2;
+>     fi;
+>     cur=${!OPTIND};
+>     ((OPTIND += 1));
+>     if (($# >= OPTIND)); then
+>         echo "bash_completion: $FUNCNAME($*): unprocessed arguments:" "$(while (($# >= OPTIND)); do
+>     printf '%s ' ${!OPTIND}
+> shift;
+> done)" 1>&2;
+>         return 2;
+>     fi;
+>     [[ $cur == *@* ]] && prefix=$prefix${cur%@*}@ && cur=${cur#*@};
+>     kh=();
+>     if [[ -n $configfile ]]; then
+>         [[ -r $configfile && ! -d $configfile ]] && config+=("$configfile");
+>     else
+>         for i in /etc/ssh/ssh_config ~/.ssh/config ~/.ssh2/config;
+>         do
+>             [[ -r $i && ! -d $i ]] && config+=("$i");
+>         done;
+>     fi;
+>     if ((${#config[@]} > 0)); then
+>         for i in "${config[@]}";
+>         do
+>             _comp__included_ssh_config_files "$i";
+>         done;
+>     fi;
+>     if ((${#config[@]} > 0)); then
+>         if _comp_split -l tmpkh "$(_comp_awk 'sub("^[ \t]*([Gg][Ll][Oo][Bb][Aa][Ll]|[Uu][Ss][Ee][Rr])[Kk][Nn][Oo][Ww][Nn][Hh][Oo][Ss][Tt][Ss][Ff][Ii][Ll][Ee][ \t=]+", "") { print $0 }' "${config[@]}" | sort -u)"; then
+>             local tmpkh2 j REPLY;
+>             for i in "${tmpkh[@]}";
+>             do
+>                 while [[ $i =~ ^([^\"]*)\"([^\"]*)\"(.*)$ ]]; do
+>                     i=${BASH_REMATCH[1]}${BASH_REMATCH[3]};
+>                     _comp_expand_tilde "${BASH_REMATCH[2]}";
+>                     [[ -r $REPLY ]] && kh+=("$REPLY");
+>                 done;
+>                 _comp_split tmpkh2 "$i" || continue;
+>                 for j in "${tmpkh2[@]}";
+>                 do
+>                     _comp_expand_tilde "$j";
+>                     [[ -r $REPLY ]] && kh+=("$REPLY");
+>                 done;
+>             done;
+>         fi;
+>     fi;
+>     if [[ ! -n $configfile ]]; then
+>         for i in /etc/ssh/ssh_known_hosts /etc/ssh/ssh_known_hosts2 /etc/known_hosts /etc/known_hosts2 ~/.ssh/known_hosts ~/.ssh/known_hosts2;
+>         do
+>             [[ -r $i && ! -d $i ]] && kh+=("$i");
+>         done;
+>         for i in /etc/ssh2/knownhosts ~/.ssh2/hostkeys;
+>         do
+>             [[ -d $i ]] || continue;
+>             _comp_expand_glob tmpkh '"$i"/*.pub' && khd+=("${tmpkh[@]}");
+>         done;
+>     fi;
+>     if ((${#kh[@]} + ${#khd[@]} > 0)); then
+>         if ((${#kh[@]} > 0)); then
+>             for i in "${kh[@]}";
+>             do
+>                 while read -ra tmpkh; do
+>                     ((${#tmpkh[@]} == 0)) && continue;
+>                     [[ ${tmpkh[0]} == [\|\#]* ]] && continue;
+>                     local host_list=${tmpkh[0]};
+>                     [[ ${tmpkh[0]} == @* ]] && host_list=${tmpkh[1]-};
+>                     local -a hosts;
+>                     if _comp_split -F , hosts "$host_list"; then
+>                         for host in "${hosts[@]}";
+>                         do
+>                             [[ $host == *[*?]* ]] && continue;
+>                             host=${host#[};
+>                             host=${host%]?(:+([0-9]))};
+>                             [[ -n $host ]] && known_hosts+=("$host");
+>                         done;
+>                     fi;
+>                 done < "$i";
+>             done;
+>         fi;
+>         if ((${#khd[@]} > 0)); then
+>             for i in "${khd[@]}";
+>             do
+>                 if [[ $i == *key_22_*.pub && -r $i ]]; then
+>                     host=${i/#*key_22_/};
+>                     host=${host/%.pub/};
+>                     [[ -n $host ]] && known_hosts+=("$host");
+>                 fi;
+>             done;
+>         fi;
+>         ((${#known_hosts[@]})) && _comp_compgen -v known_hosts -- -W '"${known_hosts[@]}"' -P "$prefix" -S "$suffix";
+>     fi;
+>     if [[ ${#config[@]} -gt 0 && -n $aliases ]]; then
+>         local -a hosts;
+>         if _comp_split hosts "$(command sed -ne 's/^[[:blank:]]*[Hh][Oo][Ss][Tt][[:blank:]=]\{1,\}\(.*\)$/\1/p' "${config[@]}")"; then
+>             _comp_compgen -av known_hosts -- -P "$prefix" -S "$suffix" -W '"${hosts[@]%%[*?%]*}"' -X '@(\!*|)';
+>         fi;
+>     fi;
+>     if [[ -n ${BASH_COMPLETION_KNOWN_HOSTS_WITH_AVAHI-} ]] && type avahi-browse &> /dev/null; then
+>         local generated=$(avahi-browse -cprak 2> /dev/null | _comp_awk -F ';' '/^=/ && $5 ~ /^_(ssh|workstation)\._tcp$/ { print $7 }' | sort -u);
+>         _comp_compgen -av known_hosts -- -P "$prefix" -S "$suffix" -W '$generated';
+>     fi;
+>     if type ruptime &> /dev/null; then
+>         local generated=$(ruptime 2> /dev/null | _comp_awk '!/^ruptime:/ { print $1 }');
+>         _comp_compgen -av known_hosts -- -W '$generated';
+>     fi;
+>     if [[ -n ${BASH_COMPLETION_KNOWN_HOSTS_WITH_HOSTFILE-set} ]]; then
+>         _comp_compgen -av known_hosts -- -A hostname -P "$prefix" -S "$suffix";
+>     fi;
+>     ((${#known_hosts[@]})) || return 1;
+>     if [[ -n $ipv4 ]]; then
+>         known_hosts=("${known_hosts[@]/*:*$suffix/}");
+>     fi;
+>     if [[ -n $ipv6 ]]; then
+>         known_hosts=("${known_hosts[@]/+([0-9]).+([0-9]).+([0-9]).+([0-9])$suffix/}");
+>     fi;
+>     if [[ -n $ipv4 || -n $ipv6 ]]; then
+>         for i in "${!known_hosts[@]}";
+>         do
+>             [[ -n ${known_hosts[i]} ]] || unset -v 'known_hosts[i]';
+>         done;
+>     fi;
+>     ((${#known_hosts[@]})) || return 1;
+>     _comp_compgen -v known_hosts -c "$prefix$cur" ltrim_colon "${known_hosts[@]}"
+> }
+> _comp_compgen_ltrim_colon () 
+> { 
+>     (($#)) || return 0;
+>     local -a _tmp;
+>     _tmp=("$@");
+>     if [[ $cur == *:* && $COMP_WORDBREAKS == *:* ]]; then
+>         local _colon_word=${cur%"${cur##*:}"};
+>         _tmp=("${_tmp[@]#"$_colon_word"}");
+>     fi;
+>     _comp_compgen_set "${_tmp[@]}"
+> }
+> _comp_compgen_mac_addresses () 
+> { 
+>     local _re='\([A-Fa-f0-9]\{2\}:\)\{5\}[A-Fa-f0-9]\{2\}';
+>     local PATH="$PATH:/sbin:/usr/sbin";
+>     local -a addresses;
+>     _comp_compgen -v addresses split -- "$({ ip -c=never link show || ip link show || LC_ALL=C ifconfig -a; } 2> /dev/null | command sed -ne "s/.*[[:space:]]HWaddr[[:space:]]\{1,\}\($_re\)[[:space:]].*/\1/p" -ne "s/.*[[:space:]]HWaddr[[:space:]]\{1,\}\($_re\)[[:space:]]*$/\1/p" -ne "s|.*[[:space:]]\(link/\)\{0,1\}ether[[:space:]]\{1,\}\($_re\)[[:space:]].*|\2|p" -ne "s|.*[[:space:]]\(link/\)\{0,1\}ether[[:space:]]\{1,\}\($_re\)[[:space:]]*$|\2|p")";
+>     _comp_compgen -av addresses split -- "$({ arp -an || ip -c=never neigh show || ip neigh show; } 2> /dev/null | command sed -ne "s/.*[[:space:]]\($_re\)[[:space:]].*/\1/p" -ne "s/.*[[:space:]]\($_re\)[[:space:]]*$/\1/p")";
+>     _comp_compgen -av addresses split -- "$(command sed -ne "s/^[[:space:]]*\($_re\)[[:space:]].*/\1/p" /etc/ethers 2> /dev/null)";
+>     _comp_compgen -U addresses ltrim_colon "${addresses[@]}"
+> }
+> _comp_compgen_pci_ids () 
+> { 
+>     _comp_compgen_split -- "$(PATH="$PATH:/sbin" lspci -n | _comp_awk '{print $3}')"
+> }
+> _comp_compgen_pgids () 
+> { 
+>     _comp_compgen_split -- "$(command ps ax -o pgid=)"
+> }
+> _comp_compgen_pids () 
+> { 
+>     _comp_compgen_split -- "$(command ps ax -o pid=)"
+> }
+> _comp_compgen_pnames () 
+> { 
+>     local -a procs=();
+>     if [[ ${1-} == -s ]]; then
+>         _comp_split procs "$(command ps ax -o comm | command sed -e 1d)";
+>     else
+>         local -a psout;
+>         _comp_split -l psout "$({ command ps ax -o command= || command ps ax -o comm=; } 2> /dev/null)";
+>         local line i=-1;
+>         for line in "${psout[@]}";
+>         do
+>             if ((i == -1)); then
+>                 if [[ $line =~ ^(.*[[:space:]])COMMAND([[:space:]]|$) ]]; then
+>                     i=${#BASH_REMATCH[1]};
+>                 else
+>                     break;
+>                 fi;
+>             else
+>                 line=${line:i};
+>                 line=${line%% *};
+>                 [[ -n $line ]] && procs+=("$line");
+>             fi;
+>         done;
+>         if ((i == -1)); then
+>             for line in "${psout[@]}";
+>             do
+>                 if [[ $line =~ ^[[(](.+)[])]$ ]]; then
+>                     procs+=("${BASH_REMATCH[1]}");
+>                 else
+>                     line=${line%% *};
+>                     line=${line##@(*/|-)};
+>                     [[ -n $line ]] && procs+=("$line");
+>                 fi;
+>             done;
+>         fi;
+>     fi;
+>     ((${#procs[@]})) && _comp_compgen -U procs -- -X "<defunct>" -W '"${procs[@]}"'
+> }
+> _comp_compgen_selinux_users () 
+> { 
+>     _comp_compgen_split -- "$(semanage user -nl 2> /dev/null | _comp_awk '{ print $1 }')"
+> }
+> _comp_compgen_services () 
+> { 
+>     local sysvdirs;
+>     _comp_sysvdirs || return 1;
+>     local services;
+>     _comp_expand_glob services '${sysvdirs[0]}/!($_comp_backup_glob|functions|README)';
+>     local _generated=$({ systemctl list-units --full --all || systemctl list-unit-files; } 2> /dev/null | _comp_awk '$1 ~ /\.service$/ { sub("\\.service$", "", $1); print $1 }');
+>     _comp_split -la services "$_generated";
+>     if [[ -x /sbin/upstart-udev-bridge ]]; then
+>         _comp_split -la services "$(initctl list 2> /dev/null | cut -d' ' -f1)";
+>     fi;
+>     ((${#services[@]})) || return 1;
+>     _comp_compgen -U services -U sysvdirs -- -W '"${services[@]#${sysvdirs[0]}/}"'
+> }
+> _comp_compgen_set () 
+> { 
+>     local _append=${_comp_compgen__append-};
+>     local _var=${_comp_compgen__var-COMPREPLY};
+>     eval -- "$_var${_append:++}=(\"\$@\")";
+>     (($#))
+> }
+> _comp_compgen_shells () 
+> { 
+>     local -a shells=();
+>     local _shell _rest;
+>     while read -r _shell _rest; do
+>         [[ $_shell == /* ]] && shells+=("$_shell");
+>     done 2> /dev/null < "${1-}"/etc/shells;
+>     _comp_compgen -U shells -- -W '"${shells[@]}"'
+> }
+> _comp_compgen_signals () 
+> { 
+>     local -a sigs;
+>     _comp_compgen -v sigs -c "SIG${cur#"${1-}"}" -- -A signal && _comp_compgen -RU sigs -- -P "${1-}" -W '"${sigs[@]#SIG}"'
+> }
+> _comp_compgen_split () 
+> { 
+>     local _ifs=' 	
+> ';
+>     local -a _compgen_options=();
+>     local OPTIND=1 OPTARG="" OPTERR=0 _opt;
+>     while getopts ':lF:X:S:P:o:' _opt "$@"; do
+>         case $_opt in 
+>             l)
+>                 _ifs='
+> '
+>             ;;
+>             F)
+>                 _ifs=$OPTARG
+>             ;;
+>             [XSPo])
+>                 _compgen_options+=("-$_opt" "$OPTARG")
+>             ;;
+>             *)
+>                 printf 'bash_completion: usage: %s [-l|-F sep] [--] str\n' "$FUNCNAME" 1>&2;
+>                 return 2
+>             ;;
+>         esac;
+>     done;
+>     shift "$((OPTIND - 1))";
+>     if (($# != 1)); then
+>         printf 'bash_completion: %s: unexpected number of arguments.\n' "$FUNCNAME" 1>&2;
+>         printf 'usage: %s [-l|-F sep] [--] str' "$FUNCNAME" 1>&2;
+>         return 2;
+>     fi;
+>     local input=$1 IFS=' 	
+> ';
+>     _comp_compgen -F "$_ifs" -U input -- ${_compgen_options[@]+"${_compgen_options[@]}"} -W '$input'
+> }
+> _comp_compgen_terms () 
+> { 
+>     _comp_compgen_split -- "$({ command sed -ne 's/^\([^[:space:]#|]\{2,\}\)|.*/\1/p' /etc/termcap
+> { toe -a || toe; } | _comp_awk '{ print $1 }'
+> _comp_expand_glob dirs '/{etc,lib,usr/lib,usr/share}/terminfo/?' && find "${dirs[@]}" -type f -maxdepth 1 | _comp_awk -F / '{ print $NF }'; } 2> /dev/null)"
+> }
+> _comp_compgen_tilde () 
+> { 
+>     if [[ ${cur-} == \~* && $cur != */* ]]; then
+>         if _comp_compgen -P '~' -- -u; then
+>             compopt -o filenames 2> /dev/null;
+>             return 0;
+>         fi;
+>     fi;
+>     return 1
+> }
+> _comp_compgen_uids () 
+> { 
+>     if type getent &> /dev/null; then
+>         _comp_compgen_split -- "$(getent passwd | cut -d: -f3)";
+>     else
+>         if type perl &> /dev/null; then
+>             _comp_compgen_split -- "$(perl -e 'while (($uid) = (getpwent)[2]) { print $uid . "\n" }')";
+>         else
+>             _comp_compgen_split -- "$(cut -d: -f3 /etc/passwd)";
+>         fi;
+>     fi
+> }
+> _comp_compgen_usage () 
+> { 
+>     (($#)) || set -- -- --usage;
+>     local -a _lines;
+>     _comp_compgen_help__get_help_lines "$@" || return "$?";
+>     local -a options=();
+>     local _line _match _option _i _char;
+>     for _line in "${_lines[@]}";
+>     do
+>         while [[ $_line =~ \[[[:space:]]*(-[^]]+)[[:space:]]*\] ]]; do
+>             _match=${BASH_REMATCH[0]};
+>             _option=${BASH_REMATCH[1]};
+>             case $_option in 
+>                 -?(\[)+([a-zA-Z0-9?]))
+>                     for ((_i = 1; _i < ${#_option}; _i++))
+>                     do
+>                         _char=${_option:_i:1};
+>                         [[ $_char != '[' ]] && options+=("-$_char");
+>                     done
+>                 ;;
+>                 *)
+>                     _comp_compgen_help__parse "$_option"
+>                 ;;
+>             esac;
+>             _line=${_line#*"$_match"};
+>         done;
+>     done;
+>     ((${#options[@]})) || return 1;
+>     _comp_compgen -U options -- -W '"${options[@]}"';
+>     return 0
+> }
+> _comp_compgen_usb_ids () 
+> { 
+>     _comp_compgen_split -- "$(PATH="$PATH:/sbin" lsusb | _comp_awk '{print $6}')"
+> }
+> _comp_compgen_usergroups () 
+> { 
+>     if [[ $cur == *\\\\* || $cur == *:*:* ]]; then
+>         return;
+>     else
+>         if [[ $cur == *\\:* ]]; then
+>             local tmp;
+>             if [[ ${1-} == -u ]]; then
+>                 _comp_compgen -v tmp -c "${cur#*:}" allowed_groups;
+>             else
+>                 _comp_compgen -v tmp -c "${cur#*:}" -- -g;
+>             fi;
+>             if ((${#tmp[@]})); then
+>                 local _prefix=${cur%%*([^:])};
+>                 _prefix=${_prefix//\\/};
+>                 _comp_compgen -Rv tmp -- -P "$_prefix" -W '"${tmp[@]}"';
+>                 _comp_compgen -U tmp set "${tmp[@]}";
+>             fi;
+>         else
+>             if [[ $cur == *:* ]]; then
+>                 if [[ ${1-} == -u ]]; then
+>                     _comp_compgen -c "${cur#*:}" allowed_groups;
+>                 else
+>                     _comp_compgen -c "${cur#*:}" -- -g;
+>                 fi;
+>             else
+>                 if [[ ${1-} == -u ]]; then
+>                     _comp_compgen_allowed_users;
+>                 else
+>                     _comp_compgen -- -u;
+>                 fi;
+>             fi;
+>         fi;
+>     fi
+> }
+> _comp_compgen_variables () 
+> { 
+>     if [[ $cur =~ ^(\$(\{[!#]?)?)([A-Za-z0-9_]*)$ ]]; then
+>         if [[ $cur == '${'* ]]; then
+>             local arrs vars;
+>             _comp_compgen -v vars -c "${BASH_REMATCH[3]}" -- -A variable -P "${BASH_REMATCH[1]}" -S '}';
+>             _comp_compgen -v arrs -c "${BASH_REMATCH[3]}" -- -A arrayvar -P "${BASH_REMATCH[1]}" -S '[';
+>             if ((${#vars[@]} == 1 && ${#arrs[@]} != 0)); then
+>                 compopt -o nospace;
+>                 _comp_compgen -U vars -U arrs -R -- -W '"${arrs[@]}"';
+>             else
+>                 _comp_compgen -U vars -U arrs -R -- -W '"${vars[@]}"';
+>             fi;
+>         else
+>             _comp_compgen -ac "${BASH_REMATCH[3]}" -- -A variable -P '$';
+>         fi;
+>         return 0;
+>     else
+>         if [[ $cur =~ ^(\$\{[#!]?)([A-Za-z0-9_]*)\[([^]]*)$ ]]; then
+>             local vars;
+>             _comp_compgen -v vars -c "${BASH_REMATCH[3]}" -- -W '"${!'"${BASH_REMATCH[2]}"'[@]}"' -P "${BASH_REMATCH[1]}${BASH_REMATCH[2]}[" -S ']}';
+>             if [[ ${BASH_REMATCH[3]} == [@*] ]]; then
+>                 vars+=("${BASH_REMATCH[1]}${BASH_REMATCH[2]}[${BASH_REMATCH[3]}]}");
+>             fi;
+>             if ((${#vars[@]})); then
+>                 _comp_compgen -U vars -c "$cur" ltrim_colon "${vars[@]}";
+>             else
+>                 _comp_compgen_set;
+>             fi;
+>             return 0;
+>         else
+>             if [[ $cur =~ ^\$\{[#!]?[A-Za-z0-9_]*\[.*\]$ ]]; then
+>                 _comp_compgen -c "$cur" ltrim_colon "$cur}";
+>                 return 0;
+>             fi;
+>         fi;
+>     fi;
+>     return 1
+> }
+> _comp_compgen_xinetd_services () 
+> { 
+>     local xinetddir=${_comp__test_xinetd_dir:-/etc/xinetd.d};
+>     if [[ -d $xinetddir ]]; then
+>         local -a svcs;
+>         if _comp_expand_glob svcs '$xinetddir/!($_comp_backup_glob)'; then
+>             _comp_compgen -U svcs -U xinetddir -- -W '"${svcs[@]#$xinetddir/}"';
+>         fi;
+>     fi
+> }
+> _comp_complete_filedir_xspec () 
+> { 
+>     local cur prev words cword comp_args;
+>     _comp_initialize -- "$@" || return;
+>     _comp_compgen_filedir_xspec "$1"
+> }
+> _comp_complete_known_hosts () 
+> { 
+>     local cur prev words cword comp_args;
+>     _comp_initialize -n : -- "$@" || return;
+>     local -a options=();
+>     [[ ${1-} == -a || ${2-} == -a ]] && options+=(-a);
+>     [[ ${1-} == -c || ${2-} == -c ]] && options+=(-c);
+>     local IFS=' 	
+> ';
+>     _comp_compgen_known_hosts ${options[@]+"${options[@]}"} -- "$cur"
+> }
+> _comp_complete_load () 
+> { 
+>     local cmd=${1:-_EmptycmD_};
+>     _comp_load -D -- "$cmd" && return 124
+> }
+> _comp_complete_longopt () 
+> { 
+>     local cur prev words cword was_split comp_args;
+>     _comp_initialize -s -- "$@" || return;
+>     case "${prev,,}" in 
+>         --help | --usage | --version)
+>             return
+>         ;;
+>         --!(no-*)dir*)
+>             _comp_compgen -a filedir -d;
+>             return
+>         ;;
+>         --!(no-*)@(file|path)*)
+>             _comp_compgen -a filedir;
+>             return
+>         ;;
+>         --+([-a-z0-9_]))
+>             local argtype=$(LC_ALL=C $1 --help 2>&1 | command sed -ne "s|.*$prev\[\{0,1\}=[<[]\{0,1\}\([-A-Za-z0-9_]\{1,\}\).*|\1|p");
+>             case ${argtype,,} in 
+>                 *dir*)
+>                     _comp_compgen -a filedir -d;
+>                     return
+>                 ;;
+>                 *file* | *path*)
+>                     _comp_compgen -a filedir;
+>                     return
+>                 ;;
+>             esac
+>         ;;
+>     esac;
+>     [[ -n $was_split ]] && return;
+>     if [[ $cur == -* ]]; then
+>         _comp_compgen_split -- "$(LC_ALL=C $1 --help 2>&1 | while read -r line; do
+>     [[ $line =~ --[A-Za-z0-9]+([-_][A-Za-z0-9]+)*=? ]] && printf '%s\n' "${BASH_REMATCH[0]}";
+> done)";
+>         [[ ${COMPREPLY-} == *= ]] && compopt -o nospace;
+>     else
+>         if [[ $1 == *@(rmdir|chroot) ]]; then
+>             _comp_compgen -a filedir -d;
+>         else
+>             [[ $1 == *mkdir ]] && compopt -o nospace;
+>             _comp_compgen -a filedir;
+>         fi;
+>     fi
+> }
+> _comp_complete_minimal () 
+> { 
+>     local cur prev words cword comp_args;
+>     _comp_initialize -- "$@" || return;
+>     compopt -o bashdefault -o default
+> }
+> _comp_complete_service () 
+> { 
+>     local cur prev words cword comp_args;
+>     _comp_initialize -- "$@" || return;
+>     ((cword > 2)) && return;
+>     if [[ $cword -eq 1 && $prev == ?(*/)service ]]; then
+>         _comp_compgen_services;
+>         [[ -e /etc/mandrake-release ]] && _comp_compgen_xinetd_services;
+>     else
+>         local sysvdirs;
+>         _comp_sysvdirs || return 1;
+>         _comp_compgen_split -l -- "$(command sed -e 'y/|/ /' -ne 's/^.*\(U\|msg_u\)sage.*{\(.*\)}.*$/\2/p' "${sysvdirs[0]}/${prev##*/}" 2> /dev/null) start stop";
+>     fi
+> }
+> _comp_complete_user_at_host () 
+> { 
+>     local cur prev words cword comp_args;
+>     _comp_initialize -n : -- "$@" || return;
+>     if [[ $cur == *@* ]]; then
+>         _comp_compgen_known_hosts "$cur";
+>     else
+>         _comp_compgen -- -u -S @;
+>         compopt -o nospace;
+>     fi
+> }
+> _comp_count_args () 
+> { 
+>     local has_optarg="" has_exclude="" exclude="" glob_include="";
+>     local OPTIND=1 OPTARG="" OPTERR=0 _opt;
+>     while getopts ':a:n:i:' _opt "$@"; do
+>         case $_opt in 
+>             a)
+>                 has_optarg=$OPTARG
+>             ;;
+>             n)
+>                 has_exclude=set exclude+=$OPTARG
+>             ;;
+>             i)
+>                 glob_include=$OPTARG
+>             ;;
+>             *)
+>                 echo "bash_completion: $FUNCNAME: usage error" 1>&2;
+>                 return 2
+>             ;;
+>         esac;
+>     done;
+>     shift "$((OPTIND - 1))";
+>     if [[ -n $has_exclude ]]; then
+>         local cword words;
+>         _comp__reassemble_words "$exclude<>&" words cword;
+>     fi;
+>     local i;
+>     REPLY=1;
+>     for ((i = 1; i < cword; i++))
+>     do
+>         if [[ -n $has_optarg && ${words[i]} == $has_optarg ]]; then
+>             ((i++));
+>         else
+>             if [[ ${words[i]} != -?* || -n $glob_include && ${words[i]} == $glob_include ]]; then
+>                 ((REPLY++));
+>             else
+>                 if [[ ${words[i]} == -- ]]; then
+>                     ((REPLY += cword - i - 1));
+>                     break;
+>                 fi;
+>             fi;
+>         fi;
+>     done
+> }
+> _comp_delimited () 
+> { 
+>     local prefix="" delimiter=$1 deduplicate=set;
+>     shift;
+>     if [[ $delimiter == -k ]]; then
+>         deduplicate="";
+>         delimiter=$1;
+>         shift;
+>     fi;
+>     [[ $cur == *"$delimiter"* ]] && prefix=${cur%"$delimiter"*}$delimiter;
+>     if [[ -n $deduplicate ]]; then
+>         _comp_compgen -R -- "$@";
+>         local -a existing;
+>         _comp_split -F "$delimiter" existing "$cur";
+>         [[ ! -n $cur || $cur == *"$delimiter" ]] || unset -v "existing[${#existing[@]}-1]";
+>         if ((${#COMPREPLY[@]})); then
+>             local x i;
+>             for x in ${existing+"${existing[@]}"};
+>             do
+>                 for i in "${!COMPREPLY[@]}";
+>                 do
+>                     if [[ $x == "${COMPREPLY[i]}" ]]; then
+>                         unset -v 'COMPREPLY[i]';
+>                         continue 2;
+>                     fi;
+>                 done;
+>             done;
+>             ((${#COMPREPLY[@]})) && _comp_compgen -c "${cur##*"$delimiter"}" -- -W '"${COMPREPLY[@]}"';
+>         fi;
+>     else
+>         _comp_compgen -c "${cur##*"$delimiter"}" -- "$@";
+>     fi;
+>     if [[ -n $prefix ]]; then
+>         local i;
+>         for i in "${!COMPREPLY[@]}";
+>         do
+>             COMPREPLY[i]="$prefix${COMPREPLY[i]}";
+>         done;
+>     fi;
+>     [[ $delimiter != : ]] || _comp_ltrim_colon_completions "$cur"
+> }
+> _comp_deprecate_func () 
+> { 
+>     if (($# != 3)); then
+>         printf 'bash_completion: %s: usage: %s DEPRECATION_VERSION OLD_NAME NEW_NAME\n' "$FUNCNAME" "$FUNCNAME";
+>         return 2;
+>     fi;
+>     if [[ $2 != [a-zA-Z_]*([a-zA-Z_0-9]) ]]; then
+>         printf 'bash_completion: %s: %s\n' "$FUNCNAME" "\$2: invalid function name '$1'" 1>&2;
+>         return 2;
+>     else
+>         if [[ $3 != [a-zA-Z_]*([a-zA-Z_0-9]) ]]; then
+>             printf 'bash_completion: %s: %s\n' "$FUNCNAME" "\$3: invalid function name '$2'" 1>&2;
+>             return 2;
+>         fi;
+>     fi;
+>     eval -- "$2() { $3 \"\$@\"; }"
+> }
+> _comp_deprecate_var () 
+> { 
+>     if (($# != 3)); then
+>         printf 'bash_completion: %s: usage: %s DEPRECATION_VERSION OLD_NAME NEW_NAME\n' "$FUNCNAME" "$FUNCNAME";
+>         return 2;
+>     fi;
+>     if [[ $2 != [a-zA-Z_]*([a-zA-Z_0-9]) ]]; then
+>         printf 'bash_completion: %s: %s\n' "$FUNCNAME" "\$2: invalid variable name '$1'" 1>&2;
+>         return 2;
+>     else
+>         if [[ $3 != [a-zA-Z_]*([a-zA-Z_0-9]) ]]; then
+>             printf 'bash_completion: %s: %s\n' "$FUNCNAME" "\$3: invalid variable name '$2'" 1>&2;
+>             return 2;
+>         fi;
+>     fi;
+>     if ((BASH_VERSINFO[0] >= 5 || BASH_VERSINFO[0] == 4 && BASH_VERSINFO[1] >= 3)); then
+>         eval "declare -gn $2=$3";
+>     else
+>         if [[ -v $2 && ! -v $3 ]]; then
+>             printf -v "$3" %s "$2";
+>         fi;
+>     fi
+> }
+> _comp_dequote () 
+> { 
+>     if [[ ${1-} =~ $_comp_dequote__regex_safe_word ]]; then
+>         REPLY=();
+>         eval "REPLY=($1)" 2> /dev/null;
+>         ((${#REPLY[@]} > 0));
+>         return "$?";
+>     else
+>         REPLY=("${1-}");
+>         return 1;
+>     fi
+> }
+> _comp_dequote_incomplete () 
+> { 
+>     local _word=${1-};
+>     if ! [[ $_word =~ $_comp_dequote__regex_safe_word ]]; then
+>         if [[ ${_word%'\'} =~ $_comp_dequote__regex_safe_word ]]; then
+>             _word=${_word%'\'};
+>         else
+>             if [[ $_word\' =~ $_comp_dequote__regex_safe_word ]]; then
+>                 _word=$_word\';
+>             else
+>                 if [[ $_word\" =~ $_comp_dequote__regex_safe_word ]]; then
+>                     _word=$_word\";
+>                 fi;
+>             fi;
+>         fi;
+>     fi;
+>     _comp_dequote "$_word"
+> }
+> _comp_expand () 
+> { 
+>     case ${cur-} in 
+>         ~*/*)
+>             local REPLY;
+>             _comp_expand_tilde "$cur";
+>             cur=$REPLY
+>         ;;
+>         ~*)
+>             _comp_compgen -v COMPREPLY tilde && eval "COMPREPLY[0]=$(printf ~%q "${COMPREPLY[0]#\~}")" && return 1
+>         ;;
+>     esac;
+>     return 0
+> }
+> _comp_expand_glob () 
+> { 
+>     if (($# != 2)); then
+>         printf 'bash-completion: %s: unexpected number of arguments\n' "$FUNCNAME" 1>&2;
+>         printf 'usage: %s ARRAY_NAME PATTERN\n' "$FUNCNAME" 1>&2;
+>         return 2;
+>     else
+>         if [[ $1 == @(GLOBIGNORE|GLOBSORT|_*|*[^_a-zA-Z0-9]*|[0-9]*|'') ]]; then
+>             printf 'bash-completion: %s: invalid array name "%s"\n' "$FUNCNAME" "$1" 1>&2;
+>             return 2;
+>         fi;
+>     fi;
+>     local _original_opts=$SHELLOPTS:$BASHOPTS;
+>     set +o noglob;
+>     shopt -s nullglob;
+>     shopt -u failglob dotglob;
+>     local GLOBIGNORE="" GLOBSORT=name;
+>     local LC_COLLATE=C LC_CTYPE=${LC_ALL:-${LC_CTYPE:-${LANG-}}} LC_ALL=;
+>     eval -- "$1=()";
+>     eval -- "$1=($2)";
+>     _comp_unlocal GLOBIGNORE;
+>     if [[ :$_original_opts: == *:dotglob:* ]]; then
+>         shopt -s dotglob;
+>     else
+>         shopt -u dotglob;
+>     fi;
+>     [[ :$_original_opts: == *:nullglob:* ]] || shopt -u nullglob;
+>     [[ :$_original_opts: == *:failglob:* ]] && shopt -s failglob;
+>     [[ :$_original_opts: == *:noglob:* ]] && set -o noglob;
+>     eval "((\${#$1[@]}))"
+> }
+> _comp_expand_tilde () 
+> { 
+>     REPLY=$1;
+>     if [[ $1 == \~* ]]; then
+>         printf -v REPLY '~%q' "${1#\~}";
+>         eval "REPLY=$REPLY";
+>     fi
+> }
+> _comp_get_first_arg () 
+> { 
+>     _comp_locate_first_arg "$@" && REPLY=${words[REPLY]}
+> }
+> _comp_get_ncpus () 
+> { 
+>     local var=NPROCESSORS_ONLN;
+>     [[ $OSTYPE == *@(linux|msys|cygwin)* ]] && var=_$var;
+>     if REPLY=$(getconf $var 2> /dev/null) && ((REPLY >= 1)); then
+>         return 0;
+>     else
+>         REPLY=1;
+>         return 1;
+>     fi
+> }
+> _comp_get_words () 
+> { 
+>     local exclude="" flag i OPTIND=1;
+>     local cur cword words=();
+>     local upargs=() upvars=() vcur="" vcword="" vprev="" vwords="";
+>     while getopts "c:i:n:p:w:" flag "$@"; do
+>         case $flag in 
+>             [cipw])
+>                 if [[ $OPTARG != [a-zA-Z_]*([a-zA-Z_0-9])?(\[*\]) ]]; then
+>                     echo "bash_completion: $FUNCNAME: -$flag: invalid variable name \`$OPTARG'" 1>&2;
+>                     return 1;
+>                 fi
+>             ;;&
+>             c)
+>                 vcur=$OPTARG
+>             ;;
+>             i)
+>                 vcword=$OPTARG
+>             ;;
+>             n)
+>                 exclude=$OPTARG
+>             ;;
+>             p)
+>                 vprev=$OPTARG
+>             ;;
+>             w)
+>                 vwords=$OPTARG
+>             ;;
+>             *)
+>                 echo "bash_completion: $FUNCNAME: usage error" 1>&2;
+>                 return 1
+>             ;;
+>         esac;
+>     done;
+>     while [[ $# -ge $OPTIND ]]; do
+>         case ${!OPTIND} in 
+>             cur)
+>                 vcur=cur
+>             ;;
+>             prev)
+>                 vprev=prev
+>             ;;
+>             cword)
+>                 vcword=cword
+>             ;;
+>             words)
+>                 vwords=words
+>             ;;
+>             *)
+>                 echo "bash_completion: $FUNCNAME: \`${!OPTIND}':" "unknown argument" 1>&2;
+>                 return 1
+>             ;;
+>         esac;
+>         ((OPTIND += 1));
+>     done;
+>     _comp__get_cword_at_cursor "${exclude-}" words cword cur;
+>     [[ -n $vcur ]] && { 
+>         upvars+=("$vcur");
+>         upargs+=(-v "$vcur" "$cur")
+>     };
+>     [[ -n $vcword ]] && { 
+>         upvars+=("$vcword");
+>         upargs+=(-v "$vcword" "$cword")
+>     };
+>     [[ -n $vprev ]] && { 
+>         local value="";
+>         ((cword >= 1)) && value=${words[cword - 1]};
+>         upvars+=("$vprev");
+>         upargs+=(-v "$vprev" "$value")
+>     };
+>     [[ -n $vwords ]] && { 
+>         local IFS=' 	
+> ';
+>         upvars+=("$vwords");
+>         upargs+=(-a"${#words[@]}" "$vwords" ${words+"${words[@]}"})
+>     };
+>     ((${#upvars[@]})) && local "${upvars[@]}" && _comp_upvars "${upargs[@]}"
+> }
+> _comp_have_command () 
+> { 
+>     PATH=$PATH:/usr/sbin:/sbin:/usr/local/sbin type "$1" &> /dev/null
+> }
+> _comp_initialize () 
+> { 
+>     local exclude="" opt_split="" outx="" errx="" inx="";
+>     local flag OPTIND=1 OPTARG="" OPTERR=0;
+>     while getopts "n:e:o:i:s" flag "$@"; do
+>         case $flag in 
+>             n)
+>                 exclude+=$OPTARG
+>             ;;
+>             e)
+>                 errx=$OPTARG
+>             ;;
+>             o)
+>                 outx=$OPTARG
+>             ;;
+>             i)
+>                 inx=$OPTARG
+>             ;;
+>             s)
+>                 opt_split="set";
+>                 was_split="";
+>                 exclude+="="
+>             ;;
+>             *)
+>                 echo "bash_completion: $FUNCNAME: usage error" 1>&2;
+>                 return 1
+>             ;;
+>         esac;
+>     done;
+>     shift "$((OPTIND - 1))";
+>     (($#)) && comp_args=("$@");
+>     COMPREPLY=();
+>     local redir='@(?(+([0-9])|{[a-zA-Z_]*([a-zA-Z_0-9])})@(>?([>|&])|<?([>&])|<<?([-<]))|&>?(>))';
+>     _comp_get_words -n "$exclude<>&" cur prev words cword;
+>     _comp_compgen_variables && return 1;
+>     if [[ $cur == $redir* || ${prev-} == $redir ]]; then
+>         local xspec;
+>         case $cur in 
+>             2'>'*)
+>                 xspec=${errx-}
+>             ;;
+>             *'>'*)
+>                 xspec=${outx-}
+>             ;;
+>             *'<'*)
+>                 xspec=${inx-}
+>             ;;
+>             *)
+>                 case $prev in 
+>                     2'>'*)
+>                         xspec=${errx-}
+>                     ;;
+>                     *'>'*)
+>                         xspec=${outx-}
+>                     ;;
+>                     *'<'*)
+>                         xspec=${inx-}
+>                     ;;
+>                 esac
+>             ;;
+>         esac;
+>         cur=${cur##$redir};
+>         _comp_compgen_filedir "$xspec";
+>         return 1;
+>     fi;
+>     local i skip;
+>     for ((i = 1; i < ${#words[@]}; 1))
+>     do
+>         if [[ ${words[i]} == $redir* ]]; then
+>             [[ ${words[i]} == $redir ]] && skip=2 || skip=1;
+>             words=("${words[@]:0:i}" "${words[@]:i+skip}");
+>             ((i <= cword)) && ((cword -= skip));
+>         else
+>             ((i++));
+>         fi;
+>     done;
+>     ((cword <= 0)) && return 1;
+>     prev=${words[cword - 1]};
+>     [[ -n $opt_split ]] && _comp__split_longopt && was_split="set";
+>     return 0
+> }
+> _comp_load () 
+> { 
+>     local flag_fallback_default="" IFS=' 	
+> ';
+>     local OPTIND=1 OPTARG="" OPTERR=0 opt;
+>     while getopts ':D' opt "$@"; do
+>         case $opt in 
+>             D)
+>                 flag_fallback_default=set
+>             ;;
+>             *)
+>                 echo "bash_completion: $FUNCNAME: usage error" 1>&2;
+>                 return 2
+>             ;;
+>         esac;
+>     done;
+>     shift "$((OPTIND - 1))";
+>     local cmd=$1 cmdname=${1##*/} dir compfile;
+>     local -a paths;
+>     [[ -n $cmdname ]] || return 1;
+>     local backslash=;
+>     if [[ $cmd == \\* ]]; then
+>         cmd=${cmd:1};
+>         $(complete -p -- "$cmd" 2> /dev/null || echo false) "\\$cmd" && return 0;
+>         backslash=\\;
+>     fi;
+>     local REPLY pathcmd origcmd=$cmd;
+>     if pathcmd=$(type -P -- "$cmd"); then
+>         _comp_abspath "$pathcmd";
+>         cmd=$REPLY;
+>     fi;
+>     local -a dirs=();
+>     if [[ -n ${BASH_COMPLETION_USER_DIR-} ]]; then
+>         _comp_split -F : paths "$BASH_COMPLETION_USER_DIR" && dirs+=("${paths[@]/%//completions}");
+>     else
+>         dirs=("${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion/completions");
+>     fi;
+>     dirs+=("$_comp__base_directory/completions");
+>     paths=();
+>     [[ $cmd == /* ]] && paths+=("${cmd%/*}");
+>     _comp_realcommand "$cmd" && paths+=("${REPLY%/*}");
+>     _comp_split -aF : paths "$PATH";
+>     for dir in "${paths[@]%/}";
+>     do
+>         [[ $dir == ?*/@(bin|sbin) ]] && dirs+=("${dir%/*}/share/bash-completion/completions");
+>     done;
+>     _comp_split -F : paths "${XDG_DATA_DIRS:-/usr/local/share:/usr/share}" && dirs+=("${paths[@]/%//bash-completion/completions}");
+>     local IFS=' 	
+> ';
+>     shift;
+>     local i prefix compspec;
+>     for prefix in "" _;
+>     do
+>         for i in ${!dirs[*]};
+>         do
+>             dir=${dirs[i]};
+>             if [[ ! -d $dir ]]; then
+>                 unset -v 'dirs[i]';
+>                 continue;
+>             fi;
+>             for compfile in "$prefix$cmdname" "$prefix$cmdname.bash";
+>             do
+>                 compfile="$dir/$compfile";
+>                 if [[ -d $compfile ]]; then
+>                     [[ $compfile == */.?(.) ]] || echo "bash_completion: $compfile: is a directory" 1>&2;
+>                 else
+>                     if [[ -e $compfile ]] && . "$compfile" "$cmd" "$@"; then
+>                         if compspec=$(complete -p -- "$cmd" 2> /dev/null); then
+>                             [[ -n $backslash ]] && eval "$compspec \"\$backslash\$cmd\"";
+>                             [[ $origcmd != */* ]] && ! complete -p -- "$origcmd" &> /dev/null && eval "$compspec \"\$origcmd\"";
+>                             return 0;
+>                         fi;
+>                         if [[ $cmdname != "$cmd" ]] && compspec=$(complete -p -- "$cmdname" 2> /dev/null); then
+>                             [[ $cmd == /* ]] && eval "$compspec \"\$cmd\"";
+>                             return 0;
+>                         fi;
+>                     fi;
+>                 fi;
+>             done;
+>         done;
+>     done;
+>     [[ -v _comp_xspecs[$cmdname] || -v _xspecs[$cmdname] ]] && complete -F _comp_complete_filedir_xspec "$cmdname" "$backslash$cmdname" && return 0;
+>     if [[ -n $flag_fallback_default ]]; then
+>         complete -F _comp_complete_minimal -- "$origcmd" && return 0;
+>     fi;
+>     return 1
+> }
+> _comp_locate_first_arg () 
+> { 
+>     local has_optarg="";
+>     local OPTIND=1 OPTARG="" OPTERR=0 _opt;
+>     while getopts ':a:' _opt "$@"; do
+>         case $_opt in 
+>             a)
+>                 has_optarg=$OPTARG
+>             ;;
+>             *)
+>                 echo "bash_completion: $FUNCNAME: usage error" 1>&2;
+>                 return 2
+>             ;;
+>         esac;
+>     done;
+>     shift "$((OPTIND - 1))";
+>     local i;
+>     REPLY=;
+>     for ((i = 1; i < cword; i++))
+>     do
+>         if [[ -n $has_optarg && ${words[i]} == $has_optarg ]]; then
+>             ((i++));
+>         else
+>             if [[ ${words[i]} != -?* ]]; then
+>                 REPLY=$i;
+>                 return 0;
+>             else
+>                 if [[ ${words[i]} == -- ]]; then
+>                     ((i + 1 < cword)) && REPLY=$((i + 1)) && return 0;
+>                     break;
+>                 fi;
+>             fi;
+>         fi;
+>     done;
+>     return 1
+> }
+> _comp_looks_like_path () 
+> { 
+>     [[ ${1-} == @(*/|[.~])* ]]
+> }
+> _comp_ltrim_colon_completions () 
+> { 
+>     ((${#COMPREPLY[@]})) || return 0;
+>     _comp_compgen -c "$1" ltrim_colon "${COMPREPLY[@]}"
+> }
+> _comp_quote () 
+> { 
+>     REPLY=\'${1//\'/\'\\\'\'}\'
+> }
+> _comp_quote_compgen () 
+> { 
+>     if [[ $1 == \'* ]]; then
+>         REPLY=${1:1};
+>     else
+>         printf -v REPLY %q "$1";
+>         if [[ $REPLY == \$\'*\' ]]; then
+>             local value=${REPLY:2:-1};
+>             value=${value//'%'/%%};
+>             printf -v REPLY "$value";
+>         fi;
+>     fi
+> }
+> _comp_readline_variable_on () 
+> { 
+>     [[ $(bind -v) == *$1+([[:space:]])on* ]]
+> }
+> _comp_realcommand () 
+> { 
+>     REPLY="";
+>     local file;
+>     file=$(type -P -- "$1") || return $?;
+>     if type -p realpath > /dev/null; then
+>         REPLY=$(realpath "$file");
+>     else
+>         if type -p greadlink > /dev/null; then
+>             REPLY=$(greadlink -f "$file");
+>         else
+>             if type -p readlink > /dev/null; then
+>                 REPLY=$(readlink -f "$file");
+>             else
+>                 _comp_abspath "$file";
+>             fi;
+>         fi;
+>     fi
+> }
+> _comp_root_command () 
+> { 
+>     local PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin;
+>     local _comp_root_command=$1;
+>     _comp_command
+> }
+> _comp_split () 
+> { 
+>     local _append="" IFS=' 	
+> ';
+>     local OPTIND=1 OPTARG="" OPTERR=0 _opt;
+>     while getopts ':alF:' _opt "$@"; do
+>         case $_opt in 
+>             a)
+>                 _append=set
+>             ;;
+>             l)
+>                 IFS='
+> '
+>             ;;
+>             F)
+>                 IFS=$OPTARG
+>             ;;
+>             *)
+>                 echo "bash_completion: $FUNCNAME: usage error" 1>&2;
+>                 return 2
+>             ;;
+>         esac;
+>     done;
+>     shift "$((OPTIND - 1))";
+>     if (($# != 2)); then
+>         printf '%s\n' "bash_completion: $FUNCNAME: unexpected number of arguments" 1>&2;
+>         printf '%s\n' "usage: $FUNCNAME [-al] [-F SEP] ARRAY_NAME TEXT" 1>&2;
+>         return 2;
+>     else
+>         if [[ $1 == @(*[^_a-zA-Z0-9]*|[0-9]*|''|_*|IFS|OPTIND|OPTARG|OPTERR) ]]; then
+>             printf '%s\n' "bash_completion: $FUNCNAME: invalid array name '$1'" 1>&2;
+>             return 2;
+>         fi;
+>     fi;
+>     local _original_opts=$SHELLOPTS;
+>     set -o noglob;
+>     local _old_size _new_size;
+>     if [[ -n $_append ]]; then
+>         eval "$1+=()";
+>         eval "_old_size=\${#$1[@]}";
+>         eval "$1+=(\$2)";
+>     else
+>         _old_size=0;
+>         eval "$1=(\$2)";
+>     fi;
+>     eval "_new_size=\${#$1[@]}";
+>     [[ :$_original_opts: == *:noglob:* ]] || set +o noglob;
+>     ((_new_size > _old_size))
+> }
+> _comp_sysvdirs () 
+> { 
+>     sysvdirs=();
+>     [[ -d /etc/rc.d/init.d ]] && sysvdirs+=(/etc/rc.d/init.d);
+>     [[ -d /etc/init.d ]] && sysvdirs+=(/etc/init.d);
+>     [[ -f /etc/slackware-version ]] && sysvdirs=(/etc/rc.d);
+>     ((${#sysvdirs[@]}))
+> }
+> _comp_try_faketty () 
+> { 
+>     if type unbuffer &> /dev/null; then
+>         unbuffer -p "$@";
+>     else
+>         if script --version 2>&1 | command grep -qF util-linux; then
+>             script -qaefc "$*" /dev/null;
+>         else
+>             "$@";
+>         fi;
+>     fi
+> }
+> _comp_unlocal () 
+> { 
+>     if ((BASH_VERSINFO[0] >= 5)) && shopt -q localvar_unset; then
+>         shopt -u localvar_unset;
+>         unset -v "$@";
+>         shopt -s localvar_unset;
+>     else
+>         unset -v "$@";
+>     fi
+> }
+> _comp_upvars () 
+> { 
+>     if ! (($#)); then
+>         echo "bash_completion: $FUNCNAME: usage: $FUNCNAME" "[-v varname value] | [-aN varname [value ...]] ..." 1>&2;
+>         return 2;
+>     fi;
+>     while (($#)); do
+>         case $1 in 
+>             -a*)
+>                 [[ -n ${1#-a} ]] || { 
+>                     echo "bash_completion: $FUNCNAME:" "\`$1': missing number specifier" 1>&2;
+>                     return 1
+>                 };
+>                 printf %d "${1#-a}" &> /dev/null || { 
+>                     echo bash_completion: "$FUNCNAME: \`$1': invalid number specifier" 1>&2;
+>                     return 1
+>                 };
+>                 [[ -n $2 ]] && unset -v "$2" && eval "$2"=\(\"\$"{@:3:${1#-a}}"\"\) && shift $((${1#-a} + 2)) || { 
+>                     echo bash_completion: "$FUNCNAME: \`$1${2+ }$2': missing argument(s)" 1>&2;
+>                     return 1
+>                 }
+>             ;;
+>             -v)
+>                 [[ -n $2 ]] && unset -v "$2" && eval "$2"=\"\$3\" && shift 3 || { 
+>                     echo "bash_completion: $FUNCNAME: $1:" "missing argument(s)" 1>&2;
+>                     return 1
+>                 }
+>             ;;
+>             *)
+>                 echo "bash_completion: $FUNCNAME: $1: invalid option" 1>&2;
+>                 return 1
+>             ;;
+>         esac;
+>     done
+> }
+> _comp_userland () 
+> { 
+>     local userland=$(uname -s);
+>     [[ $userland == @(Linux|GNU/*) ]] && userland=GNU;
+>     [[ $userland == "$1" ]]
+> }
+> _comp_variable_assignments () 
+> { 
+>     local cur=${1-} i;
+>     if [[ $cur =~ ^([A-Za-z_][A-Za-z0-9_]*)=(.*)$ ]]; then
+>         prev=${BASH_REMATCH[1]};
+>         cur=${BASH_REMATCH[2]};
+>     else
+>         return 1;
+>     fi;
+>     case $prev in 
+>         TZ)
+>             cur=/usr/share/zoneinfo/$cur;
+>             _comp_compgen_filedir;
+>             if ((${#COMPREPLY[@]})); then
+>                 for i in "${!COMPREPLY[@]}";
+>                 do
+>                     if [[ ${COMPREPLY[i]} == *.tab ]]; then
+>                         unset -v 'COMPREPLY[i]';
+>                         continue;
+>                     else
+>                         if [[ -d ${COMPREPLY[i]} ]]; then
+>                             COMPREPLY[i]+=/;
+>                             compopt -o nospace;
+>                         fi;
+>                     fi;
+>                     COMPREPLY[i]=${COMPREPLY[i]#/usr/share/zoneinfo/};
+>                 done;
+>             fi
+>         ;;
+>         TERM)
+>             _comp_compgen_terms
+>         ;;
+>         LANG | LC_*)
+>             _comp_compgen_split -- "$(locale -a 2> /dev/null)"
+>         ;;
+>         LANGUAGE)
+>             _comp_delimited : -W '$(locale -a 2>/dev/null)'
+>         ;;
+>         *)
+>             _comp_compgen_variables && return 0;
+>             _comp_compgen -a filedir
+>         ;;
+>     esac;
+>     return 0
+> }
+> _comp_xfunc () 
+> { 
+>     local xfunc_name=$2;
+>     [[ $xfunc_name == _* ]] || xfunc_name=_comp_xfunc_${1//[^a-zA-Z0-9_]/_}_$xfunc_name;
+>     declare -F -- "$xfunc_name" &> /dev/null || _comp_load -- "$1";
+>     "$xfunc_name" "${@:3}"
+> }
+> _complete_as_root () 
+> { 
+>     _comp_as_root "$@"
+> }
+> _completion_loader () 
+> { 
+>     _comp_complete_load "$@"
+> }
+> _configured_interfaces () 
+> { 
+>     _comp_compgen_configured_interfaces "$@"
+> }
+> _count_args () 
+> { 
+>     local i cword words;
+>     _comp__reassemble_words "${1-}" words cword;
+>     args=1;
+>     for ((i = 1; i < cword; i++))
+>     do
+>         if [[ ${words[i]} != -* && ${words[i - 1]} != ${2-} || ${words[i]} == ${3-} ]]; then
+>             ((args++));
+>         fi;
+>     done
+> }
+> _dvd_devices () 
+> { 
+>     _comp_compgen -a dvd_devices
+> }
+> _expand () 
+> { 
+>     _comp_expand "$@"
+> }
+> _filedir () 
+> { 
+>     _comp_compgen -a filedir "$@"
+> }
+> _filedir_xspec () 
+> { 
+>     _comp_complete_filedir_xspec "$@"
+> }
+> _fstypes () 
+> { 
+>     _comp_compgen -a fstypes
+> }
+> _get_comp_words_by_ref () 
+> { 
+>     _comp_get_words "$@"
+> }
+> _get_cword () 
+> { 
+>     local LC_CTYPE=C;
+>     local cword words;
+>     _comp__reassemble_words "${1-}" words cword;
+>     if [[ -n ${2-} && -n ${2//[^0-9]/} ]]; then
+>         printf "%s" "${words[cword - $2]}";
+>     else
+>         if ((${#words[cword]} == 0 && COMP_POINT == ${#COMP_LINE})); then
+>             :;
+>         else
+>             local i;
+>             local cur=$COMP_LINE;
+>             local index=$COMP_POINT;
+>             for ((i = 0; i <= cword; ++i))
+>             do
+>                 while [[ ${#cur} -ge ${#words[i]} && ${cur:0:${#words[i]}} != "${words[i]}" ]]; do
+>                     cur=${cur:1};
+>                     ((index > 0)) && ((index--));
+>                 done;
+>                 if ((i < cword)); then
+>                     local old_size=${#cur};
+>                     cur=${cur#"${words[i]}"};
+>                     local new_size=${#cur};
+>                     ((index -= old_size - new_size));
+>                 fi;
+>             done;
+>             if [[ ${words[cword]:0:${#cur}} != "$cur" ]]; then
+>                 printf "%s" "${words[cword]}";
+>             else
+>                 printf "%s" "${cur:0:index}";
+>             fi;
+>         fi;
+>     fi
+> }
+> _get_first_arg () 
+> { 
+>     local i;
+>     arg=;
+>     for ((i = 1; i < COMP_CWORD; i++))
+>     do
+>         if [[ ${COMP_WORDS[i]} != -* ]]; then
+>             arg=${COMP_WORDS[i]};
+>             break;
+>         fi;
+>     done
+> }
+> _get_pword () 
+> { 
+>     if ((COMP_CWORD >= 1)); then
+>         _get_cword "${@-}" 1;
+>     fi
+> }
+> _gids () 
+> { 
+>     _comp_compgen_gids "$@"
+> }
+> _have () 
+> { 
+>     _comp_have_command "$@"
+> }
+> _init_completion () 
+> { 
+>     local was_split;
+>     _comp_initialize "$@";
+>     local rc=$?;
+>     local flag OPTIND=1 OPTARG="" OPTERR=0;
+>     while getopts "n:e:o:i:s" flag "$@"; do
+>         case $flag in 
+>             [neoi])
+> 
+>             ;;
+>             s)
+>                 if [[ -n $was_split ]]; then
+>                     split=true;
+>                 else
+>                     split=false;
+>                 fi;
+>                 break
+>             ;;
+>         esac;
+>     done;
+>     return "$rc"
+> }
+> _installed_modules () 
+> { 
+>     _comp_compgen_inserted_kernel_modules "$@"
+> }
+> _ip_addresses () 
+> { 
+>     _comp_compgen_ip_addresses "$@"
+> }
+> _kernel_versions () 
+> { 
+>     _comp_compgen_kernel_versions "$@"
+> }
+> _known_hosts () 
+> { 
+>     _comp_complete_known_hosts "$@"
+> }
+> _known_hosts_real () 
+> { 
+>     _comp_compgen_known_hosts "$@"
+> }
+> _ksi_completions () 
+> { 
+>     builtin local src;
+>     builtin local limit;
+>     builtin let limit=1+$COMP_CWORD;
+>     src=$(builtin printf "%s\n" "${COMP_WORDS[@]:0:$limit}" | builtin command kitten __complete__ bash);
+>     if [[ $? == 0 ]]; then
+>         builtin eval "${src}";
+>     fi
+> }
+> _ksi_debug_print () 
+> { 
+>     builtin local b;
+>     b=$(builtin command base64 <<< "${@}");
+>     builtin printf "\eP@kitty-print|%s\e\\" "${b//[[:space:]]}}"
+> }
+> _ksi_get_current_command () 
+> { 
+>     builtin local last_cmd;
+>     last_cmd=$(HISTTIMEFORMAT= builtin history 1);
+>     last_cmd="${last_cmd#*[[:digit:]]*[[:space:]]}";
+>     last_cmd="${last_cmd#"${last_cmd%%[![:space:]]*}"}";
+>     if [[ "${_ksi_prompt[title]}" == "y" ]]; then
+>         builtin printf "\e]2;%s%s\a" "${_ksi_prompt[hostname_prefix]@P}" "${last_cmd//[[:cntrl:]]}";
+>     fi;
+>     if [[ "${_ksi_prompt[mark]}" == "y" ]]; then
+>         builtin printf "\e]133;C;cmdline=%q\a" "$last_cmd";
+>     fi
+> }
+> _ksi_prompt_command () 
+> { 
+>     if [[ -n "${_ksi_prompt[ps0]}" ]]; then
+>         PS0=${PS0//\\\[\\e\]133;k;start_kitty\\a\\\]*end_kitty\\a\\\]};
+>         PS0="${_ksi_prompt[ps0]}$PS0";
+>     fi;
+>     if [[ -n "${_ksi_prompt[ps0_suffix]}" ]]; then
+>         PS0=${PS0//\\\[\\e\]133;k;start_suffix_kitty\\a\\\]*end_suffix_kitty\\a\\\]};
+>         PS0="${PS0}${_ksi_prompt[ps0_suffix]}";
+>     fi;
+>     if [[ -n "${_ksi_prompt[ps1]}" ]]; then
+>         PS1=${PS1//\\\[\\e\]133;k;start_kitty\\a\\\]*end_kitty\\a\\\]};
+>         PS1=${PS1//\\\[\\e\]133;k;start_secondary_kitty\\a\\\]*end_secondary_kitty\\a\\\]};
+>     fi;
+>     if [[ -n "${_ksi_prompt[ps1_suffix]}" ]]; then
+>         PS1=${PS1//\\\[\\e\]133;k;start_suffix_kitty\\a\\\]*end_suffix_kitty\\a\\\]};
+>     fi;
+>     if [[ -n "${_ksi_prompt[ps1]}" ]]; then
+>         if [[ "${_ksi_prompt[mark]}" == "y" && ( "${PS1}" == *"\n"* || "${PS1}" == *'
+> '* ) ]]; then
+>             builtin local oldval;
+>             oldval=$(builtin shopt -p extglob);
+>             builtin shopt -s extglob;
+>             PS1=${PS1%@('\n'|'
+> ')*}${_ksi_prompt[secondary_prompt]}${PS1##*@('\n'|'
+> ')};
+>             builtin eval "$oldval";
+>         fi;
+>         PS1="${_ksi_prompt[ps1]}$PS1";
+>     fi;
+>     if [[ -n "${_ksi_prompt[ps1_suffix]}" ]]; then
+>         PS1="${PS1}${_ksi_prompt[ps1_suffix]}";
+>     fi;
+>     if [[ -n "${_ksi_prompt[ps2]}" ]]; then
+>         PS2=${PS2//\\\[\\e\]133;k;start_kitty\\a\\\]*end_kitty\\a\\\]};
+>         PS2="${_ksi_prompt[ps2]}$PS2";
+>     fi;
+>     if [[ "${_ksi_prompt[cwd]}" == "y" ]]; then
+>         if [[ "${_ksi_prompt[last_reported_cwd]}" != "$PWD" ]]; then
+>             _ksi_prompt[last_reported_cwd]="$PWD";
+>             builtin printf "\e]7;kitty-shell-cwd://%s%s\a" "$HOSTNAME" "$PWD";
+>         fi;
+>     fi
+> }
+> _ksi_transmit_data () 
+> { 
+>     builtin local data;
+>     data="${1//[[:space:]]}";
+>     builtin local pos=0;
+>     builtin local chunk_num=0;
+>     while [ $pos -lt ${#data} ]; do
+>         builtin local chunk="${data:$pos:2048}";
+>         pos=$(($pos+2048));
+>         builtin printf '\eP@kitty-%s|%s:%s\e\\' "${2}" "${chunk_num}" "${chunk}";
+>         chunk_num=$(($chunk_num+1));
+>     done;
+>     [ "$3" = "save_history" ] && builtin history -a;
+>     builtin printf '\eP@kitty-%s|\e\\' "${2}"
+> }
+> _longopt () 
+> { 
+>     _comp_complete_longopt "$@"
+> }
+> _mac_addresses () 
+> { 
+>     _comp_compgen_mac_addresses "$@"
+> }
+> _minimal () 
+> { 
+>     _comp_complete_minimal "$@"
+> }
+> _modules () 
+> { 
+>     _comp_compgen_kernel_modules "$@"
+> }
+> _ncpus () 
+> { 
+>     local REPLY;
+>     _comp_get_ncpus;
+>     printf %s "$REPLY"
+> }
+> _parse_help () 
+> { 
+>     local -a args;
+>     if [[ $1 == - ]]; then
+>         args=(-);
+>     else
+>         local REPLY opt IFS=' 	
+> ';
+>         _comp_dequote "$1";
+>         _comp_split opt "${2:---help}";
+>         args=(-c "$REPLY" ${opt[@]+"${opt[@]}"});
+>     fi;
+>     local -a REPLY=();
+>     _comp_compgen -Rv REPLY help "${args[@]}" || return 1;
+>     ((${#REPLY[@]})) && printf '%s\n' "${REPLY[@]}";
+>     return 0
+> }
+> _parse_usage () 
+> { 
+>     local -a args;
+>     if [[ $1 == - ]]; then
+>         args=(-);
+>     else
+>         local REPLY opt IFS=' 	
+> ';
+>         _comp_dequote "$1";
+>         _comp_split opt "${2:---usage}";
+>         args=(-c "$REPLY" ${opt[@]+"${opt[@]}"});
+>     fi;
+>     local -a REPLY=();
+>     _comp_compgen -Rv REPLY usage "${args[@]}" || return 1;
+>     ((${#REPLY[@]})) && printf '%s\n' "${REPLY[@]}";
+>     return 0
+> }
+> _pci_ids () 
+> { 
+>     _comp_compgen -a pci_ids
+> }
+> _pgids () 
+> { 
+>     _comp_compgen_pgids "$@"
+> }
+> _pids () 
+> { 
+>     _comp_compgen_pids "$@"
+> }
+> _pnames () 
+> { 
+>     _comp_compgen_pnames "$@"
+> }
+> _quote_readline_by_ref () 
+> { 
+>     [[ $2 == REPLY ]] || local REPLY;
+>     _comp_quote_compgen "$1";
+>     [[ $2 == REPLY ]] || printf -v "$2" %s "$REPLY"
+> }
+> _realcommand () 
+> { 
+>     local REPLY;
+>     _comp_realcommand "$1";
+>     local rc=$?;
+>     printf "%s\n" "$REPLY";
+>     return $rc
+> }
+> _rl_enabled () 
+> { 
+>     _comp_readline_variable_on "$@"
+> }
+> _root_command () 
+> { 
+>     _comp_root_command "$@"
+> }
+> _service () 
+> { 
+>     _comp_complete_service "$@"
+> }
+> _services () 
+> { 
+>     _comp_compgen_services "$@"
+> }
+> _shells () 
+> { 
+>     _comp_compgen -a shells
+> }
+> _signals () 
+> { 
+>     _comp_compgen_signals "$@"
+> }
+> _starship_set_return () 
+> { 
+>     return "${1:-0}"
+> }
+> _sysvdirs () 
+> { 
+>     _comp_sysvdirs "$@"
+> }
+> _terms () 
+> { 
+>     _comp_compgen -a terms
+> }
+> _tilde () 
+> { 
+>     ! _comp_compgen -c "$1" tilde
+> }
+> _uids () 
+> { 
+>     _comp_compgen_uids "$@"
+> }
+> _upvar () 
+> { 
+>     echo "bash_completion: $FUNCNAME: deprecated function," "use _comp_upvars instead" 1>&2;
+>     if unset -v "$1"; then
+>         if (($# == 2)); then
+>             eval "$1"=\"\$2\";
+>         else
+>             eval "$1"=\(\"\$"{@:2}"\"\);
+>         fi;
+>     fi
+> }
+> _upvars () 
+> { 
+>     _comp_upvars "$@"
+> }
+> _usb_ids () 
+> { 
+>     _comp_compgen -a usb_ids
+> }
+> _user_at_host () 
+> { 
+>     _comp_complete_user_at_host "$@"
+> }
+> _usergroup () 
+> { 
+>     _comp_compgen_usergroups "$@"
+> }
+> _userland () 
+> { 
+>     _comp_userland "$@"
+> }
+> _variables () 
+> { 
+>     _comp_compgen_variables "$@"
+> }
+> _xfunc () 
+> { 
+>     _comp_xfunc "$@"
+> }
+> _xinetd_services () 
+> { 
+>     _comp_compgen_xinetd_services "$@"
+> }
+> clone-in-kitty () 
+> { 
+>     builtin local bv="${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}.${BASH_VERSINFO[2]}";
+>     builtin local data="shell=bash,pid=$$,bash_version=$bv,cwd=$(builtin printf "%s" "$PWD" | builtin command base64),envfmt=bash,env=$(builtin export | builtin command base64)";
+>     while :; do
+>         case "$1" in 
+>             "")
+>                 break
+>             ;;
+>             -h | --help)
+>                 builtin printf "%s\n\n%s\n" "Clone the current bash session into a new kitty window." "For usage instructions see: https://sw.kovidgoyal.net/kitty/shell-integration/#clone-shell";
+>                 builtin return
+>             ;;
+>             *)
+>                 data="$data,a=$(builtin printf "%s" "$1" | builtin command base64)"
+>             ;;
+>         esac;
+>         shift;
+>     done;
+>     _ksi_transmit_data "$data" "clone" "save_history"
+> }
+> dequote () 
+> { 
+>     local REPLY;
+>     _comp_dequote "$1";
+>     local rc=$?;
+>     printf %s "$REPLY";
+>     return $rc
+> }
+> quote () 
+> { 
+>     local quoted=${1//\'/\'\\\'\'};
+>     printf "'%s'" "$quoted"
+> }
+> quote_readline () 
+> { 
+>     local REPLY;
+>     _comp_quote_compgen "$1";
+>     printf %s "$REPLY"
+> }
+> starship_precmd () 
+> { 
+>     STARSHIP_CMD_STATUS=$? STARSHIP_PIPE_STATUS=("${PIPESTATUS[@]}");
+>     if [[ -n ${BLE_ATTACHED-} && ${#BLE_PIPESTATUS[@]} -gt 0 ]]; then
+>         STARSHIP_PIPE_STATUS=("${BLE_PIPESTATUS[@]}");
+>     fi;
+>     if [[ -n "${BP_PIPESTATUS-}" ]] && [[ "${#BP_PIPESTATUS[@]}" -gt 0 ]]; then
+>         STARSHIP_PIPE_STATUS=("${BP_PIPESTATUS[@]}");
+>     fi;
+>     jobs &> /dev/null;
+>     local job NUM_JOBS=0 IFS=' 	
+> ';
+>     for job in $(jobs -p);
+>     do
+>         [[ -n $job ]] && ((NUM_JOBS++));
+>     done;
+>     "${starship_precmd_user_func-:}";
+>     _starship_set_return "$STARSHIP_CMD_STATUS";
+>     if [[ -n "${STARSHIP_PROMPT_COMMAND-}" ]]; then
+>         eval "$STARSHIP_PROMPT_COMMAND";
+>     fi;
+>     local -a ARGS=(--terminal-width="${COLUMNS}" --status="${STARSHIP_CMD_STATUS}" --pipestatus="${STARSHIP_PIPE_STATUS[*]}" --jobs="${NUM_JOBS}" --shlvl="${SHLVL}");
+>     if [[ -n "${STARSHIP_START_TIME-}" ]]; then
+>         STARSHIP_END_TIME=$(/etc/profiles/per-user/ahd/bin/starship time);
+>         STARSHIP_DURATION=$((STARSHIP_END_TIME - STARSHIP_START_TIME));
+>         ARGS+=(--cmd-duration="${STARSHIP_DURATION}");
+>         STARSHIP_START_TIME="";
+>     fi;
+>     PS1="$(/etc/profiles/per-user/ahd/bin/starship prompt "${ARGS[@]}")";
+>     if [[ -n ${BLE_ATTACHED-} ]]; then
+>         local nlns=${PS1//[!'
+> ']};
+>         bleopt prompt_rps1="$nlns$(/etc/profiles/per-user/ahd/bin/starship prompt --right "${ARGS[@]}")";
+>     fi;
+>     STARSHIP_PREEXEC_READY=true
+> }
+> starship_preexec () 
+> { 
+>     local PREV_LAST_ARG=$1;
+>     if [ "${STARSHIP_PREEXEC_READY:-}" = "true" ]; then
+>         STARSHIP_PREEXEC_READY=false;
+>         STARSHIP_START_TIME=$(/etc/profiles/per-user/ahd/bin/starship time);
+>     fi;
+>     : "$PREV_LAST_ARG"
+> }
+> starship_preexec_ps0 () 
+> { 
+>     /etc/profiles/per-user/ahd/bin/starship time
+> }
+> z () 
+> { 
+>     __zoxide_z "$@"
+> }
+> zi () 
+> { 
+>     __zoxide_zi "$@"
+> }
