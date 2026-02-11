@@ -16,7 +16,7 @@
 }:
 let
   fqdn = "${config.networking.hostName}.${config.networking.domain}";
-  baseUrl = "https://${fqdn}";
+  baseUrl = "https://${config.networking.domain}";
   clientConfig."m.homeserver".base_url = baseUrl;
   serverConfig."m.server" = "${fqdn}:443";
   mkWellKnown = data: ''
@@ -62,6 +62,9 @@ in
         # Further reference can be found in the upstream docs at
         # https://spec.matrix.org/latest/client-server-api/#getwell-knownmatrixclient
         locations."= /.well-known/matrix/client".extraConfig = mkWellKnown clientConfig;
+
+        locations."/_matrix".proxyPass = "http://[::1]:8008";
+        locations."/_synapse/client".proxyPass = "http://[::1]:8008";
       };
       "${fqdn}" = {
         enableACME = true;
