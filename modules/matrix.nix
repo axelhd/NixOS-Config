@@ -107,6 +107,8 @@ in
       enable_registration = true;
       enable_registration_without_verification = true;
 
+      admins = [ "@axe:axessible.dev" ];
+
       /* Get key
       sudo install -m 600 -o matrix-synapse -g matrix-synapse \
         <(openssl rand -hex 32) \
