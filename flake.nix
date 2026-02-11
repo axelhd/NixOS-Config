@@ -5,6 +5,7 @@
     # NixOS official package source
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/release-25.11";
 
     everforest.url = "git+https://codeberg.org/fwinter/everforest-nix.git";
 
@@ -138,6 +139,28 @@
                   useUserPackages = true;
                   users.ahd = import ./home;
                 };
+              }
+            )
+          ];
+        };
+        matrix = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            # Import the previous configuration.nix we used,
+            # so the old configuration file still takes effect
+            ./host/matrix/configuration.nix
+            copyparty.nixosModules.default
+            (
+              { pkgs, ... }:
+              {
+                # add the copyparty overlay to expose the package to the module
+                nixpkgs.overlays = [ copyparty.overlays.default];
+                # (optional) install the package globally
+                environment.systemPackages = [
+                  pkgs.copyparty
+                ];
+
               }
             )
           ];
