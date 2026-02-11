@@ -97,30 +97,41 @@ in
 
   services.matrix-synapse = {
     enable = true;
-    settings.server_name = config.networking.domain;
-    # The public base URL value must match the `base_url` value set in `clientConfig` above.
-    # The default value here is based on `server_name`, so if your `server_name` is different
-    # from the value of `fqdn` above, you will likely run into some mismatched domain names
-    # in client applications.
-    settings.public_baseurl = baseUrl;
-    settings.enable_registration = true;
-    settings.listeners = [
-      {
-        port = 8008;
-        bind_addresses = [ "127.0.0.1" "::1" ];
-        type = "http";
-        tls = false;
-        x_forwarded = true;
-        resources = [
-          {
-            names = [
-              "client"
-              "federation"
-            ];
-            compress = true;
-          }
-        ];
-      }
+    settings = {
+      server_name = config.networking.domain;
+      # The public base URL value must match the `base_url` value set in `clientConfig` above.
+      # The default value here is based on `server_name`, so if your `server_name` is different
+      # from the value of `fqdn` above, you will likely run into some mismatched domain names
+      # in client applications.
+      public_baseurl = baseUrl;
+      enable_registration = true;
+      enable_registration_without_verification = true;
+
+      /* Get key
+      sudo install -m 600 -o matrix-synapse -g matrix-synapse \
+        <(openssl rand -hex 32) \
+        /var/lib/matrix-synapse/macaroon.key
+      */
+      #macaroon_secret_key = lib.mkForce (builtins.readFile /var/lib/matrix-synapse/macaroon.key);
+
+      listeners = [
+        {
+          port = 8008;
+          bind_addresses = [ "127.0.0.1" "::1" ];
+          type = "http";
+          tls = false;
+          x_forwarded = true;
+          resources = [
+            {
+              names = [
+                "client"
+                "federation"
+              ];
+              compress = true;
+            }
+          ];
+        }
+      };
     ];
   };
 }
