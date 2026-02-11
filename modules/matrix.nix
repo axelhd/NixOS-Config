@@ -69,14 +69,36 @@ in
         # It's also possible to do a redirect here or something else, this vhost is not
         # needed for Matrix. It's recommended though to *not put* element
         # here, see also the section about Element.
-        locations."/".extraConfig = ''
-          return 404;
+        #locations."/".extraConfig = ''
+        #  return 404;
+        #'';
+        # Serve Element at the root
+        locations."/" = {
+        priority = 2000;  # lower priority than the API locations
+        root = pkgs.element-web.override {
+          conf = {
+            default_server_config = clientConfig;
+          };
+        };
+        extraConfig = ''
+          # For single-page app routing (Element client-side routes)
+          try_files $uri $uri/ /index.html;
+
+          # Optional: cache static assets
+          location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff2?|ttf|eot)$ {
+            expires 30d;
+            add_header Cache-Control "public, immutable";
+          }
         '';
+      };
         # Forward all Matrix API calls to the synapse Matrix homeserver. A trailing slash
-        # *must not* be used here.
-        locations."/_matrix".proxyPass = "http://[::1]:8008";
-        # Forward requests for e.g. SSO and password-resets.
-        locations."/_synapse/client".proxyPass = "http://[::1]:8008";
+        # *must not* be used here.# Prioritize the Matrix API locations with ^~ (higher priority than /)
+        locations."^~ /_matrix" = {
+          proxyPass = "http://[::1]:8008";
+        };
+        locations."^~ /_synapse/client" = {
+          proxyPass = "http://[::1]:8008";
+        };
       };
       "element.${fqdn}" = {
         enableACME = true;
