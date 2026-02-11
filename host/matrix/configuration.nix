@@ -50,12 +50,6 @@
 
   services.fail2ban.enable = true;
 
-  services.endlessh = {
-    enable = true;
-    port = 22;
-    openFirewall = false; # Don't open firewall globally
-  };
-
   users.users."ahd".openssh.authorizedKeys.keyFiles = [
     ./authorized_keys
   ];
