@@ -103,6 +103,8 @@
     isNormalUser = true;
     description = "Axel Hajslund Damgaard";
     extraGroups = [
+      "networkmanager"
+      "wheel"
     ];
     shell = pkgs.nushell;
   };
