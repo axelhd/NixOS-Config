@@ -111,8 +111,8 @@ in
           conf = {
             default_server_config = clientConfig; # see `clientConfig` from the snippet above.
           };
-        */
         };
+        */
       };
     };
   };
