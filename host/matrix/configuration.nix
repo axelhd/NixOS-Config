@@ -56,7 +56,7 @@
     openFirewall = false; # Don't open firewall globally
   };
 
-  users.users."user".openssh.authorizedKeys.keyFiles = [
+  users.users."ahd".openssh.authorizedKeys.keyFiles = [
     ./authorized_keys
   ];
 

@@ -100,6 +100,7 @@ in
     # from the value of `fqdn` above, you will likely run into some mismatched domain names
     # in client applications.
     settings.public_baseurl = baseUrl;
+    settings.enable_registration = true;
     settings.listeners = [
       {
         port = 8008;
