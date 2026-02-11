@@ -92,12 +92,12 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "dk";
+    layout = "us";
     variant = "";
   };
 
   # Configure console keymap
-  console.keyMap = "dk-latin1";
+  #console.keyMap = "dk-latin1";
 
   users.users.ahd = {
     isNormalUser = true;
@@ -125,6 +125,7 @@
     unzip
     mc
     nushell
+    git
     # FHS
     (
       let
