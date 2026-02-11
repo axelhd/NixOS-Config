@@ -1,3 +1,13 @@
+# Before instalation
+# $ sudo -u postgres psql
+# postgres=# CREATE ROLE "matrix-synapse" WITH LOGIN;
+# CREATE ROLE
+# postgres=# CREATE DATABASE "matrix-synapse" WITH OWNER "matrix-synapse"
+#   TEMPLATE template0
+#   LC_COLLATE = 'C'
+#   LC_CTYPE = 'C';
+# CREATE DATABASE
+
 {
   pkgs,
   lib,
@@ -16,8 +26,8 @@ let
   '';
 in
 {
-  networking.hostName = "matrix";
-  networking.domain = "corvina.adora.dk";
+  #networking.hostName = "matrix";
+  networking.domain = "axessible.dev";
   networking.firewall.allowedTCPPorts = [
     80
     443
