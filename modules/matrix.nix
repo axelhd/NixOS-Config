@@ -96,7 +96,13 @@ in
         enableACME = true;
         forceSSL = true;
         root = pkgs.synapse-admin;
-        locations."/_synapse/admin".proxyPass = "http://[::1]:8008";
+        locations."/api".extraConfig = ''
+          proxy_pass http://[::1]:8008/_synapse/admin;
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto $scheme;
+        '';
       };
 
     };
