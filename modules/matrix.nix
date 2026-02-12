@@ -65,26 +65,20 @@ in
 
         locations."/_matrix".proxyPass = "http://[::1]:8008";
         locations."/_synapse/client".proxyPass = "http://[::1]:8008";
-        locations."/_synapse/admin" = {
+        locations."/_synapse/admin/" = {
           proxyPass = "http://[::1]:8008";
           extraConfig = ''
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Forwarded-Proto $scheme;
             proxy_set_header Host $host;
-
-            # Permissive CORS - safest for separate subdomain (no credentials used, auth is Bearer token)
-            add_header Access-Control-Allow-Origin "*" always;
-            add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
-            add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept" always;
-
-            # Preflight handling
-            if ($request_method = "OPTIONS") {
-              add_header Access-Control-Allow-Origin "*";
-              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
-              add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept";
-              add_header Content-Length 0;
-              return 204;
-            }
+          '';
+        };
+        locations."/" = {
+          priority = 1000; # Lower priority to ensure other locations (e.g. /_matrix, /.well-known) win
+          root = pkgs.synapse-admin;
+          extraConfig = ''
+            index index.html;
+            try_files $uri $uri/ /index.html;
           '';
         };
       };
@@ -94,34 +88,17 @@ in
         # It's also possible to do a redirect here or something else, this vhost is not
         # needed for Matrix. It's recommended though to *not put* element
         # here, see also the section about Element.
-        locations."/".extraConfig = ''
-          return 404;
-        '';
         # Forward all Matrix API calls to the synapse Matrix homeserver. A trailing slash
         # *must not* be used here.
         locations."/_matrix".proxyPass = "http://[::1]:8008";
         # Forward requests for e.g. SSO and password-resets.
         locations."/_synapse/client".proxyPass = "http://[::1]:8008";
-        locations."/_synapse/admin" = {
+        locations."/_synapse/admin/" = {
           proxyPass = "http://[::1]:8008";
           extraConfig = ''
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Forwarded-Proto $scheme;
             proxy_set_header Host $host;
-
-            # Permissive CORS - safest for separate subdomain (no credentials used, auth is Bearer token)
-            add_header Access-Control-Allow-Origin "*" always;
-            add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
-            add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept" always;
-
-            # Preflight handling
-            if ($request_method = "OPTIONS") {
-              add_header Access-Control-Allow-Origin "*";
-              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
-              add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept";
-              add_header Content-Length 0;
-              return 204;
-            }
           '';
         };
       };
@@ -135,11 +112,6 @@ in
             default_server_config = clientConfig; # see `clientConfig` from the snippet above.
           };
         };
-      };
-      "admin.${config.networking.domain}" = {
-        enableACME = true;
-        forceSSL = true;
-        root = pkgs.synapse-admin;
       };
 
     };
