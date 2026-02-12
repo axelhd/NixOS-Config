@@ -83,13 +83,6 @@ in
             }
             add_header Access-Control-Allow-Origin "*" always;
           '';
-        };
-        locations."/admin/" = {
-          root = pkgs.synapse-admin;
-          extraConfig = ''
-            try_files $uri $uri/ /admin/index.html;
-          '';
-        };
       };
       "${fqdn}" = {
         enableACME = true;
@@ -136,15 +129,12 @@ in
           };
         };
       };
-      /*
+      
       "admin.${config.networking.domain}" = {
         enableACME = true;
         forceSSL = true;
         root = pkgs.synapse-admin;
       };
-      */
-
-
     };
   };
 
