@@ -50,7 +50,7 @@
           bash.enable = true;
           clang.enable = true;
           css.enable = true;
-          html.enable = true;
+          html.enable = false; # BROKEN
           sql.enable = true;
           java.enable = true;
           kotlin.enable = true;
@@ -60,7 +60,7 @@
             lsp.enable = true;
             treesitter.enable = true;
           };
-          zig.enable = true;
+          zig.enable = false; # BROKEN
           python.enable = true;
           typst.enable = true;
           rust = {
