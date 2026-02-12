@@ -92,6 +92,12 @@ in
           };
         };
       };
+      "admin.${config.networking.domain}" = {
+        enableACME = true;
+        forceSSL = true;
+        root = pkgs.synapse-admin;
+      };
+
     };
   };
 
