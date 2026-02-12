@@ -183,6 +183,8 @@ in
     upscayl
     arma3-unix-launcher
     protonup-qt
+    nheko
+    #cinny-desktop
 
     (modrinth-app.overrideAttrs (oldAttrs: {
       buildCommand = ''

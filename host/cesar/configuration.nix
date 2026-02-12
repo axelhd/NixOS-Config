@@ -24,7 +24,6 @@
     ../../modules/stylix.nix
     ../../modules/joy.nix
     ../../modules/warp.nix
-    ../../modules/matrix.nix
   ];
   networking.hostName = "cesar"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -55,5 +54,9 @@
   networking.firewall = {
     allowedUDPPorts = [ 2302 2303 2304 2305 2306 ];
   };
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "olm-3.2.16"
+  ];
 
 }
