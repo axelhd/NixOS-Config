@@ -65,6 +65,25 @@ in
 
         locations."/_matrix".proxyPass = "http://[::1]:8008";
         locations."/_synapse/client".proxyPass = "http://[::1]:8008";
+        locations."/_synapse/admin" = {
+          proxyPass = "http://[::1]:8008";
+          extraConfig = ''
+            # Basic proxy settings (match your other locations)
+            proxy_set_header X-Forwarded-For $remote_addr;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header Host $host;
+
+            # CORS handling for browser access from admin.axessible.dev
+            # (Admin API calls often include Authorization header, triggering preflight)
+            if ($request_method = 'OPTIONS') {
+              add_header Access-Control-Allow-Origin "*";
+              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
+              add_header Access-Control-Allow-Headers "Authorization, Content-Type";
+              return 204;
+            }
+            add_header Access-Control-Allow-Origin "*" always;
+          '';
+        };
       };
       "${fqdn}" = {
         enableACME = true;
@@ -80,7 +99,26 @@ in
         locations."/_matrix".proxyPass = "http://[::1]:8008";
         # Forward requests for e.g. SSO and password-resets.
         locations."/_synapse/client".proxyPass = "http://[::1]:8008";
-      };
+        locations."/_synapse/admin" = {
+          proxyPass = "http://[::1]:8008";
+          extraConfig = ''
+            # Basic proxy settings (match your other locations)
+            proxy_set_header X-Forwarded-For $remote_addr;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header Host $host;
+
+            # CORS handling for browser access from admin.axessible.dev
+            # (Admin API calls often include Authorization header, triggering preflight)
+            if ($request_method = 'OPTIONS') {
+              add_header Access-Control-Allow-Origin "*";
+              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
+              add_header Access-Control-Allow-Headers "Authorization, Content-Type";
+              return 204;
+            }
+            add_header Access-Control-Allow-Origin "*" always;
+          '';
+        };
+              };
       "element.${fqdn}" = {
         enableACME = true;
         forceSSL = true;
@@ -96,14 +134,6 @@ in
         enableACME = true;
         forceSSL = true;
         root = pkgs.synapse-admin;
-        locations."/api".extraConfig = ''
-          proxy_pass http://[::1]:8008/_synapse/admin;
-          proxy_set_header Host $host;
-          proxy_set_header X-Real-IP $remote_addr;
-          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-          proxy_set_header X-Forwarded-Proto $scheme;
-        '';
-        locations."/_synapse".proxyPass = "http://[::1]:8008";
       };
 
     };
