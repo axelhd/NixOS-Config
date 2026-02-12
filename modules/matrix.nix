@@ -68,23 +68,27 @@ in
         locations."/_synapse/admin" = {
           proxyPass = "http://[::1]:8008";
           extraConfig = ''
-            # Standard proxy headers (match your other locations; helps with logging/IPs)
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Forwarded-Proto $scheme;
             proxy_set_header Host $host;
 
-            # CORS: Specific to your admin subdomain (safer than "*"; reflects the exact origin)
-            # Handles preflight (OPTIONS) and actual requests
-            if ($request_method = 'OPTIONS') {
-              add_header Access-Control-Allow-Origin "https://admin.${config.networking.domain}";
-              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
-              add_header Access-Control-Allow-Headers "Authorization, Content-Type";
+            # CORS headers (use "*" for testing; restrictive version commented below)
+            add_header Access-Control-Allow-Origin "*" always;
+            add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
+            add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
+
+            # Handle preflight OPTIONS requests
+            if ($request_method = "OPTIONS") {
+              add_header Access-Control-Allow-Origin "*" always;
+              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
+              add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
               add_header Content-Length 0;
               return 204;
             }
-            add_header Access-Control-Allow-Origin "https://admin.${config.networking.domain}" always;
-            add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
-            add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
+
+            # For stricter security (exact admin origin only; switch to this once working)
+            # add_header Access-Control-Allow-Origin "https://admin.${config.networking.domain}" always;
+            # ... (same for the if block)
           '';
         };
       };
@@ -105,23 +109,27 @@ in
         locations."/_synapse/admin" = {
           proxyPass = "http://[::1]:8008";
           extraConfig = ''
-            # Standard proxy headers (match your other locations; helps with logging/IPs)
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Forwarded-Proto $scheme;
             proxy_set_header Host $host;
 
-            # CORS: Specific to your admin subdomain (safer than "*"; reflects the exact origin)
-            # Handles preflight (OPTIONS) and actual requests
-            if ($request_method = 'OPTIONS') {
-              add_header Access-Control-Allow-Origin "https://admin.${config.networking.domain}";
-              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
-              add_header Access-Control-Allow-Headers "Authorization, Content-Type";
+            # CORS headers (use "*" for testing; restrictive version commented below)
+            add_header Access-Control-Allow-Origin "*" always;
+            add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
+            add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
+
+            # Handle preflight OPTIONS requests
+            if ($request_method = "OPTIONS") {
+              add_header Access-Control-Allow-Origin "*" always;
+              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
+              add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
               add_header Content-Length 0;
               return 204;
             }
-            add_header Access-Control-Allow-Origin "https://admin.${config.networking.domain}" always;
-            add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
-            add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
+
+            # For stricter security (exact admin origin only; switch to this once working)
+            # add_header Access-Control-Allow-Origin "https://admin.${config.networking.domain}" always;
+            # ... (same for the if block)
           '';
         };
       };
