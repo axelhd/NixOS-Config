@@ -48,6 +48,7 @@ in
     processing
     raylib
     libnotify
+    sqlitestudio
   ];
 
   home.file.".wakatime.cfg".text = ''
