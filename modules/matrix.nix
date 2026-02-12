@@ -72,23 +72,19 @@ in
             proxy_set_header X-Forwarded-Proto $scheme;
             proxy_set_header Host $host;
 
-            # CORS headers (use "*" for testing; restrictive version commented below)
+            # Permissive CORS - safest for separate subdomain (no credentials used, auth is Bearer token)
             add_header Access-Control-Allow-Origin "*" always;
             add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
-            add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
+            add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept" always;
 
-            # Handle preflight OPTIONS requests
+            # Preflight handling
             if ($request_method = "OPTIONS") {
-              add_header Access-Control-Allow-Origin "*" always;
-              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
-              add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
+              add_header Access-Control-Allow-Origin "*";
+              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
+              add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept";
               add_header Content-Length 0;
               return 204;
             }
-
-            # For stricter security (exact admin origin only; switch to this once working)
-            # add_header Access-Control-Allow-Origin "https://admin.${config.networking.domain}" always;
-            # ... (same for the if block)
           '';
         };
       };
@@ -113,23 +109,19 @@ in
             proxy_set_header X-Forwarded-Proto $scheme;
             proxy_set_header Host $host;
 
-            # CORS headers (use "*" for testing; restrictive version commented below)
+            # Permissive CORS - safest for separate subdomain (no credentials used, auth is Bearer token)
             add_header Access-Control-Allow-Origin "*" always;
             add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
-            add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
+            add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept" always;
 
-            # Handle preflight OPTIONS requests
+            # Preflight handling
             if ($request_method = "OPTIONS") {
-              add_header Access-Control-Allow-Origin "*" always;
-              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
-              add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
+              add_header Access-Control-Allow-Origin "*";
+              add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
+              add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept";
               add_header Content-Length 0;
               return 204;
             }
-
-            # For stricter security (exact admin origin only; switch to this once working)
-            # add_header Access-Control-Allow-Origin "https://admin.${config.networking.domain}" always;
-            # ... (same for the if block)
           '';
         };
       };
