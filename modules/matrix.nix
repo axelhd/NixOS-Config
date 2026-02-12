@@ -96,6 +96,7 @@ in
         enableACME = true;
         forceSSL = true;
         root = pkgs.synapse-admin;
+        locations."/_synapse/admin".proxyPass = "http://[::1]:8008";
       };
 
     };
