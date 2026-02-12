@@ -112,8 +112,23 @@ in
             default_server_config = clientConfig; # see `clientConfig` from the snippet above.
           };
         };
-      };
+        "cinny.${fqdn}" = {
+          enableACME = true;
+          forceSSL = true;
+          serverAliases = [ "cinny.${fqdn}" ];
 
+          root = pkgs.cinny.override {
+            conf = {
+              defaultHomeserver = baseUrl;
+            };
+          };
+
+          extraConfig = ''
+            index index.html;
+            try_files $uri $uri/ /index.html;
+          '';
+        };
+      };
     };
   };
 
