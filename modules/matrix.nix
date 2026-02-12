@@ -102,23 +102,26 @@ in
         locations."/_synapse/admin" = {
           proxyPass = "http://[::1]:8008";
           extraConfig = ''
-            # Basic proxy settings (match your other locations)
-            proxy_set_header X-Forwarded-For $remote_addr;
+            # Standard proxy headers (match your other locations; helps with logging/IPs)
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Forwarded-Proto $scheme;
             proxy_set_header Host $host;
 
-            # CORS handling for browser access from admin.axessible.dev
-            # (Admin API calls often include Authorization header, triggering preflight)
+            # CORS: Specific to your admin subdomain (safer than "*"; reflects the exact origin)
+            # Handles preflight (OPTIONS) and actual requests
             if ($request_method = 'OPTIONS') {
-              add_header Access-Control-Allow-Origin "*";
+              add_header Access-Control-Allow-Origin "https://admin.${config.networking.domain}";
               add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
               add_header Access-Control-Allow-Headers "Authorization, Content-Type";
+              add_header Content-Length 0;
               return 204;
             }
-            add_header Access-Control-Allow-Origin "*" always;
+            add_header Access-Control-Allow-Origin "https://admin.${config.networking.domain}" always;
+            add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
+            add_header Access-Control-Allow-Headers "Authorization, Content-Type" always;
           '';
         };
-              };
+      };
       "element.${fqdn}" = {
         enableACME = true;
         forceSSL = true;
