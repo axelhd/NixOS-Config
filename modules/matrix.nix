@@ -83,6 +83,7 @@ in
             }
             add_header Access-Control-Allow-Origin "*" always;
           '';
+        };
       };
       "${fqdn}" = {
         enableACME = true;
@@ -117,7 +118,7 @@ in
             add_header Access-Control-Allow-Origin "*" always;
           '';
         };
-      };
+              };
       "element.${fqdn}" = {
         enableACME = true;
         forceSSL = true;
@@ -129,12 +130,12 @@ in
           };
         };
       };
-      
       "admin.${config.networking.domain}" = {
         enableACME = true;
         forceSSL = true;
         root = pkgs.synapse-admin;
       };
+
     };
   };
 
