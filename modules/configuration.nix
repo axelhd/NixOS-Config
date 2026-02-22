@@ -100,11 +100,17 @@
     SUBSYSTEM=="usb", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="04d8", MODE="0666"
     SUBSYSTEM=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE="0666"
 
+    # Stream Deck+
+    SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0fd9", ATTRS{idProduct}=="0060", MODE="0666"
+
+
     SUBSYSTEM=="input", MODE="0660", GROUP="input"
     SUBSYSTEM=="hidraw", MODE="0660", GROUP="input"
     KERNEL=="hidraw*", MODE="0660", GROUP="input"
-
   '';
+
+  boot.kernelModules = [ "uinput" ];
+
 
   services.samba = {
     enable = true;

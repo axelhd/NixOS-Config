@@ -1,0 +1,10 @@
+library: ~/Music/cd
+import:
+    move: no
+    write: yes
+    copy: no
+    autotag: yes
+    fetchart: yes
+    resume: yes
+paths:
+    default: $albumartist/$album/$track.$title

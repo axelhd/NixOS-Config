@@ -119,6 +119,9 @@ in
     xnec2c
     openscad
     gnome-terminal
+    streamcontroller
+    #fontforge
+    fontforge-gtk
     #freecad
     (pkgs.symlinkJoin {
       name = "freecad";
@@ -184,6 +187,7 @@ in
     arma3-unix-launcher
     protonup-qt
     nheko
+    
     #cinny-desktop
 
     (modrinth-app.overrideAttrs (oldAttrs: {
@@ -203,5 +207,31 @@ in
     }
   );
 
+  programs.beets = {
+    enable = true;
+    settings = {
+      library = "~/Music/beets/library.db";
+      directory = "~/Music/cd";
+      import = {
+        move = false;
+        write = true;
+        copy = false;
+        autotag = true;
+        fetchart = true;
+        resume = true;
+      };
+      paths.default = "$albumartist/$album/$track.$title";
+      plugins = "fetchart";
+      fetchart = {
+        auto = true;
+        cautious = true;
+        minwidth = 300;
+        cover_names = "cover front folder";
+      };
+    };
+  };
+
   home.file.".abcde.conf".source = ../abcde.conf;
+  #home.file.".config/beets/config.yaml".source = ../beets.yaml;
+
 }

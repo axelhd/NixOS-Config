@@ -17,6 +17,7 @@
         modules-left = [
           "custom/notification"
           "clock"
+          "custom/swall"
           "tray"
         ];
         modules-center = [
@@ -29,6 +30,11 @@
           "network"
           "battery"
         ];
+        "custom/swall" = {
+          format = "SWall";
+          #exec = "/home/ahd/wc/nix/home/swall";
+          on-click = "/home/ahd/wc/axel-doc/kode/c/wall_switcher/cmake-build-release/dbtest";
+        };
         tray = {
           icon-size = 14;
           spacing = 10;

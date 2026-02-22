@@ -19,7 +19,6 @@
   home.packages = with pkgs; [
     wofi
     waybar
-    hyprpaper
     #dunst
     kitty
     swaylock
@@ -238,7 +237,7 @@
 
       exec-once = [
         "vlc --play-and-exit --fullscreen --no-video-title-show --quiet ~/wc/nix/home/hyprland/startup.mkv"
-        "hyprpaper &" # Start wallpaper
+        #"hyprpaper &" # Start wallpaper
         "waybar &" # Start waybar
         "dunst &" # Start notification daemon
         "/run/current-system/sw/bin/kwalletd6"
@@ -336,6 +335,19 @@
       dwindle = {
         preserve_split = true; # Needed to make togglesplit work
       };
+    };
+  };
+
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      preload = [
+        "${../wallpapers/stalker/strelok_night.png}"
+      ];
+      wallpaper = [
+        "${../wallpapers/stalker/strelok_night.png}"
+      ];
+      ipc = "on";
     };
   };
 
