@@ -23,12 +23,13 @@
     # Obsidian nvim not used
     #obsidian-nvim.url = "github:epwalsh/obsidian.nvim";
 
+    nixpkgs-nvf.url = "github:NixOS/nixpkgs/cad22e7d996aea55ecab064e84834289143e44a0";
     nvf = {
-      url = "github:notashelf/nvf";
+      url = "github:notashelf/nvf/main";
       # You can override the input nixpkgs to follow your system's
       # instance of nixpkgs. This is safe to do as nvf does not depend
       # on a binary cache.
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-nvf";
       # Optionally, you can also override individual plugins
       # for example:
       #inputs.obsidian-nvim.follows = "obsidian-nvim"; # <- this will use the obsidian-nvim from your inputs

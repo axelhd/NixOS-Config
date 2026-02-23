@@ -64,11 +64,11 @@
           python.enable = true;
           typst.enable = true;
           rust = {
-            enable = true;
-            extensions.crates-nvim.enable = true;
+            enable = false;
+            extensions.crates-nvim.enable = false;
           };
           assembly.enable = true;
-          csharp.enable = true;
+          csharp.enable = false;
           nim.enable = true;
         };
 
@@ -83,7 +83,7 @@
           indent-blankline.enable = true;
 
           # Fun
-          cellular-automaton.enable = true;
+          cellular-automaton.enable = false;
         };
 
         statusline = {
@@ -99,8 +99,8 @@
         # enable blink-cmp in maximal because it needs to build its rust fuzzy
         # matcher library.
         autocomplete = {
-          nvim-cmp.enable = false;
-          blink-cmp.enable = true;
+          nvim-cmp.enable = true;#false;
+          blink-cmp.enable = false;#true;
         };
 
         snippets.luasnip.enable = true;
