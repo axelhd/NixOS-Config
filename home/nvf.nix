@@ -135,8 +135,8 @@
         };
 
         minimap = {
-          minimap-vim.enable = false;
-          codewindow.enable = true; # lighter, faster, and uses lua for configuration
+          minimap-vim.enable = true;
+          codewindow.enable = false; # BROKEN # lighter, faster, and uses lua for configuration
         };
 
         dashboard = {
