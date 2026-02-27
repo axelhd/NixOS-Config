@@ -10,19 +10,38 @@
     user = "copyparty";
     group = "copyparty";
     settings = {
-      i = "0.0.0.0";
-      # use lists to set multiple values
+      i = "127.0.0.1"; # only listen locally (nginx will proxy)
       p = [
         3210
       ];
+      no_anon = true;
+    };
+    accounts = {
+      htx = {
+        passwordFile = ../copypartyHtxPassword;
+      };
     };
     volumes = {
       "/" = {
-        path = "/home/ahd/copyparty/";
+        path = "/home/copyparty/copyparty/htx/";
         access = {
-          r = "*";
+          r = [ "htx" ];
+          w = [ "htx" ];
         };
       };
+    };
+  };
+
+  "drive.${config.networking.domain}" = {
+    enableACME = true;
+    forceSSL = true;
+
+    locations."/" = {
+      proxyPass = "http://127.0.0.1:3210";
+      proxyWebsockets = true;
+      extraConfig = ''
+        client_max_body_size 0;
+      '';
     };
   };
 }

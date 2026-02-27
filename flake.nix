@@ -24,6 +24,10 @@
     #obsidian-nvim.url = "github:epwalsh/obsidian.nvim";
 
     nixpkgs-nvf.url = "github:NixOS/nixpkgs/cad22e7d996aea55ecab064e84834289143e44a0";
+    alabaster-nvim = {
+      url = "github:p00f/alabaster.nvim";
+      flake = false;
+    };
     nvf = {
       url = "github:notashelf/nvf/main";
       # You can override the input nixpkgs to follow your system's
@@ -77,6 +81,7 @@
       stylix,
       copyparty,
       swall,
+      alabaster-nvim,
       ...
     }@inputs:
     let
@@ -113,7 +118,7 @@
               { pkgs, ... }:
               {
                 # add the copyparty overlay to expose the package to the module
-                nixpkgs.overlays = [ copyparty.overlays.default];
+                nixpkgs.overlays = [ copyparty.overlays.default ];
                 # (optional) install the package globally
                 environment.systemPackages = [
                   pkgs.copyparty
@@ -121,6 +126,27 @@
 
               }
             )
+            /*
+              {
+                vim = {
+                  extraPlugins = {
+                    alabaster = {
+                      package = pkgs.vimUtils.buildVimPlugin {
+                        name = "alabaster.nvim";
+                        src = alabaster-nvim;
+                      };
+                      setup = ''
+                        vim.cmd.colorscheme("alabaster")
+                      '';
+                    };
+                  };
+                  theme.enable = true;
+                  theme.name = "auto"; # theme override from plugin
+
+                };
+              }
+            */
+
             #nvf.nixosModules.default
             #./immich.nix
 
@@ -156,7 +182,7 @@
               { pkgs, ... }:
               {
                 # add the copyparty overlay to expose the package to the module
-                nixpkgs.overlays = [ copyparty.overlays.default];
+                nixpkgs.overlays = [ copyparty.overlays.default ];
                 # (optional) install the package globally
                 environment.systemPackages = [
                   pkgs.copyparty

@@ -14,12 +14,32 @@
     settings = lib.mkForce {
       vim = {
         theme = {
-          enable = true;
+          enable = false;
           name = "onedark";
           style = "cool";
           #name = "rose-pine";
           #style = "main";
           transparent = true;
+        };
+        extraPlugins = {
+          alabaster = {
+            package = pkgs.vimUtils.buildVimPlugin {
+              name = "alabaster.nvim";
+              src = pkgs.fetchFromGitHub {
+                owner = "p00f";
+                repo = "alabaster.nvim";
+                rev = "master";
+                sha256 = "sha256-myeggPnb76KFnm1rmSDgLwHHr1WKzV6KnGvvmU6GhXo=";
+              };
+            };
+
+            setup = ''
+              vim.o.background = "dark"  -- "light" or "dark"
+              vim.cmd.colorscheme("alabaster")
+              vim.api.nvim_set_hl(0, "Visual", { bg = "#e6e6e6" })
+              vim.api.nvim_set_hl(0, "CursorLine", { bg = "#f0f0f0" })
+            '';
+          };
         };
         viAlias = true;
         vimAlias = true;
@@ -99,8 +119,8 @@
         # enable blink-cmp in maximal because it needs to build its rust fuzzy
         # matcher library.
         autocomplete = {
-          nvim-cmp.enable = true;#false;
-          blink-cmp.enable = false;#true;
+          nvim-cmp.enable = true; # false;
+          blink-cmp.enable = false; # true;
         };
 
         snippets.luasnip.enable = true;
@@ -115,7 +135,7 @@
           nvimBufferline.enable = true;
         };
 
-        treesitter = { 
+        treesitter = {
           context.enable = true;
           textobjects.enable = true;
         };
@@ -189,7 +209,7 @@
           illuminate.enable = true;
           breadcrumbs = {
             enable = true;
-            navbuddy.enable = true; 
+            navbuddy.enable = true;
           };
           smartcolumn = {
             enable = true;
