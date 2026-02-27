@@ -18,7 +18,7 @@
     };
     accounts = {
       htx = {
-        passwordFile = "../copypartyHtxPassword";
+        passwordFile = "/var/lib/secrets/copypartyHtxPassword";
       };
     };
     volumes = {
