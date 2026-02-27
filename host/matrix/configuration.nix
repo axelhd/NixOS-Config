@@ -20,6 +20,7 @@
     #../../modules/synapse.nix
     ../../modules/acme.nix
     ../../modules/matrix.nix
+    ../../modules/copyparty.nix
   ];
   networking.hostName = "matrix";
 
@@ -105,7 +106,6 @@
 
   security.polkit.enable = true;
 
-  
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
