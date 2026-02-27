@@ -32,16 +32,18 @@
     };
   };
 
-  "drive.${config.networking.domain}" = {
-    enableACME = true;
-    forceSSL = true;
+  services.nginx.virtualHosts = {
+    "drive.${config.networking.domain}" = {
+      enableACME = true;
+      forceSSL = true;
 
-    locations."/" = {
-      proxyPass = "http://127.0.0.1:3210";
-      proxyWebsockets = true;
-      extraConfig = ''
-        client_max_body_size 0;
-      '';
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:3210";
+        proxyWebsockets = true;
+        extraConfig = ''
+          client_max_body_size 0;
+        '';
+      };
     };
   };
 }
