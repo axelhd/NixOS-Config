@@ -27,6 +27,8 @@
         access = {
           r = [ "htx" ];
           w = [ "htx" ];
+          d = [ "htx" ];
+          m = [ "htx" ];
         };
       };
     };
