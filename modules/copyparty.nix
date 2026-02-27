@@ -14,7 +14,7 @@
       p = [
         3210
       ];
-      no_anon = true;
+      #no_anon = true;
     };
     accounts = {
       htx = {
