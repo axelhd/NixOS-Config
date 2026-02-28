@@ -20,7 +20,7 @@
     ../../modules/nvidia.nix
     #../../modules/synapse.nix
     ../../modules/configuration.nix
-    ../../modules/copyparty_local.nix
+    ../../modules/copyparty.nix
     ../../modules/stylix.nix
     ../../modules/joy.nix
     ../../modules/warp.nix
@@ -50,14 +50,9 @@
     })
   ];
 
+
   networking.firewall = {
-    allowedUDPPorts = [
-      2302
-      2303
-      2304
-      2305
-      2306
-    ];
+    allowedUDPPorts = [ 2302 2303 2304 2305 2306 ];
   };
 
   nixpkgs.config.permittedInsecurePackages = [
