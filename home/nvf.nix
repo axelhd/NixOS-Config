@@ -69,10 +69,12 @@
           nix.enable = true;
           bash.enable = true;
           clang.enable = true;
+          arduino.enable = true;
           css.enable = true;
           html.enable = false; # BROKEN
           sql.enable = true;
           java.enable = true;
+          odin.enable = false; # BROKEN
           kotlin.enable = true;
           lua = {
             enable = true;

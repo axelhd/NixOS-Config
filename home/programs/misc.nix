@@ -170,7 +170,7 @@ in
     element-desktop
     darktable
     aseprite
-    krita
+    #krita
     google-fonts
     cdparanoia
     abcde
@@ -186,8 +186,9 @@ in
     upscayl
     arma3-unix-launcher
     protonup-qt
+    rar
     nheko
-    
+
     #cinny-desktop
 
     (modrinth-app.overrideAttrs (oldAttrs: {
@@ -208,7 +209,7 @@ in
   );
 
   programs.beets = {
-    enable = true;
+    enable = false; # Build fails
     settings = {
       library = "~/Music/beets/library.db";
       directory = "~/Music/cd";
