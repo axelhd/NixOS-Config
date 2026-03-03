@@ -1,0 +1,21 @@
+system: "base16"
+name: "AXE"
+author: "AXE"
+variant: "dark"
+palette:
+  base00: "#0E1415" # Default background
+  base01: "#296e7a" # Alternate background
+  base02: "#293334" # Selection background
+  base03: "#032026" # Unfocused window border (hypr)
+  base04: "#6fccd6" # Alternate text
+  base05: "#CECECE" # Default text Window title text
+  base06: "#FFFF00" # Status text?
+  base07: "#66ccff" # Service name
+  base08: "#d91f1f" # Error
+  base09: "#fe7734" # Urgent ; Urgent window border (hypr)
+  base0A: "#ffb348" # Warning
+  base0B: "#20f000" # Status text, rest of command
+  base0C: "#0066f5" # Command name
+  base0D: "#0bd1f4" # Focused window border (hypr, notif) Item on (dark bg)
+  base0E: "#065260" # Dark off (dark)
+  base0F: "#FF00FF" # Undefined

@@ -9,8 +9,9 @@
   stylix = {
     enable = true;
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
-    image = ../home/wallpapers/stalker/strelok_night.png;
+    #base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
+    base16Scheme = inputs.base16.packages.${pkgs.system}.default + "/axe.yaml";
+    image = ../home/nix-wallpaper-gear.png;
 
     fonts = {
       monospace = {

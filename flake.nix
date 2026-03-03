@@ -66,6 +66,10 @@
 
     swall.url = "path:/home/ahd/wc/axel-doc/kode/PycharmProjects/wallswitcher";
 
+    hellope.url = "path:/home/ahd/wc/axel-doc/kode/odin/hellope";
+
+    base16.url = "path:/home/ahd/wc/nix/pkgs/base16";
+
   };
 
   outputs =
@@ -82,6 +86,8 @@
       copyparty,
       swall,
       alabaster-nvim,
+      hellope,
+      base16,
       ...
     }@inputs:
     let
@@ -122,6 +128,8 @@
                 # (optional) install the package globally
                 environment.systemPackages = [
                   pkgs.copyparty
+                  hellope.packages.x86_64-linux.default
+                  base16.packages.x86_64-linux.default
                 ];
 
               }
