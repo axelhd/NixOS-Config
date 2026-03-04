@@ -159,7 +159,7 @@
       }
       tooltip {
           background:#${config.lib.stylix.colors.base00};
-          color: #${config.lib.stylix.colors.base04};
+          color: #${config.lib.stylix.colors.base05};
       }
       #clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
           transition: all .3s ease;
@@ -168,17 +168,17 @@
       #custom-notification {
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base04};
+          color:#${config.lib.stylix.colors.base05};
       }
       #clock{
           padding: 0px 5px;
-          color:#${config.lib.stylix.colors.base04};
+          color:#${config.lib.stylix.colors.base05};
           transition: all .3s ease;
       }
       #custom-pacman{
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base04};
+          color:#${config.lib.stylix.colors.base05};
       }
       #workspaces {
           padding: 0px 5px;
@@ -219,19 +219,19 @@
       #bluetooth{
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base04};
+          color:#${config.lib.stylix.colors.base05};
       }
       #mpris,
       #pipewire,
       #network{
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base04};
+          color:#${config.lib.stylix.colors.base05};
       }
       #battery{
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base04};
+          color:#${config.lib.stylix.colors.base05};
       }
       #battery.charging {
           color: #26A65B;
@@ -253,7 +253,7 @@
       }
       #custom-expand{
           padding: 0px 5px;
-          color:alpha(#${config.lib.stylix.colors.base04},.2);
+          color:alpha(#${config.lib.stylix.colors.base05},.2);
           text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
           transition: all .3s ease;
       }
@@ -267,7 +267,7 @@
       #cpu,#memory,#temperature{
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base04};
+          color:#${config.lib.stylix.colors.base05};
       }
       #custom-endpoint{
           color:transparent;
