@@ -10,7 +10,6 @@ in
 {
   home.packages = with pkgs; [
 
-    neofetch
     nnn
 
     # archives
@@ -187,8 +186,7 @@ in
     arma3-unix-launcher
     protonup-qt
     rar
-    nheko
-
+    wineWow64Packages.stagingFull
     #cinny-desktop
 
     (modrinth-app.overrideAttrs (oldAttrs: {

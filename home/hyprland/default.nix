@@ -40,141 +40,143 @@
     #configFile = ./dunstrc2;
 
     settings = {
-    global = {
-      monitor = 0;
-      follow = "none";
+      global = {
+        monitor = 0;
+        follow = "none";
 
-      width = "100, 300";
-      height = "0, 300";
-      origin = "top-right";
-      offset = "5, 15";
-      scale = 0;
-      notification_limit = 10;
+        width = "100, 300";
+        height = "0, 300";
+        origin = "top-right";
+        offset = "5, 15";
+        scale = 0;
+        notification_limit = 10;
 
-      progress_bar = true;
-      progress_bar_height = 14;
-      progress_bar_frame_width = 0;
-      progress_bar_min_width = 100;
-      progress_bar_max_width = 300;
-      progress_bar_corner_radius = 50;
-      progress_bar_corners = "bottom-left,top-right";
+        progress_bar = true;
+        progress_bar_height = 14;
+        progress_bar_frame_width = 0;
+        progress_bar_min_width = 100;
+        progress_bar_max_width = 300;
+        progress_bar_corner_radius = 50;
+        progress_bar_corners = "bottom-left,top-right";
 
-      icon_corner_radius = 0;
-      icon_corners = "all";
+        icon_corner_radius = 0;
+        icon_corners = "all";
 
-      indicate_hidden = true;
-      transparency = 1;
-      separator_height = 6;
-      padding = 10;
-      horizontal_padding = 8;
-      text_icon_padding = 12;
+        indicate_hidden = true;
+        transparency = 1;
+        separator_height = 6;
+        padding = 10;
+        horizontal_padding = 8;
+        text_icon_padding = 12;
 
-      frame_width = 1;
-      frame_color = lib.mkDefault "#a0a0a0";
-      gap_size = 6;
-      separator_color = lib.mkDefault "frame";
-      sort = true;
+        frame_width = 1;
+        frame_color = lib.mkDefault "#a0a0a0";
+        gap_size = 6;
+        separator_color = lib.mkDefault "frame";
+        sort = true;
 
-      font = lib.mkDefault "Fira Mono 12";
-      line_height = 0;
-      markup = "full";
-      format = "<b>%s</b>\n%b";
-      alignment = "left";
-      vertical_alignment = "center";
-      show_age_threshold = -1;
-      ellipsize = "middle";
-      ignore_newline = false;
-      stack_duplicates = true;
-      hide_duplicate_count = false;
-      show_indicators = true;
+        font = lib.mkDefault "Fira Mono 12";
+        line_height = 0;
+        markup = "full";
+        format = "<b>%s</b>\n%b";
+        alignment = "left";
+        vertical_alignment = "center";
+        show_age_threshold = -1;
+        ellipsize = "middle";
+        ignore_newline = false;
+        stack_duplicates = true;
+        hide_duplicate_count = false;
+        show_indicators = true;
 
-      enable_recursive_icon_lookup = true;
-      icon_theme = lib.mkDefault "Adwaita, Papirus, Papirus-Dark";
-      icon_position = "right";
-      min_icon_size = 32;
-      max_icon_size = 128;
-      # icon_path = "/usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/";
+        enable_recursive_icon_lookup = true;
+        icon_theme = lib.mkDefault "Adwaita, Papirus, Papirus-Dark";
+        icon_position = "right";
+        min_icon_size = 32;
+        max_icon_size = 128;
+        # icon_path = "/usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/";
 
-      sticky_history = true;
-      history_length = 30;
+        sticky_history = true;
+        history_length = 30;
 
-      dmenu = "/usr/bin/dmenu -l 10 -p dunst:";
-      browser = "/usr/bin/xdg-open";
-      always_run_script = true;
-      title = "Dunst";
-      class = "Dunst";
+        dmenu = "/usr/bin/dmenu -l 10 -p dunst:";
+        browser = "/usr/bin/xdg-open";
+        always_run_script = true;
+        title = "Dunst";
+        class = "Dunst";
 
-      corner_radius = 10;
-      corners = "all";
-      ignore_dbusclose = false;
+        corner_radius = 10;
+        corners = "all";
+        ignore_dbusclose = false;
 
-      force_xwayland = false;
-      force_xinerama = false;
+        force_xwayland = false;
+        force_xinerama = false;
 
-      mouse_left_click = "close_current";
-      mouse_middle_click = "do_action, close_current";
-      mouse_right_click = "close_all";
+        mouse_left_click = "close_current";
+        mouse_middle_click = "do_action, close_current";
+        mouse_right_click = "close_all";
+      };
+
+      experimental = {
+        per_monitor_dpi = false;
+      };
+
+      urgency_low = {
+        background = lib.mkDefault "#222222";
+        foreground = lib.mkDefault "#ffffff";
+        highlight = lib.mkDefault "#722ae6,#e4b5cb";
+        timeout = 20;
+      };
+
+      urgency_normal = {
+        background = lib.mkDefault "#222222";
+        foreground = lib.mkDefault "#ffffff";
+        frame_color = lib.mkDefault "#5e5086";
+        highlight = lib.mkDefault "#722ae6,#e4b5cb";
+        timeout = 20;
+        override_pause_level = 30;
+        default_icon = "dialog-information";
+      };
+
+      urgency_critical = {
+        background = lib.mkDefault "#222222";
+        foreground = lib.mkDefault "#ffffff";
+        frame_color = lib.mkDefault "#d54e53";
+        highlight = lib.mkDefault "#d54e53,#f0f0f0";
+        timeout = 0;
+        override_pause_level = 60;
+        default_icon = lib.mkDefault "dialog-warning";
+      };
     };
 
-    experimental = {
-      per_monitor_dpi = false;
-    };
-
-    urgency_low = {
-      background = lib.mkDefault "#222222";
-      foreground = lib.mkDefault "#ffffff";
-      highlight = lib.mkDefault "#722ae6,#e4b5cb";
-      timeout = 20;
-    };
-
-    urgency_normal = {
-      background = lib.mkDefault "#222222";
-      foreground = lib.mkDefault "#ffffff";
-      frame_color = lib.mkDefault "#5e5086";
-      highlight = lib.mkDefault "#722ae6,#e4b5cb";
-      timeout = 20;
-      override_pause_level = 30;
-      default_icon = "dialog-information";
-    };
-
-    urgency_critical = {
-      background = lib.mkDefault "#222222";
-      foreground = lib.mkDefault "#ffffff";
-      frame_color = lib.mkDefault "#d54e53";
-      highlight = lib.mkDefault "#d54e53,#f0f0f0";
-      timeout = 0;
-      override_pause_level = 60;
-      default_icon = lib.mkDefault "dialog-warning";
-    };
-  };
-
-   /* settigs = {
-      width = "(100, 300)";
-      height = "(0, 300)";
-      origin = "top-right";
-      offset = "(5, 15)";
-      progress_bar = true;
-      progress_bar_height = 14;
-      progress_bar_frame_width = 0;
-      progress_bar_min_width = 100;
-      progress_bar_max_width = 300;
-      progress_bar_corner_radius = 50;
-      progress_bar_corners = "bottom-left, top-right";
-      icon_corner_radius = 5;
-      icon_corners = "all";
-      indicate_hidden = "yes";
-      transparency = 50;
-      separator_height = 6;
-      padding = 10;
-      horizontal_padding = 8;
-      text_icon_padding = 12;
-      frame_width = 1;
-      frame_color = "#ff0000"; # TODO: replace with stylix value 
-      gap_size = 6;
-      separator_color = auto;
-      markup = "full";
-      format = "<b>%s</b>\n%b";
-    }; */
+    /*
+      settigs = {
+        width = "(100, 300)";
+        height = "(0, 300)";
+        origin = "top-right";
+        offset = "(5, 15)";
+        progress_bar = true;
+        progress_bar_height = 14;
+        progress_bar_frame_width = 0;
+        progress_bar_min_width = 100;
+        progress_bar_max_width = 300;
+        progress_bar_corner_radius = 50;
+        progress_bar_corners = "bottom-left, top-right";
+        icon_corner_radius = 5;
+        icon_corners = "all";
+        indicate_hidden = "yes";
+        transparency = 50;
+        separator_height = 6;
+        padding = 10;
+        horizontal_padding = 8;
+        text_icon_padding = 12;
+        frame_width = 1;
+        frame_color = "#ff0000"; # TODO: replace with stylix value
+        gap_size = 6;
+        separator_color = auto;
+        markup = "full";
+        format = "<b>%s</b>\n%b";
+      };
+    */
   };
 
   programs.rofi = {
@@ -247,14 +249,14 @@
         follow_mouse = 1;
       };
       general = {
-        gaps_in = 5; # 5
+        gaps_in = 3; # 5
         gaps_out = 10; # 10
-        border_size = 1;
+        border_size = 3; # 1;
         "col.active_border" = lib.mkDefault "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = lib.mkDefault "rgba(595959aa)";
       };
       decoration = {
-        rounding = 15;
+        rounding = 0; # 15;
         #drop_shadow = true;
         #shadow_range = 4;
         #shadow_render_power = 3;
