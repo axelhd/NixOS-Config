@@ -19,6 +19,7 @@
     ../../modules/configuration.nix
     #../../modules/wifi.nix
     ../../modules/stylix.nix
+    ../../modules/warp.nix
   ];
   networking.hostName = "kali"; # Define your hostname.
   services.libinput.enable = true;

@@ -18,4 +18,4 @@ palette:
   base0C: "#7efcfa" # Command name
   base0D: "#0bd1f4" # Focused window border (hypr, notif) Item on (dark bg)
   base0E: "#065260" # Dark off (dark)
-  base0F: "#FF00FF" # UNDEFINED
+  base0F: "#131f21" # Waybar module background (slightly lighter than base00)

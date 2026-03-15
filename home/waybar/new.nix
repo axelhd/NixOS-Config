@@ -14,6 +14,16 @@
         layer = "top";
         position = "top";
         reload_style_on_change = true;
+
+        fixed-center = true;
+
+        spacing = 0;
+        height = 0;
+        margin-top = 7;
+        margin-right = 7;
+        margin-bottom = 0;
+        margin-left = 7;
+
         modules-left = [
           "custom/notification"
           "clock"
@@ -117,7 +127,11 @@
           format = "{volume}% {icon} {format_source}";
           format-muted = "{icon} {format_source}";
           muted-icon = "󰝟 ";
-          format-icons = [ " " " " " " ];
+          format-icons = [
+            " "
+            " "
+            " "
+          ];
           format-source = " ";
           format-source-muted = "  ";
           tooltip-format = "Speaker: {volume}%\nMicrophone: {source_volume}%";
@@ -132,34 +146,41 @@
       * {
           font-size:15px;
           font-family: "#${config.stylix.fonts.monospace.name}";
+          min-height: 0;
+          border: none;
+          border-radius: 5px;
+          font-weight: 500;
       }
       window#waybar{
-          all:unset;
+          background: #${config.lib.stylix.colors.base00};
+          border: 2px solid #${config.lib.stylix.colors.base03};
+          border-radius: 10px;
       }
       .modules-left {
           padding:7px;
-          margin:10 0 5 10;
+          margin:5 0 5 5;
           border-radius:10px;
-          background: alpha(#${config.lib.stylix.colors.base00},1);
-          box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+          background: alpha(#${config.lib.stylix.colors.base0F},1);
+          border: 2px solid #${config.lib.stylix.colors.base03}
       }
       .modules-center {
           padding:7px;
-          margin:10 0 5 0;
+          margin:5 0 5 0;
           border-radius:10px;
-          background: alpha(#${config.lib.stylix.colors.base00},1);
-          box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+          background: alpha(#${config.lib.stylix.colors.base0F},1);
+          border: 2px solid #${config.lib.stylix.colors.base03}
       }
       .modules-right {
           padding:7px;
-          margin: 10 10 5 0;
+          margin: 5 5 5 0;
           border-radius:10px;
-          background: alpha(#${config.lib.stylix.colors.base00},1);
-          box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+          background: alpha(#${config.lib.stylix.colors.base0F},1);
+          border: 2px solid #${config.lib.stylix.colors.base03}
       }
       tooltip {
           background:#${config.lib.stylix.colors.base00};
           color: #${config.lib.stylix.colors.base05};
+          border: 2px solid #${config.lib.stylix.colors.base03}
       }
       #clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
           transition: all .3s ease;

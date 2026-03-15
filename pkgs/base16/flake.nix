@@ -12,7 +12,7 @@
     {
       packages.${system}.default = pkgs.stdenv.mkDerivation {
         pname = "base16";
-        version = "1.1";
+        version = "1.2";
 
         src = ./.;
 

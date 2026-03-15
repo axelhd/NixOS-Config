@@ -39,6 +39,7 @@ in
     cowsay
     file
     which
+    pixieditor
     tree
     gnused
     gnutar
@@ -114,6 +115,7 @@ in
     qalculate-gtk
     spotdl
     yt-dlp
+    foliate
     vlc
     xnec2c
     openscad
