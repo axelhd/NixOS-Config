@@ -6,6 +6,10 @@
   lib,
   ...
 }:
+let
+  inner_margin = "8"; # Has to be a string since it has to be used in CSS raw
+  outer_margin = 8;
+in
 {
   programs.waybar = {
     enable = true;
@@ -19,10 +23,10 @@
 
         spacing = 0;
         height = 0;
-        margin-top = 7;
-        margin-right = 7;
-        margin-bottom = 0;
-        margin-left = 7;
+        margin-top = outer_margin;
+        margin-right = outer_margin;
+        margin-bottom = outer_margin;
+        margin-left = outer_margin;
 
         modules-left = [
           "custom/notification"
@@ -143,6 +147,22 @@
       };
     };
     style = ''
+      @define-color base00 #${config.lib.stylix.colors.base00};
+      @define-color base01 #${config.lib.stylix.colors.base01};
+      @define-color base02 #${config.lib.stylix.colors.base02};
+      @define-color base03 #${config.lib.stylix.colors.base03};
+      @define-color base04 #${config.lib.stylix.colors.base04};
+      @define-color base05 #${config.lib.stylix.colors.base05};
+      @define-color base06 #${config.lib.stylix.colors.base06};
+      @define-color base07 #${config.lib.stylix.colors.base07};
+      @define-color base08 #${config.lib.stylix.colors.base08};
+      @define-color base09 #${config.lib.stylix.colors.base09};
+      @define-color base0A #${config.lib.stylix.colors.base0A};
+      @define-color base0B #${config.lib.stylix.colors.base0B};
+      @define-color base0C #${config.lib.stylix.colors.base0C};
+      @define-color base0D #${config.lib.stylix.colors.base0D};
+      @define-color base0E #${config.lib.stylix.colors.base0E};
+      @define-color base0F #${config.lib.stylix.colors.base0F};
       * {
           font-size:15px;
           font-family: "#${config.stylix.fonts.monospace.name}";
@@ -152,54 +172,54 @@
           font-weight: 500;
       }
       window#waybar{
-          background: #${config.lib.stylix.colors.base00};
-          border: 2px solid #${config.lib.stylix.colors.base03};
+          background: @base00;
+          border: 2px solid @base03;
           border-radius: 10px;
       }
       .modules-left {
           padding:7px;
-          margin:5 0 5 5;
+          margin:${inner_margin} 0 ${inner_margin} ${inner_margin};
           border-radius:10px;
-          background: alpha(#${config.lib.stylix.colors.base0F},1);
-          border: 2px solid #${config.lib.stylix.colors.base03}
+          background: alpha(@base0F,1);
+          border: 2px solid @base03
       }
       .modules-center {
           padding:7px;
-          margin:5 0 5 0;
+          margin:${inner_margin} 0 ${inner_margin} 0;
           border-radius:10px;
-          background: alpha(#${config.lib.stylix.colors.base0F},1);
-          border: 2px solid #${config.lib.stylix.colors.base03}
+          background: alpha(@base0F,1);
+          border: 2px solid @base03
       }
       .modules-right {
           padding:7px;
-          margin: 5 5 5 0;
+          margin: ${inner_margin} ${inner_margin} ${inner_margin} 0;
           border-radius:10px;
-          background: alpha(#${config.lib.stylix.colors.base0F},1);
-          border: 2px solid #${config.lib.stylix.colors.base03}
+          background: alpha(@base0F,1);
+          border: 2px solid @base03
       }
       tooltip {
-          background:#${config.lib.stylix.colors.base00};
-          color: #${config.lib.stylix.colors.base05};
-          border: 2px solid #${config.lib.stylix.colors.base03}
+          background:@base00;
+          color: @base05;
+          border: 2px solid @base03
       }
       #clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base09};
+          color:@base04;
       }
       #custom-notification {
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base05};
+          color:@base05;
       }
       #clock{
           padding: 0px 5px;
-          color:#${config.lib.stylix.colors.base05};
+          color:@base05;
           transition: all .3s ease;
       }
       #custom-pacman{
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base05};
+          color:@base05;
       }
       #workspaces {
           padding: 0px 5px;
@@ -207,22 +227,22 @@
       #workspaces button {
           all:unset;
           padding: 0px 5px;
-          color: alpha(#${config.lib.stylix.colors.base09},.4);
+          color: alpha(@base0E,.7);
           transition: all .2s ease;
       }
       #workspaces button:hover {
-          color:rgba(0,0,0,0);
+          color:@base0C;
           border: none;
           text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
           transition: all 1s ease;
       }
       #workspaces button.active {
-          color: #${config.lib.stylix.colors.base09};
+          color: @base0D;
           border: none;
           text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
       }
       #workspaces button.empty {
-          color: rgba(0,0,0,0);
+          color: alpha(@base0E,.4);
           border: none;
           text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
       }
@@ -233,26 +253,26 @@
           transition: all 1s ease;
       }
       #workspaces button.empty.active {
-          color: #${config.lib.stylix.colors.base09};
+          color: @base0D;
           border: none;
           text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
       }
       #bluetooth{
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base05};
+          color:@base05;
       }
       #mpris,
       #pipewire,
       #network{
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base05};
+          color:@base05;
       }
       #battery{
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base05};
+          color:@base05;
       }
       #battery.charging {
           color: #26A65B;
@@ -274,7 +294,7 @@
       }
       #custom-expand{
           padding: 0px 5px;
-          color:alpha(#${config.lib.stylix.colors.base05},.2);
+          color:alpha(@base05,.2);
           text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
           transition: all .3s ease;
       }
@@ -288,7 +308,7 @@
       #cpu,#memory,#temperature{
           padding: 0px 5px;
           transition: all .3s ease;
-          color:#${config.lib.stylix.colors.base05};
+          color:@base05;
       }
       #custom-endpoint{
           color:transparent;
@@ -311,4 +331,5 @@
       }
     '';
   };
+
 }
