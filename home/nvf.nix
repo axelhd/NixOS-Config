@@ -74,7 +74,7 @@
           html.enable = false; # BROKEN
           sql.enable = true;
           java.enable = true;
-          odin.enable = false; # BROKEN
+          odin.enable = true; # BROKEN
           kotlin.enable = true;
           lua = {
             enable = true;

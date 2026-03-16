@@ -161,7 +161,6 @@ in
     #geogebra
     geogebra6
     lunar-client
-    heroic
     wxmaxima
     maxima
     wsjtx
