@@ -1,0 +1,43 @@
+diff --git a/src/core/linux/SDL_evdev.c b/src/core/linux/SDL_evdev.c
+index 1234567890..abcdef1234 100644
+--- a/src/core/linux/SDL_evdev.c
++++ b/src/core/linux/SDL_evdev.c
+@@ -30,6 +30,20 @@
+ #include <linux/input.h>
+ #include <linux/input-event-codes.h>
+
++/* Increase kernel input limits */
++#ifdef KEY_MAX
++#undef KEY_MAX
++#define KEY_MAX 0x4ff
++#endif
++
++#ifdef KEY_CNT
++#undef KEY_CNT
++#define KEY_CNT (KEY_MAX + 1)
++#endif
++
++/* Ensure evdev bitfield is large enough */
++#define SDL_EVDEV_MAX_KEYS KEY_CNT
++
+
+
+diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
+index 1234567890..abcdef1234 100644
+--- a/src/joystick/SDL_joystick.c
++++ b/src/joystick/SDL_joystick.c
+@@ -50,7 +50,7 @@
+ 
+ /* նախկին limit was too small */
+-#define MAX_BUTTONS 128
++#define MAX_BUTTONS 1024
+
+
+diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
+index 1234567890..abcdef1234 100644
+--- a/src/joystick/linux/SDL_sysjoystick.c
++++ b/src/joystick/linux/SDL_sysjoystick.c
+@@ -80,7 +80,7 @@
+ 
+-#define MAX_BUTTONS 128
++#define MAX_BUTTONS 1024

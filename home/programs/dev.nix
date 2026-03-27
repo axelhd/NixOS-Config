@@ -11,38 +11,38 @@ in
   home.packages = with pkgs; [
     vscodium
     jetbrains.clion
-    jetbrains.dataspell
+    # jetbrains.dataspell
     jetbrains.pycharm
-    jetbrains.rust-rover
-    jetbrains.rider
-    jetbrains.idea
-    rustlings
-    dbeaver-bin
-    octaveFull
+    # jetbrains.rust-rover
+    # jetbrains.rider
+    # jetbrains.idea
+    # rustlings
+    # dbeaver-bin
+    # octaveFull
     godot
     git
     subversion
     python3
     lnav
-    rustup
+    # rustup
     gcc
     kile
     texliveFull
-    rubber
+    # rubber
     love
     luajit
-    lazarus-qt6
-    fpc
+    # lazarus-qt6
+    # fpc
     sqlite
-    python313Packages.pip
+    # python313Packages.pip
     jdk25
     craftos-pc
     qcad
     wireguard-tools
     nim
     devenv
-    arduino-ide
-    arduino
+    #arduino-ide
+    #arduino
     dfu-programmer
     dfu-util
     processing

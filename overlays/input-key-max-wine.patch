@@ -1,0 +1,39 @@
+diff --git a/dlls/winebus.sys/bus_udev.c b/dlls/winebus.sys/bus_udev.c
+index 1234567890..abcdef1234 100644
+--- a/dlls/winebus.sys/bus_udev.c
++++ b/dlls/winebus.sys/bus_udev.c
+@@ -40,6 +40,20 @@
+ #include <linux/input.h>
+ #include <linux/input-event-codes.h>
+
++/* Increase kernel input limits */
++#ifdef KEY_MAX
++#undef KEY_MAX
++#define KEY_MAX 0x4ff
++#endif
++
++#ifdef KEY_CNT
++#undef KEY_CNT
++#define KEY_CNT (KEY_MAX + 1)
++#endif
++
++/* Increase Wine internal key tracking */
++#define WINE_MAX_KEYS KEY_CNT
+
+diff --git a/dlls/hidclass.sys/device.c b/dlls/hidclass.sys/device.c
+index 1234567890..abcdef1234 100644
+--- a/dlls/hidclass.sys/device.c
++++ b/dlls/hidclass.sys/device.c
+@@ -100,7 +100,7 @@
+ 
+-#define MAX_BUTTONS 128
++#define MAX_BUTTONS 1024
+
+diff --git a/dlls/dinput/joystick.c b/dlls/dinput/joystick.c
+index 1234567890..abcdef1234 100644
+--- a/dlls/dinput/joystick.c
++++ b/dlls/dinput/joystick.c
+@@ -200,7 +200,7 @@
+ 
+-#define DIJOYSTATE_BUTTONS 128
++#define DIJOYSTATE_BUTTONS 1024

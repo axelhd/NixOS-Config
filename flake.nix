@@ -105,6 +105,7 @@
         inherit system;
         inherit inputs;
       }; # <- passing inputs to the attribute set for NixOS (optional)
+
     in
     {
       # Please replace my-nixos with your hostname
@@ -124,13 +125,24 @@
               { pkgs, ... }:
               {
                 # add the copyparty overlay to expose the package to the module
-                nixpkgs.overlays = [ copyparty.overlays.default ];
+                nixpkgs.overlays = [
+                  copyparty.overlays.default
+                  #(import ./overlays/sdl.nix {inherit self;})
+                  #(import ./overlays/fixQtWebEngine.nix {inherit self;})
+                ];
+                boot.kernelPatches = [
+                  {
+                    name = "input-key-max";
+                    patch = ./overlays/input-key-max.patch;
+                  }
+                ];
                 # (optional) install the package globally
                 environment.systemPackages = [
                   pkgs.copyparty
                   hellope.packages.x86_64-linux.default
                   base16.packages.x86_64-linux.default
                 ];
+
 
               }
             )

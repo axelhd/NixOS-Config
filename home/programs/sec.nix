@@ -15,11 +15,11 @@ in
     avalonia-ilspy
     audacity
     #sonic-visualiser
-    zsteg
-    qsstv
+    # zsteg
+    # qsstv
     #stegsolve
     ghidra
     python313Packages.protobuf
-    urh
+    # urh
   ];
 }

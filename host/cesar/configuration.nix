@@ -22,23 +22,26 @@
     ../../modules/configuration.nix
     ../../modules/copyparty_local.nix
     ../../modules/stylix.nix
-    ../../modules/joy.nix
+    #../../modules/joy.nix
     ../../modules/warp.nix
+    ../../modules/virtualization.nix
   ];
   networking.hostName = "cesar"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   networking.networkmanager.enable = true;
 
-  services.monado = {
-    enable = true;
-    defaultRuntime = true; # Register as default OpenXR runtime
-  };
+  /*
+    services.monado = {
+      enable = true;
+      defaultRuntime = true; # Register as default OpenXR runtime
+    };
 
-  systemd.user.services.monado.environment = {
-    STEAMVR_LH_ENABLE = "1";
-    XRT_COMPOSITOR_COMPUTE = "1";
-  };
+    systemd.user.services.monado.environment = {
+      STEAMVR_LH_ENABLE = "1";
+      XRT_COMPOSITOR_COMPUTE = "1";
+    };
+  */
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
@@ -46,7 +49,7 @@
 
   environment.systemPackages = with pkgs; [
     (blender.override {
-      cudaSupport = true;
+      #cudaSupport = true;
     })
   ];
 

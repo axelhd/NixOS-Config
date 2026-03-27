@@ -59,9 +59,11 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
+  /*
   specialisation.kde.configuration = {
     services.desktopManager.plasma6.enable = true;
   };
+  */
 
   programs.kdeconnect.enable = true;
 
@@ -216,7 +218,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    sddm-astronaut
+    # sddm-astronaut
     wget
     cryptsetup
     # Hyprland-related utilities
@@ -240,16 +242,16 @@
     clang-tools
     xdg-desktop-portal-hyprland
     libva
-    nv-codec-headers-12
-    cudatoolkit
+    # nv-codec-headers-12
+    # cudatoolkit
     cachix
-    ninja
-    pkg-config
-    cairo
-    cmake
+    # ninja
+    # pkg-config
+    # cairo
+    # cmake
     kdePackages.kwallet
-    docker
-    dconf # Required for GTK theme settings
+    # docker
+    # dconf # Required for GTK theme settings
     nushell
     chntpw
     dislocker

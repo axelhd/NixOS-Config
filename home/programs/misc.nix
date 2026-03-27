@@ -36,7 +36,8 @@ in
     ipcalc # it is a calculator for the IPv4/v6 addresses
 
     # misc
-    cowsay
+    # cowsay
+    mangohud
     file
     which
     pixieditor
@@ -46,7 +47,7 @@ in
     gawk
     zstd
     gnupg
-    the-powder-toy
+    # the-powder-toy
     musescore
     gamma-launcher
     bottles
@@ -85,8 +86,8 @@ in
     pavucontrol
     volctl
     playerctl
-    thunar
-    nemo
+    # thunar
+    # nemo
     kdePackages.kate
     kdePackages.dolphin
     kdePackages.qtsvg
@@ -108,7 +109,7 @@ in
     hunspell
     hunspellDicts.da_DK
     hunspellDicts.en_GB-large
-    xclicker
+    # xclicker
     #kdePackages.kwallet
     bc
     kdePackages.ark
@@ -140,19 +141,19 @@ in
     linuxConsoleTools
     opentrack
     ckan
-    cool-retro-term
+    # cool-retro-term
     digikam
     blueman
     gimp3-with-plugins
     # alvr
-    webcamoid
+    # webcamoid
     evtest
     evtest-qt
     kew
-    r2modman
-    obs-studio
-    discord
-    vesktop
+    # r2modman
+    # obs-studio
+    # discord
+    # vesktop
     lorien
     ffmpeg_6-full
     zoxide
@@ -160,35 +161,36 @@ in
     redshift
     #geogebra
     geogebra6
-    lunar-client
-    wxmaxima
-    maxima
-    wsjtx
+    # lunar-client
+    # wxmaxima
+    # maxima
+    # wsjtx
     caligula
     lm_sensors
-    element
-    element-desktop
+    # element
+    # element-desktop
     darktable
-    aseprite
+    # aseprite
     #krita
     google-fonts
-    cdparanoia
+    # cdparanoia
     abcde
-    pywal
-    pipes-rs
-    prismlauncher
-    themechanger
-    davinci-resolve
-    steamcmd
+    # pywal
+    # pipes-rs
+    # prismlauncher
+    # themechanger
+    # davinci-resolve
+    # steamcmd
     #kdePackages.kdenlive
     forge-mtg
-    pscircle
-    upscayl
+    # pscircle
+    # upscayl
     arma3-unix-launcher
     protonup-qt
     rar
     wineWow64Packages.stagingFull
     #cinny-desktop
+    ncdu
 
     (modrinth-app.overrideAttrs (oldAttrs: {
       buildCommand = ''
@@ -201,11 +203,13 @@ in
     }))
 
   ];
-  programs.obs-studio.package = (
-    pkgs.obs-studio.override {
-      cudaSupport = true;
-    }
-  );
+  /*
+    programs.obs-studio.package = (
+      pkgs.obs-studio.override {
+        cudaSupport = true;
+      }
+    );
+  */
 
   programs.beets = {
     enable = false; # Build fails
