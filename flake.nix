@@ -6,6 +6,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/release-25.11";
+    nixmate.url = "github:daskladas/nixmate";
 
     everforest.url = "git+https://codeberg.org/fwinter/everforest-nix.git";
 
@@ -141,8 +142,8 @@
                   pkgs.copyparty
                   hellope.packages.x86_64-linux.default
                   base16.packages.x86_64-linux.default
+                  inputs.nixmate.packages.${system}.default
                 ];
-
 
               }
             )
@@ -190,7 +191,7 @@
             )
           ];
         };
-        matrix = nixpkgs.lib.nixosSystem {
+        matrix = inputs.nixpkgs-stable.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
@@ -223,6 +224,15 @@
             everforest.nixosModules.everforest
             stylix.nixosModules.stylix
             copyparty.nixosModules.default
+            (
+              { pkgs, ... }:
+              {
+                environment.systemPackages = [
+                  base16.packages.x86_64-linux.default
+                  inputs.nixmate.packages.${system}.default
+                ];
+              }
+            )
             #nvf.nixosModules.default
             #./immich.nix
 
