@@ -243,6 +243,7 @@
         "waybar &" # Start waybar
         "dunst &" # Start notification daemon
         "/run/current-system/sw/bin/kwalletd6"
+        "streamcontroller -b"
       ];
       input = {
         kb_layout = "dk";

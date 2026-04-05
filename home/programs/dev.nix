@@ -12,6 +12,7 @@ in
     vscodium
     jekyll
     jetbrains.clion
+    killall
     # jetbrains.dataspell
     jetbrains.pycharm
     # jetbrains.rust-rover

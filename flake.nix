@@ -69,7 +69,7 @@
 
     hellope.url = "path:/home/ahd/wc/axel-doc/kode/odin/hellope";
 
-    base16.url = "path:/home/ahd/wc/nix/pkgs/base16";
+    base16.url = "git+https://codeberg.org/Axe/ColdBlueBase16.git";
 
     copy-imgs.url = "git+https://codeberg.org/Axe/copy-imgs";
 

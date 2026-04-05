@@ -21,14 +21,17 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1773602071,
-        "narHash": "sha256-QWW4UxJhy9j+zKudgdjnEN5QPrrAHOxkj4Qi5VGH7dI=",
-        "path": "/home/ahd/wc/nix/pkgs/base16",
-        "type": "path"
+        "lastModified": 1775402001,
+        "narHash": "sha256-EOP2cYb9KVI7eDei14exlT3tZpF9r1N8T7vV7eFtlp0=",
+        "ref": "refs/heads/master",
+        "rev": "492ed901f6e24ac5b939413e2d345cdb03a6805b",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://codeberg.org/Axe/ColdBlueBase16.git"
       },
       "original": {
-        "path": "/home/ahd/wc/nix/pkgs/base16",
-        "type": "path"
+        "type": "git",
+        "url": "https://codeberg.org/Axe/ColdBlueBase16.git"
       }
     },
     "base16-fish": {
@@ -143,11 +146,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1775401655,
-        "narHash": "sha256-DKhT5UU75WwvTbYi4fVamY+sE2W9HX7OaygpPKfoCZ0=",
+        "lastModified": 1775402483,
+        "narHash": "sha256-3Z4YGPrzxQXhjxpY5c443UJ9PgV9efvJdAX6hTIiOOY=",
         "ref": "refs/heads/master",
-        "rev": "f62e148649620bc8faa48253abe0564045ac6801",
-        "revCount": 2,
+        "rev": "0f28b1a989f3e00546a2b786b1599fdf25054603",
+        "revCount": 3,
         "type": "git",
         "url": "https://codeberg.org/Axe/copy-imgs"
       },
@@ -523,11 +526,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1775395387,
-        "narHash": "sha256-1qwB4sxZAGfvJTThd172Ydl3ymU6gbKMAQNVkyoDF7A=",
+        "lastModified": 1775407882,
+        "narHash": "sha256-ayQiAWnEHv9RuI6olJo4uwlhHH5r67XXheMs3n4Iks8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e86e7cc7ac91192bf86f97d6d10b083ad6425289",
+        "rev": "bdb47b127f865fcf2bd5aa8a853033983ad07181",
         "type": "github"
       },
       "original": {
