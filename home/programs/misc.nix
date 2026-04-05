@@ -42,6 +42,7 @@ in
     which
     pixieditor
     tree
+    element-desktop
     gnused
     gnutar
     gawk
@@ -151,7 +152,7 @@ in
     evtest-qt
     kew
     # r2modman
-    # obs-studio
+    obs-studio
     # discord
     # vesktop
     lorien

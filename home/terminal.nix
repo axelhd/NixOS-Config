@@ -5,7 +5,6 @@
   lib,
   ...
 }:
-
 {
   # basic configuration of git, please change to your own
   programs.git = {
@@ -105,7 +104,23 @@
   };
 
   programs.zoxide.enable = true;
-
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    shellAliases = {
+      ll = "ls -l";
+      rebuild = "z ~/wc/nix ; sudo nixos-rebuild switch --flake .";
+    };
+    history.size = 10000;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+      ];
+    };
+  };
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -123,8 +138,9 @@
       gdb = "pwndbg";
     };
   };
+
   programs.nushell = {
-    enable = true;
+    enable = false;
     # The config.nu can be anywhere you want if you like to edit your Nushell with Nu
     #configFile.source = ./.../config.nu;
     # for editing directly to config.nu

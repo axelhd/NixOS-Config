@@ -65,11 +65,13 @@
 
     copyparty.url = "github:9001/copyparty";
 
-    swall.url = "path:/home/ahd/wc/axel-doc/kode/PycharmProjects/wallswitcher";
+    #swall.url = "path:/home/ahd/wc/axel-doc/kode/PycharmProjects/wallswitcher";
 
     hellope.url = "path:/home/ahd/wc/axel-doc/kode/odin/hellope";
 
     base16.url = "path:/home/ahd/wc/nix/pkgs/base16";
+
+    copy-imgs.url = "git+https://codeberg.org/Axe/copy-imgs";
 
   };
 
@@ -85,7 +87,7 @@
       pwndbg,
       stylix,
       copyparty,
-      swall,
+      #swall,
       alabaster-nvim,
       hellope,
       base16,
@@ -143,6 +145,7 @@
                   hellope.packages.x86_64-linux.default
                   base16.packages.x86_64-linux.default
                   inputs.nixmate.packages.${system}.default
+                  inputs.copy-imgs.packages.${system}.default
                 ];
 
               }

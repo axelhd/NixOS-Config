@@ -30,6 +30,7 @@
 
   boot.kernel.sysctl."kernel.sysrq" = 502;
 
+  home-manager.backupFileExtension = "old";
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -60,9 +61,9 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   /*
-  specialisation.kde.configuration = {
-    services.desktopManager.plasma6.enable = true;
-  };
+    specialisation.kde.configuration = {
+      services.desktopManager.plasma6.enable = true;
+    };
   */
 
   programs.kdeconnect.enable = true;
@@ -112,7 +113,6 @@
   '';
 
   boot.kernelModules = [ "uinput" ];
-
 
   services.samba = {
     enable = true;
@@ -185,13 +185,29 @@
       "input"
       "hamachi"
     ];
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
     #packages = with pkgs; [
     #kdePackages.kate
     #thunderbird
     #];
   };
-
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    shellAliases = {
+      ll = "ls -l";
+      rebuild = "z ~/wc/nix ; sudo nixos-rebuild switch --flake .";
+    };
+    histSize = 10000;
+    ohMyZsh = {
+      enable = true;
+      plugins = [
+        "git"
+      ];
+    };
+  };
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
   ];
