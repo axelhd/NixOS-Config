@@ -238,12 +238,12 @@
       };
 
       exec-once = [
-        "vlc --play-and-exit --fullscreen --no-video-title-show --quiet ~/wc/nix/home/hyprland/startup.mkv"
+        #"vlc --play-and-exit --fullscreen --no-video-title-show --quiet ~/wc/nix/home/hyprland/startup.mkv &"
         #"hyprpaper &" # Start wallpaper
         "waybar &" # Start waybar
         "dunst &" # Start notification daemon
-        "/run/current-system/sw/bin/kwalletd6"
-        "streamcontroller -b"
+        "/run/current-system/sw/bin/kwalletd6 &"
+        "streamcontroller -b &"
       ];
       input = {
         kb_layout = "dk";
