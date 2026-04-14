@@ -17,9 +17,10 @@
     };
     volumes = {
       "/" = {
-        path = "/home/copyparty/copyparty/";
+        path = "/home/ahd/copyparty/";
         access = {
           r = [ "*" ];
+          w = [ "*" ];
         };
       };
     };

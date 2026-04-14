@@ -52,7 +52,7 @@ in
     raylib
     libnotify
     sqlitestudio
-    yazi
+    #yazi
   ];
 
   home.file.".wakatime.cfg".text = ''

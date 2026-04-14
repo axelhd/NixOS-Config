@@ -876,17 +876,14 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1734387309,
-        "narHash": "sha256-oUkgm2WK1MI5xpSZlkL6TsuYxw/mi7bfiQwerWmJIeo=",
-        "owner": "redcode-labs",
-        "repo": "RedNix",
-        "rev": "44bdcefd2ad0495e981b9b3f387b1c110db103e4",
-        "type": "github"
+        "lastModified": 1775903287,
+        "narHash": "sha256-VJRq1gIVv7HxJ24I0ld5e1Pbg59Z3qJfo/wCyLS0VGc=",
+        "path": "/home/ahd/wc/RedNix",
+        "type": "path"
       },
       "original": {
-        "owner": "redcode-labs",
-        "repo": "RedNix",
-        "type": "github"
+        "path": "/home/ahd/wc/RedNix",
+        "type": "path"
       }
     },
     "root": {

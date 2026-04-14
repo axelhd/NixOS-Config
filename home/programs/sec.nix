@@ -14,12 +14,17 @@ in
     gdb
     avalonia-ilspy
     audacity
-    #sonic-visualiser
-    # zsteg
+    sonic-visualiser
+    zsteg
     # qsstv
     #stegsolve
     ghidra
     python313Packages.protobuf
+    wireshark
+    burpsuite
+    caido
+    metasploit
+    volatility3
     # urh
   ];
 }

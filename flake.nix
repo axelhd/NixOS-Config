@@ -52,7 +52,7 @@
     catppuccin.url = "github:catppuccin/nix";
 
     rednix = {
-      url = "github:redcode-labs/RedNix";
+      url = "path:/home/ahd/wc/RedNix";
       #inputs.nixpkgs.follows = "nixpkgs";
     };
 

@@ -25,6 +25,7 @@
     #inputs.pwndbg
     ./wacom.nix
     ./stylix.nix
+    ./yazi.nix
   ];
 
   #gtk.enable = true; # to enable the cursor theme on gtk apps
@@ -168,7 +169,8 @@
   # You can update home Manager without changing this value. See
   # the home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "25.05";
+  # home.stateVersion = "25.05";
+  home.stateVersion = "26.05";
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
