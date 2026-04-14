@@ -23,7 +23,7 @@
     };
     volumes = {
       "/" = {
-        path = "/home/copyparty/copyparty/htx/";
+        path = "/home/copyparty/copyparty/htx/spasserprojekt";
         access = {
           r = [ "htx" ];
           w = [ "htx" ];
