@@ -11,6 +11,7 @@ in
   home.packages = with pkgs; [
 
     nnn
+    calibre
 
     # archives
     zip
