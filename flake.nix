@@ -51,10 +51,12 @@
 
     catppuccin.url = "github:catppuccin/nix";
 
-    rednix = {
-      url = "path:/home/ahd/wc/RedNix";
-      #inputs.nixpkgs.follows = "nixpkgs";
-    };
+    /*
+      rednix = {
+        url = "path:/home/ahd/wc/RedNix";
+        #inputs.nixpkgs.follows = "nixpkgs";
+      };
+    */
 
     pwndbg.url = "github:pwndbg/pwndbg";
 
@@ -72,6 +74,8 @@
     base16.url = "git+https://codeberg.org/Axe/ColdBlueBase16.git";
 
     copy-imgs.url = "git+https://codeberg.org/Axe/copy-imgs";
+
+    sops-nix.url = "github:Mic92/sops-nix";
 
   };
 

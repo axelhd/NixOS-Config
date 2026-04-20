@@ -10,6 +10,8 @@ in
 {
   home.packages = with pkgs; [
     vscodium
+    tmux
+    sops
     jekyll
     jetbrains.clion
     killall

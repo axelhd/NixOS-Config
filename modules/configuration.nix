@@ -22,7 +22,8 @@
   imports = [
     #./virtualization.nix
     #./i2p.nix
-    ./restic.nix
+    ./backup.nix
+    ./sops.nix
     ./sddm.nix
   ];
 
@@ -208,12 +209,15 @@
       ];
     };
   };
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-    v4l2loopback
-  ];
-  boot.extraModprobeConfig = ''
-    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
-  '';
+  /*
+    Breaks linux compilation
+    boot.extraModulePackages = with config.boot.kernelPackages; [
+      v4l2loopback
+    ];
+    boot.extraModprobeConfig = ''
+      options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+    '';
+  */
 
   security.polkit.enable = true;
 

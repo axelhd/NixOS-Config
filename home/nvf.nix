@@ -29,7 +29,7 @@
                 owner = "p00f";
                 repo = "alabaster.nvim";
                 rev = "master";
-                sha256 = "sha256-myeggPnb76KFnm1rmSDgLwHHr1WKzV6KnGvvmU6GhXo=";
+                sha256 = "sha256-Rp/nl5dlz55aChrYUL7ir3XtWDFFS99CHS3l3FoCI7c=";
               };
             };
 

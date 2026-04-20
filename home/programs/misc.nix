@@ -12,6 +12,7 @@ in
 
     nnn
     calibre
+    pandoc
 
     # archives
     zip
@@ -186,7 +187,15 @@ in
     #kdePackages.kdenlive
     forge-mtg
     # pscircle
-    # upscayl
+    (pkgs.symlinkJoin {
+      name = "upscayl";
+      paths = [ pkgs.upscayl ];
+      buildInputs = [ pkgs.makeWrapper ];
+      postBuild = ''
+        wrapProgram $out/bin/upscayl \
+          --set __EGL_VENDOR_LIBRARY_FILENAMES /run/opengl-driver/share/glvnd/egl_vendor.d/10_nvidia.json
+      '';
+    })
     arma3-unix-launcher
     protonup-qt
     rar
