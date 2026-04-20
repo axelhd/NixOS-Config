@@ -22,7 +22,7 @@
   imports = [
     #./virtualization.nix
     #./i2p.nix
-    ./backup.nix
+    #./backup.nix
     ./sops.nix
     ./sddm.nix
   ];

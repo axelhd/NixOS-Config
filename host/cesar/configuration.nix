@@ -24,6 +24,7 @@
     ../../modules/stylix.nix
     #../../modules/joy.nix
     ../../modules/warp.nix
+    ../../modules/backup.nix
     ../../modules/virtualization.nix
   ];
   networking.hostName = "cesar"; # Define your hostname.
