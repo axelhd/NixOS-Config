@@ -77,6 +77,7 @@
 
     sops-nix.url = "github:Mic92/sops-nix";
 
+    nixos-grub-themes.url = "github:axelhd/nixos-grub-themes";
   };
 
   outputs =

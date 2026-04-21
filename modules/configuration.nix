@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 {
@@ -33,8 +34,14 @@
 
   home-manager.backupFileExtension = "old";
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub = {
+    enable = true;
+    device = "nodev";
+    efiSupport = true;
+    theme = lib.mkForce inputs.nixos-grub-themes.packages.${pkgs.system}.amber-crt;
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Copenhagen";
