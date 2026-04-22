@@ -3,11 +3,12 @@
   pkgs,
   lib,
   inputs,
+  fetchurl,
   ...
 }:
 
 let
-  modpackTarball = lib.fetchurl {
+  modpackTarball = fetchurl {
     url = "10.0.0.8:8000/mods.tar.gz";
     hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
   };
