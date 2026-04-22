@@ -10,7 +10,7 @@
 let
   modpackTarball = pkgs.fetchurl {
     url = "10.0.0.8:8000/mods.tar.gz";
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    hash = "sha256-sCv2svqXTvMqZgYovuN8oooVohoRn7n5cIqj2GWQ8tA=";
   };
 
   modpackDrv = pkgs.runCommand "modpack-mods" { } ''
