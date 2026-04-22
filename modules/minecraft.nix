@@ -15,7 +15,7 @@ let
 
   modpackDrv = pkgs.runCommand "modpack-mods" { } ''
     mkdir -p $out
-    tar -xzf ${modpackTarball} -C $out --strip-components=1
+    tar -xzf ${modpackTarball} -C $out # --strip-components=1
   '';
 
   jarFiles = builtins.filter (f: pkgs.lib.hasSuffix ".jar" (builtins.toString f)) (
