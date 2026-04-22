@@ -16,6 +16,17 @@ let
     mkdir -p $out
     tar -xzf ${modpackTarball} -C $out --strip-components=1
   '';
+
+  jarFiles = builtins.filter (f: pkgs.lib.hasSuffix ".jar" (builtins.toString f)) (
+    pkgs.lib.filesystem.listFilesRecursive modpackDrv
+  );
+
+  jarDrvs = builtins.map (
+    f:
+    pkgs.runCommand (baseNameOf (builtins.toString f)) { } ''
+      cp ${f} $out
+    ''
+  ) jarFiles;
 in
 
 {
@@ -29,18 +40,7 @@ in
         LegoLars2000 = "aabfb2ff-10a1-438a-baae-d1338d2457a2";
       };
       symlinks = {
-        mods = pkgs.linkFarmFromDrvs "mods" (
-          builtins.map (jarFile: jarFile) (
-            pkgs.lib.filesystem.listFilesRecursive modpackDrv
-            |> builtins.filter (f: pkgs.lib.hasSuffix ".jar" (builtins.toString f))
-            |> builtins.map (
-              f:
-              pkgs.runCommand (baseNameOf (builtins.toString f)) { } ''
-                cp ${f} $out
-              ''
-            )
-          )
-        );
+        mods = pkgs.linkFarmFromDrvs "mods" jarDrvs;
       };
     };
   };
