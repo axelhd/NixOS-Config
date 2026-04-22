@@ -78,7 +78,7 @@
     sops-nix.url = "github:Mic92/sops-nix";
 
     nixos-grub-themes.url = "github:axelhd/nixos-grub-themes";
-    nix-minecraft.url = "github:infinisil/nix-minecraft";
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
   };
 
   outputs =
