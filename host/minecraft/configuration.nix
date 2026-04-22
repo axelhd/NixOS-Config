@@ -56,14 +56,16 @@
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [
     "nix-command"
+    "pipe-operators"
     "flakes"
   ];
 
   boot.kernel.sysctl."kernel.sysrq" = 502;
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.useOSProber = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Copenhagen";
