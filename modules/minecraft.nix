@@ -24,7 +24,6 @@
           "fabric-api" = {
             version = "0.100.1+1.21";
           };
-          ""
           # ... add more by slug
         };
       };
