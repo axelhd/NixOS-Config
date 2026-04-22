@@ -27,6 +27,7 @@ in
     servers.htx = {
       enable = true;
       package = inputs.nix-minecraft.packages.x86_64-linux.fabric-server; # or forge, etc.
+      jvmPackage = pkgs.jdk21;
       operators = {
         LegoLars2000 = "aabfb2ff-10a1-438a-baae-d1338d2457a2";
       };
