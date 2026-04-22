@@ -15,9 +15,9 @@ stdenvNoCC.mkDerivation rec {
     domain = "codeberg.org";
     owner = "Axe";
     repo = "sddm-phantom-theme";
-    rev = "4bfce425c952b66795e30c36c1ad8c8049a1e54c";
-    hash = "sha256-Df7yXG7PIIYAETtM+XnrC8bh0tq9QCAQeLYCAeuy/8k="; # lib.fakeSha256; # replace after first build
-  }; 
+    rev = "9e10a700351ca964eda52f14a1383c1a0c1e5a00";
+    hash = "sha256-TcgYj5Z+YwkFwK8JY54YbXA3o26DokOPfUSEBQQLupw="; # lib.fakeSha256; # replace after first build
+  };
 
   dontWrapQtApps = true;
 

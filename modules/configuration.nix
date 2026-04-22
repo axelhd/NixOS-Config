@@ -43,6 +43,8 @@
     theme = lib.mkForce inputs.nixos-grub-themes.packages.${pkgs.system}.amber-crt;
   };
 
+  boot.initrd.systemd.enable = false;
+
   # Set your time zone.
   time.timeZone = "Europe/Copenhagen";
 

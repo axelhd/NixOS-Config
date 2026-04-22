@@ -49,6 +49,7 @@ in
     gnutar
     gawk
     zstd
+    czkawka-full
     gnupg
     # the-powder-toy
     musescore

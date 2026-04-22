@@ -78,6 +78,7 @@
     sops-nix.url = "github:Mic92/sops-nix";
 
     nixos-grub-themes.url = "github:axelhd/nixos-grub-themes";
+    nix-minecraft.url = "github:infinisil/nix-minecraft";
   };
 
   outputs =
@@ -221,6 +222,24 @@
             )
           ];
         };
+
+        mcnix = inputs.nixpkgs-stable.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            # Import the previous configuration.nix we used,
+            # so the old configuration file still takes effect
+            ./host/minecraft/configuration.nix
+            inputs.nix-minecraft.nixosModules.minecraft-servers
+            (
+              { pkgs, ... }:
+              {
+
+              }
+            )
+          ];
+        };
+
         kali = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };

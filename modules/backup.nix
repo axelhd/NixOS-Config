@@ -59,7 +59,6 @@ let
       OnCalendar = "daily";
       Persistent = true;
     };
-    # MAKE SOPS TEMPLATE
     passwordFile = config.sops.secrets."cesar/restic".path;
 
   };
