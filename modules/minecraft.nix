@@ -26,7 +26,7 @@ in
     eula = true;
     servers.htx = {
       enable = true;
-      package = pkgs.fabricServers.fabric-1_21_1.override; # or forge, etc.
+      package = pkgs.fabricServers.fabric-1_21_1; # or forge, etc.
       jvmOpts = "-Xmx8G -Xms1G";
       operators = {
         LegoLars2000 = "aabfb2ff-10a1-438a-baae-d1338d2457a2";
