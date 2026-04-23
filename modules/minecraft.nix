@@ -35,6 +35,9 @@ in
       operators = {
         LegoLars2000 = "aabfb2ff-10a1-438a-baae-d1338d2457a2";
       };
+      bannedPlayers = {
+        Ruphles = "44e71430-f672-4545-af4e-b9a24e651d17";
+      };
       symlinks =
         let
           modpack = (
