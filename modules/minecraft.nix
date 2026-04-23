@@ -26,14 +26,27 @@ in
     eula = true;
     servers.htx = {
       enable = true;
-      package = pkgs.fabricServers.fabric-1_21_1; # or forge, etc.
+      package = pkgs.neoforgeServers.neoforge-1_21_1;
+      serverProperties = {
+        gamemode = "survival";
+        difficulty = "normal";
+      };
       jvmOpts = "-Xmx8G -Xms1G";
       operators = {
         LegoLars2000 = "aabfb2ff-10a1-438a-baae-d1338d2457a2";
       };
-      symlinks = {
-        mods = modpackDrv;
-      };
+      symlinks =
+        let
+          modpack = (
+            pkgs.fetchPackwizModpack {
+              url = "https://codeberg.org/Axe/NixOS-Config/raw/branch/master/mods/pack.toml";
+              packHash = "";
+            }
+          );
+        in
+        {
+          mods = "${modpack}/mods"; # modpackDrv;
+        };
     };
   };
 }

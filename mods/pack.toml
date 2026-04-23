@@ -1,0 +1,13 @@
+name = "htx"
+author = "ahd"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "803a1f45f58dac64706bb8596689b8ec01a1d809d9462a27312d942e6d8e4d69"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.228"
