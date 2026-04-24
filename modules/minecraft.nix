@@ -70,7 +70,7 @@ in
         OnCalendar = "*:0/20";
         Persistent = true;
       };
-      passwordFile = "../restic_password_mc.txt";
+      passwordFile = "/restic_password_mc.txt";
       repository = "/srv_bak";
 
     };
