@@ -71,7 +71,8 @@ in
         Persistent = true;
       };
       passwordFile = null; # ../restic_password_mc.txt;
-      repository = "/data/hdd1/restic_backup";
+      repository = "/srv_bak";
+
     };
   };
 }
