@@ -43,7 +43,7 @@ in
           modpack = (
             pkgs.fetchPackwizModpack {
               url = "https://codeberg.org/Axe/NixOS-Config/raw/branch/master/mods/pack.toml";
-              packHash = "";
+              packHash = "sha256-PDVx77I/eZyy++wo0s2cathiVJRHEUlHb2shILIfthI=";
             }
           );
         in
