@@ -1,8 +1,17 @@
 hash-format = "sha256"
 
 [[files]]
+file = "export.sh"
+hash = "dab960f8ff543b7d058b0a269fe7cc44fb3a26dd70a2ecd0c4034cc23791d776"
+
+[[files]]
 file = "mods/advancedperipherals.pw.toml"
 hash = "37a7a5a7d013603e5b1ea8a472f318b8e0dce6a78abd163e851721415263a519"
+metafile = true
+
+[[files]]
+file = "mods/anti-xray.pw.toml"
+hash = "eae66e8a13ab53f9685ca955e7774ce6da1f7de433583f6212a3a1d16884a1cb"
 metafile = true
 
 [[files]]
@@ -12,7 +21,7 @@ metafile = true
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
-hash = "6d3a1c92eee4dd671253c41ec000ae48064a33c45263d6adce5cad466395169d"
+hash = "ea336d25c3e21ef168aec20e1ea470c96949ad29632646ee8e8ab0d74b4bbfc9"
 metafile = true
 
 [[files]]
@@ -56,6 +65,11 @@ hash = "b5bbbdef134fb735d4a741ccb85b46c6b1707e8e974a09bdcc1dcd785c0f172e"
 metafile = true
 
 [[files]]
+file = "mods/custom-login-messages.pw.toml"
+hash = "7c109aa64ac9d99a9f80ecf0edc92bb0fdaf2f8dd8123b22ba4fefe66f5d0424"
+metafile = true
+
+[[files]]
 file = "mods/distanthorizons.pw.toml"
 hash = "a989a69146d64786ed1a8234e6333e19c96636a905e4867a3566138e976d40dc"
 metafile = true
@@ -93,6 +107,11 @@ metafile = true
 [[files]]
 file = "mods/gravestone-mod.pw.toml"
 hash = "2ac1df7fad83d36e69b4aaad32f0b952c9b039d7345592bb66934f40a8606224"
+metafile = true
+
+[[files]]
+file = "mods/grieflogger.pw.toml"
+hash = "e4d63300d9fdf653fe7eb135a52755680d00566ef5b4628c3c03db949fdb7fcb"
 metafile = true
 
 [[files]]
@@ -153,6 +172,11 @@ metafile = true
 [[files]]
 file = "mods/sound-physics-remastered.pw.toml"
 hash = "258a77de0a6db4c9ab045cbb240bcf4eac0dbbca3f6bc981fb461e55c247f23f"
+metafile = true
+
+[[files]]
+file = "mods/supermartijn642s-config-lib.pw.toml"
+hash = "62bd7012826fdcccf17a089055be67f87fb7335c88e73efc52bc9e51a1bf3188"
 metafile = true
 
 [[files]]

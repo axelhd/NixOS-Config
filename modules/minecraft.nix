@@ -52,4 +52,29 @@ in
         };
     };
   };
+
+  common = {
+
+  };
+  services.restic.backups = {
+    local = {
+      paths = [
+        "/srv"
+      ];
+
+      exclude = [
+      ];
+      initialize = true;
+      pruneOpts = [
+        "--keep-daily 7"
+      ];
+      timerConfig = {
+
+        OnCalendar = "*:0/20";
+        Persistent = true;
+      };
+      passwordFile = ../restic_password_mc.txt;
+      repository = "/data/hdd1/restic_backup";
+    };
+  };
 }

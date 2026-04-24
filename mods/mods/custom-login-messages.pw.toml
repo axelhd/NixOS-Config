@@ -1,0 +1,13 @@
+name = "Custom Login Messages"
+filename = "miraisoftloginmessages-1.5.0+mc1.21.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/ybXUhts0/versions/v1TpQNzS/miraisoftloginmessages-1.5.0%2Bmc1.21.jar"
+hash-format = "sha512"
+hash = "d718e21512eeb6e53a5038ac02fe16d153d18d66b2ae750221936912401650c7bdafb2b19bcf3c6a23fcffeafc9c52042cf8fac793f022af2b0ad71243d3a85f"
+
+[update]
+[update.modrinth]
+mod-id = "ybXUhts0"
+version = "v1TpQNzS"

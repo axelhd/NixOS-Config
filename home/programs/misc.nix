@@ -13,6 +13,8 @@ in
     nnn
     calibre
     pandoc
+    pwgen
+    packwiz
 
     # archives
     zip
