@@ -53,9 +53,6 @@ in
     };
   };
 
-  common = {
-
-  };
   services.restic.backups = {
     local = {
       paths = [
