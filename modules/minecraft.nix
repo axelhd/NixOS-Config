@@ -13,7 +13,7 @@ let
     tar -xzf ${
       pkgs.fetchurl {
         url = "http://10.0.0.8:8000/mods.tar.gz";
-        hash = "sha256-sCv2svqXTvMqZgYovuN8oooVohoRn7n5cIqj2GWQ8tA=";
+        hash = ""; # "sha256-sCv2svqXTvMqZgYovuN8oooVohoRn7n5cIqj2GWQ8tA=";
       }
     } -C $out
   '';
