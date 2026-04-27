@@ -110,18 +110,8 @@ hash = "36debf7653e95a855b4fedacc19027cf2e01960fc0b6d55ef2ffbffbcb455690"
 metafile = true
 
 [[files]]
-file = "mods/custom-login-messages.pw.toml"
-hash = "7c109aa64ac9d99a9f80ecf0edc92bb0fdaf2f8dd8123b22ba4fefe66f5d0424"
-metafile = true
-
-[[files]]
 file = "mods/distanthorizons.pw.toml"
 hash = "133e7c9295b9e7e8577b5ca36cf9548b4c590eeb0708fdeb9cb59c2758759ac8"
-metafile = true
-
-[[files]]
-file = "mods/dynamic-fps.pw.toml"
-hash = "ae6fd52d8bdcbeca5bbe6db840f22f92c1928fe0fda22017b19612b9b00a245a"
 metafile = true
 
 [[files]]
