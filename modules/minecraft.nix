@@ -30,7 +30,7 @@
         let
           modpack = (
             pkgs.fetchPackwizModpack {
-              url = "https://codeberg.org/Axe/NixOS-Config/raw/branch/master/mods/pack.toml";
+              url = "https://raw.githubusercontent.com/axelhd/NixOS-Config/refs/heads/master/mods/pack.toml";
               packHash = "";
             }
           );
