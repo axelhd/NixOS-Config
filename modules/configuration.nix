@@ -20,14 +20,6 @@
 
   #services.xserver.wacom.enable = true;
 
-  imports = [
-    #./virtualization.nix
-    #./i2p.nix
-    #./backup.nix
-    ./sops.nix
-    ./sddm.nix
-  ];
-
   nixpkgs.config.allowBroken = true;
 
   boot.kernel.sysctl."kernel.sysrq" = 502;

@@ -26,6 +26,7 @@
     ./wacom.nix
     ./stylix.nix
     ./yazi.nix
+    ./xdg.nix
   ];
 
   #gtk.enable = true; # to enable the cursor theme on gtk apps

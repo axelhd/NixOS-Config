@@ -15,6 +15,7 @@ in
     pandoc
     pwgen
     packwiz
+    prismlauncher
 
     # archives
     zip
@@ -159,7 +160,7 @@ in
     # r2modman
     obs-studio
     # discord
-    # vesktop
+    vesktop
     lorien
     ffmpeg_6-full
     zoxide

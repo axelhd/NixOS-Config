@@ -1,6 +1,6 @@
 #!/run/current-system/sw/bin/zsh
-packwiz modrinth export
-packwiz curseforge export 
+packwiz modrinth export --restrictDomains=false
+#packwiz curseforge export 
 
 mv htx-1.0.0.mrpack modrinth.mrpack
-mv htx-1.0.0.zip curseforge.zip
+#mv htx-1.0.0.zip curseforge.zip

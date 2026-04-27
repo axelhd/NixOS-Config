@@ -115,6 +115,14 @@
         inherit inputs;
       }; # <- passing inputs to the attribute set for NixOS (optional)
 
+      headless_imports = [
+        ./modules/sops.nix
+      ];
+
+      headed_imports = [
+        ./modules/sddm.nix
+      ] ++ headed_imports;
+
     in
     {
       # Please replace my-nixos with your hostname
@@ -122,7 +130,7 @@
         cesar = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
-          modules = [
+          modules = headed_imports ++ [
             # Import the previous configuration.nix we used,
             # so the old configuration file still takes effect
             ./host/cesar/configuration.nix
@@ -203,7 +211,7 @@
         matrix = inputs.nixpkgs-stable.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
-          modules = [
+          modules = headless_imports ++ [
             # Import the previous configuration.nix we used,
             # so the old configuration file still takes effect
             ./host/matrix/configuration.nix
@@ -226,7 +234,7 @@
         mcnix = inputs.nixpkgs-stable.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
-          modules = [
+          modules = headless_imports ++ [
             # Import the previous configuration.nix we used,
             # so the old configuration file still takes effect
             ./host/minecraft/configuration.nix
@@ -243,7 +251,7 @@
         kali = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
-          modules = [
+          modules = headed_imports ++ [
             # Import the previous configuration.nix we used,
             # so the old configuration file still takes effect
             ./host/kali/configuration.nix
@@ -279,7 +287,7 @@
         venus = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
-          modules = [
+          modules = headed_imports ++ [
             # Import the previous configuration.nix we used,
             # so the old configuration file still takes effect
             ./host/venus/configuration.nix
