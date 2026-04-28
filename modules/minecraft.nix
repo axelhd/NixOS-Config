@@ -17,7 +17,7 @@
       package = pkgs.neoforgeServers.neoforge-1_21_1;
       serverProperties = {
         gamemode = "survival";
-        difficulty = "normal";
+        difficulty = "hard";
       };
       jvmOpts = "-Xmx8G -Xms1G";
       operators = {
@@ -31,12 +31,13 @@
           modpack = (
             pkgs.fetchPackwizModpack {
               url = "https://raw.githubusercontent.com/axelhd/NixOS-Config/refs/heads/master/mods/pack.toml";
-              packHash = "sha256-D5Umyhw6Nd6wRMOt0FBkSKqO0lnuoChYJ095UX02B0Y=";
+              packHash = "";
             }
           );
         in
         {
           mods = "${modpack}/mods"; # modpackDrv;
+          "config/artifacts/items.toml" = ../artifacts-items.toml;
         };
     };
   };
