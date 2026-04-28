@@ -37,7 +37,7 @@
         in
         {
           mods = "${modpack}/mods"; # modpackDrv;
-          "config/artifacts/items.toml" = ../artifacts-items.toml;
+          #"config/artifacts/items.toml" = ../artifacts-items.toml;
         };
     };
   };
