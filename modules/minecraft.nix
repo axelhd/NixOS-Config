@@ -31,7 +31,7 @@
           modpack = (
             pkgs.fetchPackwizModpack {
               url = "https://raw.githubusercontent.com/axelhd/NixOS-Config/refs/heads/master/mods/pack.toml";
-              packHash = "";
+              packHash = "sha256-D5Umyhw6Nd6wRMOt0FBkSKqO0lnuoChYJ095UX02B0Y=";
             }
           );
         in
