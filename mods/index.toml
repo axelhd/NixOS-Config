@@ -145,11 +145,6 @@ hash = "1dc09ef29e50db6aba5c6fbfaf892983444a0d4ca25f856f1d2838e0c6546166"
 metafile = true
 
 [[files]]
-file = "mods/fantasy_armor.pw.toml"
-hash = "afa210c4991668ea4b0158f7c95a895dac077925129c2fd569937cd15766f827"
-metafile = true
-
-[[files]]
 file = "mods/farmers-delight.pw.toml"
 hash = "69495e979400e63b317b80a71bdd9276929d503b12fa0e73bc668c474d5dbc4c"
 metafile = true
