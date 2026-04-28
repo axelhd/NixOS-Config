@@ -195,11 +195,6 @@ hash = "c14defcebe823231795ee9df77bd7a473b0fa2016147f7e465d13a0a38e136c5"
 metafile = true
 
 [[files]]
-file = "mods/horseshoes.pw.toml"
-hash = "3a2d0f8129331cb1de5397eb00b224df82178e96f521e42c3d67d28a2bf472de"
-metafile = true
-
-[[files]]
 file = "mods/inventory-essentials.pw.toml"
 hash = "c9c6a9d2c8b2d215536bd251088c94eae09c8928b4d8e4779720f07ad6564a3f"
 metafile = true
