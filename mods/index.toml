@@ -80,11 +80,6 @@ hash = "36f2f6e74b7dbeccb504572d47006582207544fa234a095093b97adfc7ecd5ac"
 metafile = true
 
 [[files]]
-file = "mods/connector.pw.toml"
-hash = "e487d315e7a44f917cd1ddc2da1b26e65968bc19fe6c0ac868dab3d2bb97bbf1"
-metafile = true
-
-[[files]]
 file = "mods/create-broken-bad-fabric.pw.toml"
 hash = "5117f179779ec5be73a5d36dc5055e1aaafe97672e9b39d39b46b0d433cc27aa"
 metafile = true
