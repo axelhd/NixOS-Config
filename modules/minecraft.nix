@@ -26,6 +26,7 @@
       bannedPlayers = {
         Ruphles = "44e71430-f672-4545-af4e-b9a24e651d17";
       };
+      files."config/artifacts/items.toml" = ../artifacts-items.toml;
       symlinks =
         let
           modpack = (
