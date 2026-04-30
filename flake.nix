@@ -121,7 +121,8 @@
 
       headed_imports = [
         ./modules/sddm.nix
-      ] ++ headed_imports;
+      ]
+      ++ headless_imports;
 
     in
     {
