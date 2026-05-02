@@ -31,7 +31,7 @@
       files."config/simplswords/general.toml" = ../simplyswords/general.toml;
       files."config/simplswords/loot.toml" = ../simplyswords/loot.toml;
       files."config/simplswords/status_effects.toml" = ../simplyswords/status_effects.toml;
-      files."config/simplswords/unique_effects.toml" = ../simplyswords/unique_effectstoml;
+      files."config/simplswords/unique_effects.toml" = ../simplyswords/unique_effects.toml;
       files."config/simplswords/weapon_attributes.toml" = ../simplyswords/weapon_attributes.toml;
       #files."config/simplswords/x.toml" = ../simplyswords/x.toml;
       symlinks =
