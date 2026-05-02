@@ -27,12 +27,12 @@
         Ruphles = "44e71430-f672-4545-af4e-b9a24e651d17";
       };
       files."config/artifacts/items.toml" = ../artifacts-items.toml;
-      files."config/simplswords/gem_powers.toml" = ../simplyswords/gem_powers.toml;
-      files."config/simplswords/general.toml" = ../simplyswords/general.toml;
-      files."config/simplswords/loot.toml" = ../simplyswords/loot.toml;
-      files."config/simplswords/status_effects.toml" = ../simplyswords/status_effects.toml;
-      files."config/simplswords/unique_effects.toml" = ../simplyswords/unique_effects.toml;
-      files."config/simplswords/weapon_attributes.toml" = ../simplyswords/weapon_attributes.toml;
+      files."config/simplyswords/gem_powers.toml" = ../simplyswords/gem_powers.toml;
+      files."config/simplyswords/general.toml" = ../simplyswords/general.toml;
+      files."config/simplyswords/loot.toml" = ../simplyswords/loot.toml;
+      files."config/simplyswords/status_effects.toml" = ../simplyswords/status_effects.toml;
+      files."config/simplyswords/unique_effects.toml" = ../simplyswords/unique_effects.toml;
+      files."config/simplyswords/weapon_attributes.toml" = ../simplyswords/weapon_attributes.toml;
       #files."config/simplswords/x.toml" = ../simplyswords/x.toml;
       symlinks =
         let
