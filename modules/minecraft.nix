@@ -27,12 +27,19 @@
         Ruphles = "44e71430-f672-4545-af4e-b9a24e651d17";
       };
       files."config/artifacts/items.toml" = ../artifacts-items.toml;
+      files."config/simplswords/gem_powers.toml" = ../simplyswords/gem_powers.toml;
+      files."config/simplswords/general.toml" = ../simplyswords/general.toml;
+      files."config/simplswords/loot.toml" = ../simplyswords/loot.toml;
+      files."config/simplswords/status_effects.toml" = ../simplyswords/status_effects.toml;
+      files."config/simplswords/unique_effects.toml" = ../simplyswords/unique_effectstoml;
+      files."config/simplswords/weapon_attributes.toml" = ../simplyswords/weapon_attributes.toml;
+      #files."config/simplswords/x.toml" = ../simplyswords/x.toml;
       symlinks =
         let
           modpack = (
             pkgs.fetchPackwizModpack {
               url = "https://codeberg.org/Axe/NixOS-Config/raw/branch/master/mods/pack.toml";
-              packHash = "sha256-wDTJnlVFxiQ8te2rBrtnX0IEThhRnmms524uldcLBYI=";
+              packHash = "";
             }
           );
         in
