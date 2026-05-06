@@ -26,26 +26,27 @@
       bannedPlayers = {
         Ruphles = "44e71430-f672-4545-af4e-b9a24e651d17";
       };
-      files."config/artifacts/items.toml" = ../artifacts-items.toml;
-      files."config/simplyswords/gem_powers.toml" = ../simplyswords/gem_powers.toml;
-      files."config/simplyswords/general.toml" = ../simplyswords/general.toml;
-      files."config/simplyswords/loot.toml" = ../simplyswords/loot.toml;
-      files."config/simplyswords/status_effects.toml" = ../simplyswords/status_effects.toml;
-      files."config/simplyswords/unique_effects.toml" = ../simplyswords/unique_effects.toml;
-      files."config/simplyswords/weapon_attributes.toml" = ../simplyswords/weapon_attributes.toml;
-      #files."config/simplswords/x.toml" = ../simplyswords/x.toml;
+      files."config/artifacts/items.toml" = ../mc_conf/artifacts-items.toml;
+      files."config/create-server.toml" = ../mc_conf/create-server.toml;
+      files."config/simplyswords/gem_powers.toml" = ../mc_conf/simplyswords/gem_powers.toml;
+      files."config/simplyswords/general.toml" = ../mc_conf/simplyswords/general.toml;
+      files."config/simplyswords/loot.toml" = ../mc_conf/simplyswords/loot.toml;
+      files."config/simplyswords/status_effects.toml" = ../mc_conf/simplyswords/status_effects.toml;
+      files."config/simplyswords/unique_effects.toml" = ../mc_conf/simplyswords/unique_effects.toml;
+      files."config/simplyswords/weapon_attributes.toml" = ../mc_conf/simplyswords/weapon_attributes.toml;
+      #files."config/simplswords/x.toml" = ../mc_conf/simplyswords/x.toml;
       symlinks =
         let
           modpack = (
             pkgs.fetchPackwizModpack {
               url = "https://codeberg.org/Axe/NixOS-Config/raw/branch/master/mods/pack.toml";
-              packHash = "sha256-6JI2UNJNHXRbc3tWZNf3A88HS25ye6InTG/ZA9FyVKk=";
+              packHash = "";
             }
           );
         in
         {
           mods = "${modpack}/mods"; # modpackDrv;
-          #"config/artifacts/items.toml" = ../artifacts-items.toml;
+          #"config/artifacts/items.toml" = ../mc_conf/artifacts-items.toml;
         };
     };
   };
