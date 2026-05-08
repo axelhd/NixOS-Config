@@ -278,7 +278,7 @@
     dislocker
     z3
     python313Packages.z3-solver
-    cutter
+    # cutter # BROKEN
     pwntools
     python313Packages.pwntools
     scanmem
@@ -335,6 +335,12 @@
       (final: prev: {
         nvchad = inputs.nix4nvchad.packages."${pkgs.system}".nvchad;
         inherit (inputs.pwndbg.packages.${final.system}) pwndbg;
+      })
+
+      (final: prev: {
+        openldap = prev.openldap.overrideAttrs (old: {
+          doCheck = false;
+        });
       })
     ];
   };
